@@ -100,8 +100,8 @@ const AboutUsPage = () => {
         <div className="max-w-7xl mx-auto">
           <img
             src="images/team-header.png"
-            className="mx-auto w-full md:w-1/2 mb-8"
-            alt="Team banner"
+            className="mx-auto pt-[2rem] w-full md:w-1/2 mb-4"
+            alt="About The Project"
           />
           <div className="w-full text-center">
             <TeamTabs teamData={teamData} defaultTab="GSP" />
