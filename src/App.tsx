@@ -6,11 +6,8 @@ import {
   Navigate,
 } from "react-router-dom";
 
-import LoginPage from "./pages/Login";
-import SignupPage from "./pages/Signup";
 import AboutUsPage from "./pages/AboutUs";
 import ProcessPage from "./pages/Process";
-import { ContentPage } from "./pages/content/Content";
 import { TracksPage } from "./pages/content/TracksPage";
 import { CharactersPage } from "./pages/content/CharactersPage";
 import { ItemsPage } from "./pages/content/ItemsPage";
@@ -20,10 +17,9 @@ import NewsAndUpdatesPage from "./pages/NewsAndUpdates";
 import PlayerStatsPage from "./pages/PlayerStats";
 import NoPage from "./pages/NoPage";
 import Navbar from "./components/navbar";
-import ErrorPage from "./pages/errorPage";
 import Footer from "./components/footer";
 import { useEffect, useState } from "react";
-
+import AuthenticationPage from "./pages/Authentication";
 export interface AccountSchema {
   pid: string;
   username: string;
@@ -37,10 +33,18 @@ function App() {
   useEffect(() => {
     const storedPID: string | null = localStorage.getItem("pid");
     const storedUsername: string | null = localStorage.getItem("username");
-    const storedPfpString: string | null = localStorage.getItem("pfpId");
+    const storedPfpString: string | null = localStorage.getItem("pfp");
 
     if (!storedPID || !storedUsername || !storedPfpString) {
       setAccount(null);
+
+      // Set account to dummy data for testing purposes.
+      // COMMENT THIS OUT BEFORE YOU BUILD.
+      // setAccount({
+      //   pid: "string",
+      //   username: "string",
+      //   pfp: 0,
+      // });
       return;
     }
     const storedAccount: AccountSchema = {
@@ -65,16 +69,12 @@ function App() {
           <Route path="/" element={<Navigate to="/home" replace />} />
           <Route
             path="/login"
-            element={<LoginPage setAccount={setAccount} />}
+            element={<AuthenticationPage setAccount={setAccount} />}
           />
-          <Route
-            path="/signup"
-            element={<SignupPage setAccount={setAccount} />}
-          />
+
           <Route path="/aboutUs" element={<AboutUsPage />} />
           <Route path="/process" element={<ProcessPage />} />
           <Route path="/content" element={<ContentPage />} />
-          <Route path="/error" element={<ErrorPage />} />
           <Route
             path="/home"
             element={<HomePage setCurrentPage={setCurrentPage} />}

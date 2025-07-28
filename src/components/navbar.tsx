@@ -28,7 +28,7 @@ const Navbar = ({
 }: NavbarParams) => {
   // Tailwind classes to set the button background for normal, hover and active states.
   const navbarButton: string =
-    "bg-size-[100%_100%] bg-[url(/ggk/images/navbar/button.png)] hover:bg-[url(/ggk/images/navbar/button-hover.png)] active:bg-[url(/ggk/images/navbar/button-active.png)] relative active:top-[1px]";
+    "bg-size-[100%_100%] text-[#FFFBEE]  relative active:top-[1px]";
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: "instant" });
 
   // Assigned upon login
@@ -41,7 +41,7 @@ const Navbar = ({
       <button
         className={`cursor-pointer ${
           // Highlight the text if user is on the same page as this button
-          currentPage == "login" ? "active-outline" : "passive-outline"
+          currentPage == "login" ? "navbar-active-outline" : "navbar-passive-outline"
         }`}
         onClick={() => {
           scrollToTop();
@@ -64,19 +64,23 @@ const Navbar = ({
     <NavigationMenuItem className="list-none md:mr-4">
       <NavigationMenuTrigger
         className={`${navbarButton} bg-inherit ${
-          currentPage === "stats" ? "active-outline" : "passive-outline"
+          currentPage === "stats" ? "navbar-active-outline" : "navbar-passive-outline"
         }`}
       >
         <button
           className={`cursor-pointer ${
-            currentPage === "stats" ? "active-outline" : "passive-outline"
+            currentPage === "stats" ? "navbar-active-outline" : "navbar-passive-outline"
           }`}
         >
           {/*Username won't appear on mobile*/}
           {isMobileDevice ? "" : username}
         </button>
         <img
-          src={account ? pfpList[account.pfp] : "images/placeholder/pfp-placeholder.png"}
+          src={
+            account
+              ? pfpList[account.pfp].src
+              : "images/placeholder/pfp-placeholder.png"
+          }
           className="max-w-7 md:m-1 rounded-full"
         />
       </NavigationMenuTrigger>
@@ -132,13 +136,18 @@ const Navbar = ({
       <NavigationMenuItem>
         <NavigationMenuTrigger
           className={`${navbarButton} bg-inherit ${
-            currentPage === "about" ? "active-outline" : "passive-outline"
+            currentPage === "about" ? "navbar-active-outline" : "navbar-passive-outline"
           }`}
         >
           <button
             className={`cursor-pointer ${
-              currentPage === "about" ? "active-outline" : "passive-outline"
+              currentPage === "about" ? "navbar-active-outline" : "navbar-passive-outline"
             }`}
+            onClick={() => {
+              scrollToTop();
+              navigate("/process");
+              setCurrentPage("about");
+            }}
           >
             About
           </button>
@@ -171,23 +180,34 @@ const Navbar = ({
       <NavigationMenuItem>
         <NavigationMenuTrigger
           className={`${navbarButton} bg-inherit ${
-            currentPage === "content" ? "active-outline" : "passive-outline"
+            currentPage === "content" ? "navbar-active-outline" : "navbar-passive-outline"
           }`}
         >
           <button
             className={`cursor-pointer ${
-              currentPage === "content" ? "active-outline" : "passive-outline"
+              currentPage === "content" ? "navbar-active-outline" : "navbar-passive-outline"
             }`}
             onClick={() => {
               scrollToTop();
-              navigate("/content");
+              navigate("/characters");
               setCurrentPage("content");
             }}
           >
             Content
           </button>
         </NavigationMenuTrigger>
-        <NavigationMenuContent className="absolute -left-2 *:hover:text-[#e7ee33]">
+        <NavigationMenuContent className="absolute -left-2 *:hover:text-[#e7ee33] text-md">
+          <NavigationMenuLink>
+            <button
+              onClick={() => {
+                scrollToTop();
+                navigate("./mascot");
+                setCurrentPage("content");
+              }}
+            >
+              Our Mascot
+            </button>
+          </NavigationMenuLink>
           <NavigationMenuLink>
             <button
               onClick={() => {
@@ -225,12 +245,12 @@ const Navbar = ({
       </NavigationMenuItem>
       <NavigationMenuLink
         className={`${navbarButton} ${
-          currentPage === "news" ? "active-outline" : "passive-outline"
+          currentPage === "news" ? "navbar-active-outline" : "navbar-passive-outline"
         }`}
       >
         <button
           className={`cursor-pointer ${
-            currentPage === "news" ? "active-outline" : "passive-outline"
+            currentPage === "news" ? "navbar-active-outline" : "navbar-passive-outline"
           } mx-1`}
           onClick={() => {
             scrollToTop();
@@ -243,12 +263,12 @@ const Navbar = ({
       </NavigationMenuLink>
       <NavigationMenuLink
         className={`${navbarButton} ${
-          currentPage === "leaderboard" ? "active-outline" : "passive-outline"
+          currentPage === "leaderboard" ? "navbar-active-outline" : "navbar-passive-outline"
         }`}
       >
         <button
           className={`cursor-pointer ${
-            currentPage === "leaderboard" ? "active-outline" : "passive-outline"
+            currentPage === "leaderboard" ? "navbar-active-outline" : "navbar-passive-outline"
           } mx-1`}
           onClick={() => {
             scrollToTop();
@@ -267,11 +287,13 @@ const Navbar = ({
     <>
       <NavigationMenuItem className="list-none">
         <NavigationMenuTrigger className={`${navbarButton} bg-inherit`}>
-          <p className="passive-outline">Pages</p>
+          <p className="navbar-passive-outline">Pages</p>
         </NavigationMenuTrigger>
         <NavigationMenuContent className="absolute -left-5 min-w-30">
           <NavigationMenuLink
-            className={`${currentPage === "about" ? "active-outline" : "passive-outline"}`}
+            className={`${
+              currentPage === "about" ? "navbar-active-outline" : "navbar-passive-outline"
+            }`}
           >
             <button
               className="cursor-pointer"
@@ -285,13 +307,15 @@ const Navbar = ({
             </button>
           </NavigationMenuLink>
           <NavigationMenuLink
-            className={`${currentPage === "content" ? "active-outline" : "passive-outline"}`}
+            className={`${
+              currentPage === "content" ? "navbar-active-outline" : "navbar-passive-outline"
+            }`}
           >
             <button
               className="cursor-pointer"
               onClick={() => {
                 scrollToTop();
-                navigate("./content");
+                navigate("./characters");
                 setCurrentPage("content");
               }}
             >
@@ -299,7 +323,9 @@ const Navbar = ({
             </button>
           </NavigationMenuLink>
           <NavigationMenuLink
-            className={`${currentPage === "news" ? "active-outline" : "passive-outline"}`}
+            className={`${
+              currentPage === "news" ? "navbar-active-outline" : "navbar-passive-outline"
+            }`}
           >
             <button
               className="cursor-pointer"
@@ -313,7 +339,11 @@ const Navbar = ({
             </button>
           </NavigationMenuLink>
           <NavigationMenuLink
-            className={`${currentPage === "leaderboard" ? "active-outline" : "passive-outline"}`}
+            className={`${
+              currentPage === "leaderboard"
+                ? "navbar-active-outline"
+                : "navbar-passive-outline"
+            }`}
           >
             <button
               className="cursor-pointer"
@@ -334,11 +364,13 @@ const Navbar = ({
   return (
     <NavigationMenu
       viewport={false}
-      className="z-40 bebas tracking-wider h-14 bg-size-[100%] **:font-black sticky top-0 flex flex-row w-full justify-between bg-[url(/ggk/images/navbar/background.png)] font-semibold **:text-base md:**:text-2xl z-30 shadow-xl/20"
+      className="z-40 tracking-wider h-14 bg-size-[100%] **:font-black sticky top-0 flex flex-row w-full justify-between bg-[url(/ggk/images/navbar/background.png)] font-semibold **:text-base md:**:text-2xl z-30 shadow-xl/20"
     >
       {/*Left side: Logo button to go home*/}
       <div className="md:min-w-40">
-        <NavigationMenuLink className={`max-w-12 h-12 md:ml-4 bg-[url(images/logo/gizmo-icon.svg)] hover:bg-[url(images/logo/gizmo-icon-hover.svg)]`}>
+        <NavigationMenuLink
+          className={`max-w-12 h-12 ml-1 md:ml-4 bg-[url(images/logo/gizmo-icon.svg)] hover:bg-[url(images/logo/gizmo-icon-hover.svg)]`}
+        >
           <button
             className="cursor-pointer"
             onClick={() => {
@@ -350,14 +382,14 @@ const Navbar = ({
             <img
               src="images/logo/gizmo-icon.svg "
               className="opacity-0 bottom-2 right-2 max-w-12 h-12 relative"
-            /> 
+            />
           </button>
         </NavigationMenuLink>
       </div>
       {/*Center: Main navigation list. Depends on screen width.*/}
       {isMobileDevice ? mobileNavList : pcNavList}
       {/*Right side: Login button or profile dropdown, depending on whether you're logged in.*/}
-      { loginNavbarItem }
+      {loginNavbarItem}
     </NavigationMenu>
   );
 };

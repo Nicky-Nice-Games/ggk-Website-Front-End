@@ -1,33 +1,11 @@
 import { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useOutsideClick } from "@/hooks/use-outside-click";
-import { fetchData } from "@/utils";
 import { CloseIcon } from "@/components/content/close-icon";
-
-type ListItem = string | { text: string; children?: ListItem[] };
-// Content of the updates
-interface ContentBlock {
-  type: "paragraph" | "list" | "heading" | "image";
-  text?: string;
-  items?: ListItem[];
-  ordered?: boolean;
-  level?: number; // for headings
-  src?: string;
-  alt?: string;
-  caption?: string;
-}
-
-// Array of updates
-interface Update {
-  id: number;
-  title: string;
-  date: string;
-  subtitle: string;
-  image: string;
-  text: ContentBlock[];
-}
-
-
+import { Worker, Viewer, SpecialZoomLevel } from "@react-pdf-viewer/core";
+import { type Update, updates } from "@/data/updates";
+import "@react-pdf-viewer/core/lib/styles/index.css";
+import HeaderBanner from "@/components/ui/header-banner";
 
 // Converts MM/DD/YYYY to YYYY-MM-DD for parsing
 const toISO = (dateStr: string) => {
@@ -36,27 +14,6 @@ const toISO = (dateStr: string) => {
 };
 
 const NewsAndUpdatesPage = () => {
-  const [updates, setUpdates] = useState<Update[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    //const loadUpdates = async () => {
-    //  try {
-    //    const res = await fetch("./data/updates.json");
-    //    if (!res.ok) throw new Error("Failed to fetch updates");
-    //    const json = await res.json();
-    //    setUpdates(json);
-    //  } catch (err: any) {
-    //    setError(err.message || "Unknown error");
-    //  } finally {
-    //    setLoading(false);
-    //  }
-    //};
-    //loadUpdates();
-    fetchData("GET", "data/updates.json", "json", (data: any) => { setUpdates(data); setLoading(false); } ) 
-  }, []);
-
   const sortedUpdates = [...updates].sort((a, b) => {
     const dateA = Date.parse(toISO(a.date));
     const dateB = Date.parse(toISO(b.date));
@@ -67,7 +24,7 @@ const NewsAndUpdatesPage = () => {
   const [isMobile, setIsMobile] = useState(false);
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 640);
+      setIsMobile(window.innerWidth < 770);
     };
 
     handleResize(); // Initial check
@@ -89,9 +46,9 @@ const NewsAndUpdatesPage = () => {
   const paginatedUpdates = isMobile
     ? restUpdates
     : restUpdates.slice(
-      (currentPage - 1) * itemsPerPage,
-      currentPage * itemsPerPage
-    );
+        (currentPage - 1) * itemsPerPage,
+        currentPage * itemsPerPage
+      );
   // Handlers
   const nextPage = () =>
     setCurrentPage((prev) => Math.min(prev + 1, totalPages));
@@ -119,45 +76,14 @@ const NewsAndUpdatesPage = () => {
   // close pop up when clicking outside
   useOutsideClick(ref, () => setActive(null));
 
-  // Nests unordered lists with custom bullet symbols based on depth
-  const RecursiveList: React.FC<{
-    items: ListItem[];
-    ordered?: boolean;
-    depth?: number;
-  }> = ({ items, ordered, depth = 0 }) => {
-    const bulletSymbols = ["•", "◦", "▪", "–", "»"];
-    return (
-      <ul className="pl-4 space-y-1">
-        {items.map((item, i) => {
-          const symbol = ordered ? "" : bulletSymbols[Math.min(depth, bulletSymbols.length - 1)];
-
-          if (typeof item === "string") {
-            return (
-              <li key={i}>
-                {!ordered && <span className="mr-1">{symbol}</span>}
-                {item}
-              </li>
-            );
-          }
-
-          return (
-            <li key={i}>
-              {!ordered && <span className="mr-1">{symbol}</span>}
-              {item.text}
-              {item.children && (
-                <RecursiveList items={item.children} ordered={ordered} depth={depth + 1} />
-              )}
-            </li>
-          );
-        })}
-      </ul>
-    );
-  };
-
-  if (loading) return <div className="text-white p-6">Loading updates...</div>;
-  if (error) return <div className="text-red-500 p-6">Error: {error}</div>;
   return (
-    <div className="min-h-screen bg-black p-6">
+    <div className="min-h-screen bg-[url('images/items-background.png')] 
+    bg-[#BBB] bg-size-[90%] md:bg-size-[80%] bg-repeat bg-fixed bg-cover bg-blend-difference pt-[1rem]">
+       <img
+              src=" images/news-banner.png"
+              className="flex justify-self-center w-[100%] md:w-[45%] 2xl:w-[35%] pt-8 mb-[1rem]"
+            ></img>
+      {/* <HeaderBanner text="News and Updates" imgsrc="images/blank-header.png"></HeaderBanner> */}
       {/* overlay behind pop up when active */}
       <AnimatePresence>
         {active && typeof active === "object" && (
@@ -177,10 +103,11 @@ const NewsAndUpdatesPage = () => {
             <motion.div
               layoutId={`item-${active.title}-${id}`}
               ref={ref}
-              className={`w-19/20 h-[90%] md:h-130 md:max-h-[90%] bg-white dark:bg-neutral-900 rounded-3xl overflow-hidden ${isMobile
-                ? "flex flex-col overflow-y-auto"
-                : "flex flex-col md:flex-row"
-                }`}
+              className={`w-18/20 h-[90%] md:h-150 md:max-h-[70%] bg-white dark:bg-neutral-900 rounded-3xl overflow-hidden ${
+                isMobile
+                  ? "flex flex-col overflow-y-auto"
+                  : "flex flex-col md:flex-row"
+              }`}
             >
               {isMobile ? (
                 // Mobile layout
@@ -189,7 +116,7 @@ const NewsAndUpdatesPage = () => {
                     <img // Moblie image
                       src={active.image}
                       alt={active.title}
-                      className="w-full object-cover object-top"
+                      className="w-full max-h-72 object-top"
                     />
                   </motion.div>
                   <div className="relative w-full flex flex-col p-6 h-full overflow-hidden">
@@ -203,54 +130,16 @@ const NewsAndUpdatesPage = () => {
                     </button>
                     <motion.h3 // Mobile title
                       layoutId={`title-${active.title}-${id}`}
-                      className="text-2xl font-semibold text-neutral-700 dark:text-neutral-200 mb-4"
+                      className="text-header3 text-black mb-4"
                     >
                       {active.title}
                     </motion.h3>
-                    <div className="flex-1 overflow-y-auto pr-2 text-neutral-600 dark:text-neutral-400 space-y-4">
-                      {/* Adds paragraphs to the expandable card*/}
-                      {active.text.map((block, i) => {
-                        if (block.type === "paragraph") return <p key={i}>{block.text}</p>;
-                        {/* Adds headings to the expandable card*/ }
-                        if (block.type === "heading") {
-                          const HeadingTag = `h${block.level || 2}` as any;
-                          return (
-                            <HeadingTag
-                              key={i}
-                              className="font-bold text-neutral-800 dark:text-neutral-100 mt-4 text-xl"
-                            >
-                              {block.text}
-                            </HeadingTag>
-                          );
-                        }
-                        {/* Adds lists to the expandable card*/ }
-                        if (block.type === "list") {
-                          const ListTag = block.ordered ? "ol" : "ul";
-                          return (
-                            <ListTag
-                              key={i}
-                              className={`${block.ordered ? "list-decimal" : "list-disc"} list-inside pl-4 space-y-1`}
-                            >
-                              <RecursiveList items={block.items ?? []} ordered={block.ordered} />
-                            </ListTag>
-                          );
-                        }
-                        {/* Adds images to the expandable card*/ }
-                        if (block.type === "image") {
-                          return (
-                            <div key={i} className="my-4">
-                              <img src={block.src} alt={block.alt || ""} className="w-full rounded-md" />
-                              {block.caption && (
-                                <p className="text-sm text-center text-neutral-500 mt-1 italic">
-                                  {block.caption}
-                                </p>
-                              )}
-                            </div>
-                          );
-                        }
-                        return null;
-                      })}
-                    </div>
+                    <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.worker.min.js">
+                      <Viewer
+                        fileUrl={active.contentLink}
+                        defaultScale={SpecialZoomLevel.PageWidth}
+                      />
+                    </Worker>
                   </div>
                 </>
               ) : (
@@ -258,16 +147,16 @@ const NewsAndUpdatesPage = () => {
                 <>
                   <motion.div
                     layoutId={`image-${active.title}-${id}`}
-                    className="min-w-4/10 md:h-auto"
+                    className="min-w-2/5 md:h-auto"
                   >
                     <img // Desktop image
                       src={active.image}
                       alt={active.title}
-                      className="w-full h-full object-cover object-top rounded-xl"
+                      className="w-full h-full object-top"
                     />
                   </motion.div>
 
-                  <div className="relative w-full flex flex-col p-6 h-full overflow-hidden">
+                  <div className="relative w-full flex flex-col p-6 min-w-3/5 xl:min-w-2/5 h-full overflow-hidden">
                     {/* x button */}
                     <button
                       onClick={() => setActive(null)}
@@ -279,55 +168,17 @@ const NewsAndUpdatesPage = () => {
 
                     <motion.h3 // Desktop title
                       layoutId={`title-${active.title}-${id}`}
-                      className="text-2xl font-semibold text-neutral-700 dark:text-neutral-200 mb-4"
+                      className="text-header3 text-black mb-4"
                     >
                       {active.title}
                     </motion.h3>
 
-                    <div className="flex-1 overflow-y-auto pr-2 text-neutral-600 dark:text-neutral-400 space-y-4">
-                      {active.text.map((block, i) => {
-                        {/* Adds paragraphs to the expandable card*/ }
-                        if (block.type === "paragraph") return <p key={i}>{block.text}</p>;
-                        {/* Adds headings to the expandable card*/ }
-                        if (block.type === "heading") {
-                          const HeadingTag = `h${block.level || 2}` as any;
-                          return (
-                            <HeadingTag
-                              key={i}
-                              className="font-bold text-neutral-800 dark:text-neutral-100 mt-4 text-xl"
-                            >
-                              {block.text}
-                            </HeadingTag>
-                          );
-                        }
-                        {/* Adds lists to the expandable card*/ }
-                        if (block.type === "list") {
-                          const ListTag = block.ordered ? "ol" : "ul";
-                          return (
-                            <ListTag
-                              key={i}
-                              className={`${block.ordered ? "list-decimal" : "list-disc"} list-inside pl-4 space-y-1`}
-                            >
-                              <RecursiveList items={block.items ?? []} ordered={block.ordered} />
-                            </ListTag>
-                          );
-                        }
-                        {/* Adds images to the expandable card*/ }
-                        if (block.type === "image") {
-                          return (
-                            <div key={i} className="my-4">
-                              <img src={block.src} alt={block.alt || ""} className="w-full rounded-md" />
-                              {block.caption && (
-                                <p className="text-sm text-center text-neutral-500 mt-1 italic">
-                                  {block.caption}
-                                </p>
-                              )}
-                            </div>
-                          );
-                        }
-                        return null;
-                      })}
-                    </div>
+                    <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.worker.min.js">
+                      <Viewer
+                        fileUrl={active.contentLink}
+                        defaultScale={SpecialZoomLevel.PageWidth}
+                      />
+                    </Worker>
                   </div>
                 </>
               )}
@@ -336,32 +187,34 @@ const NewsAndUpdatesPage = () => {
         ) : null}
       </AnimatePresence>
       {/* Most recent update */}
-      <motion.div
-        layoutId={`item-${mostRecentUpdate.title}-${id}`}
-        key={mostRecentUpdate.id}
-        onClick={() => setActive(mostRecentUpdate)}
-        className="col-span-1 sm:col-span-2 lg:col-span-3 bg-white text-black rounded-xl shadow overflow-hidden cursor-pointer hover:scale-105 m-4"
-      >
-        <img
-          src={mostRecentUpdate.image}
-          alt={mostRecentUpdate.title}
-          className="w-full h-96 object-cover"
-        />
-        <div className="p-4">
-          <p className="text-xs text-[#F76902] font-semibold mb-1">
-            {mostRecentUpdate.date}
-          </p>
-          <h2 className="text-lg font-bold">{mostRecentUpdate.title}</h2>
-          <p className="text-sm mt-1">{mostRecentUpdate.subtitle}</p>
-        </div>
-      </motion.div>
+      <div className="flex justify-center">
+        <motion.div
+          layoutId={`item-${mostRecentUpdate.title}-${id}`}
+          key={mostRecentUpdate.id}
+          onClick={() => setActive(mostRecentUpdate)}
+          className="col-span-1 sm:col-span-2 lg:col-span-3 max-w-200 bg-white text-black rounded-xl shadow overflow-hidden cursor-pointer m-4"
+        >
+          <img
+            src={mostRecentUpdate.image}
+            alt={mostRecentUpdate.title}
+            className="w-full max-h-96 object-cover transition-transform duration-300 hover:scale-120"
+          />
+          <div className="p-4 bg-white relative z-2">
+            <p className="text-xs text-[#F76902] font-semibold mb-1">
+              {mostRecentUpdate.date}
+            </p>
+            <h2 className="text-lg font-bold">{mostRecentUpdate.title}</h2>
+            <p className="text-sm mt-1">{mostRecentUpdate.subtitle}</p>
+          </div>
+        </motion.div>
+      </div>
 
       {/* Grid container: 
             - 1 column on small screens,
             - 2 columns on small+ (sm),
             - 3 columns on large+ (lg),
             - with spacing (gap-6) between items */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid m-auto grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-[1300px]">
         {/* Map over the updates array to render each update card */}
         {paginatedUpdates.map((update, index) => {
           //const globalIndex = (currentPage - 1) * itemsPerPage + index;
@@ -377,27 +230,31 @@ const NewsAndUpdatesPage = () => {
               key={update.id} // Unique key for each item
               onClick={() => setActive(update)}
               // Full width for all images, but height depends on if it's full-width or not
-              className={`${isFullWidth ? "col-span-1 sm:col-span-2 lg:col-span-3" : ""
-                } bg-white text-black rounded-xl shadow overflow-hidden 
-        cursor-pointer hover:scale-105 m-4`}
+              className={`${
+                isFullWidth ? "col-span-1 sm:col-span-2 lg:col-span-3" : ""
+              } bg-white text-black rounded-xl shadow overflow-hidden 
+              cursor-pointer m-4`}
             >
               {/* Image */}
               <img
                 src={update.image}
                 alt={update.title}
-                className={`w-full ${isFullWidth ? "h-96" : "h-72"
-                  } object-cover`}
+                className={`w-full transition-transform duration-300 hover:scale-120 object-fill ${
+                  isFullWidth ? "h-96" : "h-72"
+                } `}
               />
               {/* Text content of the update */}
-              <div className="p-4">
+              <div className="p-4 relative bg-white z-2">
                 {/* Date */}
-                <p className="text-xs text-[#F76902] font-semibold mb-1">
+                <p className="text-[15px] poppins text-[#F76902] font-bold mb-1">
                   {update.date}
                 </p>
                 {/* Title */}
-                <h2 className="text-lg font-bold">{update.title}</h2>
+                <h2 className="text-[24px] poppins font-bold">
+                  {update.title}
+                </h2>
                 {/* Subtitle */}
-                <p className="text-sm mt-1">{update.subtitle}</p>
+                <p className="text-body mt-1">{update.subtitle}</p>
               </div>
             </motion.div>
           );
@@ -409,15 +266,15 @@ const NewsAndUpdatesPage = () => {
           <button
             onClick={prevPage}
             disabled={currentPage === 1}
-            className="px-4 py-2 bg-gray-700 text-white rounded disabled:opacity-50"
+            className="cursor-pointer disabled:cursor-auto px-4 py-2 bg-gray-700 text-white rounded disabled:opacity-50 hover:bg-gray-600"
           >
             Previous
           </button>
-          <span className="text-white">{`Page ${currentPage} of ${totalPages}`}</span>
+          <div className="text-white px-4 py-2">{`Page ${currentPage} of ${totalPages}`}</div>
           <button
             onClick={nextPage}
             disabled={currentPage === totalPages}
-            className="px-4 py-2 bg-gray-700 text-white rounded disabled:opacity-50"
+            className="cursor-pointer disabled:cursor-auto px-4 py-2 bg-gray-700 text-white rounded disabled:opacity-50 hover:bg-gray-600"
           >
             Next
           </button>
@@ -428,7 +285,7 @@ const NewsAndUpdatesPage = () => {
         <div className="flex justify-center mt-4">
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="px-4 py-2 bg-gray-700 text-white rounded disabled:opacity-50"
+            className="px-4 py-2 bg-gray-700 text-white rounded disabled:opacity-50 hover:bg-gray-600"
           >
             ↑ Back to top
           </button>
@@ -437,7 +294,5 @@ const NewsAndUpdatesPage = () => {
     </div>
   );
 };
-
- 
 
 export default NewsAndUpdatesPage;

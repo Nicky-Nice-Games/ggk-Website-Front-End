@@ -1,26 +1,24 @@
-import { cn } from "@/lib/utils"
-import { Button } from "@/components/ui/button"
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { useNavigate } from "react-router-dom"
+import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 
+interface SignupFormProps extends React.ComponentProps<"div"> {
+  onSignupClick?: () => void;
+}
 export function SignupForm({
   className,
+  onSignupClick,
   ...props
-}: React.ComponentProps<"div">) {
-  const navigate = useNavigate();
-
+}: SignupFormProps) {
   return (
     <div className={cn("flex flex-col gap-6", className)} {...props}>
       <Card className="bg-[#1a1a1a]">
         <CardHeader className="text-center">
-          <CardTitle className="text-xl text-white">Join The Competition</CardTitle>
+          <CardTitle className="text-xl text-white">
+            Join The Competition
+          </CardTitle>
         </CardHeader>
         <CardContent>
           <form>
@@ -51,10 +49,14 @@ export function SignupForm({
                     <a
                       href="#"
                       className="ml-auto text-sm underline-offset-4 hover:underline text-[#F76902]"
-                    >
-                    </a>
+                    ></a>
                   </div>
-                  <Input id="password" type="password" required />
+                  <Input
+                    id="password"
+                    type="password"
+                    className="text-white"
+                    required
+                  />
                 </div>
                 <div className="grid gap-3">
                   <div className="flex items-center text-[#D0D3D4]">
@@ -62,19 +64,28 @@ export function SignupForm({
                     <a
                       href="#"
                       className="ml-auto text-sm underline-offset-4 hover:underline text-[#F76902]"
-                    >
-                    </a>
+                    ></a>
                   </div>
-                  <Input id="retype-password" type="password" required />
+                  <Input
+                    id="retype-password"
+                    type="password"
+                    className="text-white"
+                    required
+                  />
                 </div>
-                <Button type="submit" className="w-full border border-1 text-white bg-[#F76902]" //onSubmit={() => login()}
+                <Button
+                  type="submit"
+                  className="w-full border border-1 text-white bg-[#F76902]"
                 >
                   Start Racing
                 </Button>
               </div>
               <div className="text-center text-sm text-[#D0D3D4]">
                 Already have an account?{" "}
-                <button onClick={() => navigate('/login')} className="underline underline-offset-4 text-[#F76902]">
+                <button
+                  onClick={onSignupClick}
+                  className="underline underline-offset-4 cursor-pointer text-[#F76902]"
+                >
                   Login
                 </button>
               </div>
@@ -83,5 +94,5 @@ export function SignupForm({
         </CardContent>
       </Card>
     </div>
-  )
+  );
 }
