@@ -94,10 +94,9 @@ const AboutUsPage = () => {
 
   return (
     <>
-      <main
-        className="min-h-screen p-4 md:p-8 md:px-3 pb-[4rem] bg-[#18181b] bg-fixed bg-cover bg-repeat"
-        style={{ backgroundImage: "url('/ggk/images/items-background.png')" }}
-      >
+      <main className="min-h-screen p-4 md:p-8 md:px-3 pb-[4rem] 
+      bg-[#BBB] bg-[url('images/items-background.png')] 
+      bg-fixed bg-cover bg-repeat bg-blend-difference bg-size-[90%] md:bg-size-[80%]">
         <div className="max-w-7xl mx-auto">
           <img
             src="images/test-header-banner.png"

@@ -61,14 +61,14 @@ export const ItemCard = memo(function ItemCard({
             setIsActive(true);
             setActiveItem(items[0]);
           }}
-          className="cursor-pointer"
+          className="cursor-pointer rounded-full h-50 w-50 xl:h-80 xl:w-80 overflow-hidden"
         >
           <motion.div layoutId={`image-${category}-${id}`}>
-            <div className="rounded-xl h-80 w-80 flex hover:scale-105 transition-transform duration-200">
+            <div className="h-full w-full flex p-[1rem] hover:scale-105 transition-transform duration-200">
               <img
                 src={items[0].imgUrl}
                 alt={items[0].name}
-                className="h-80 w-80 object-contain"
+                className="h-full w-full object-cover pointer-events-none"
               />
             </div>
           </motion.div>
@@ -118,7 +118,7 @@ export const ItemCard = memo(function ItemCard({
                   height={200}
                   src={activeItem.imgUrl}
                   alt={activeItem.name}
-                  className="w-72 h-72 object-contain"
+                  className="w-60 h-60 object-contain"
                 />
 
                 {/* Level Tabs */}
@@ -144,13 +144,13 @@ export const ItemCard = memo(function ItemCard({
                   <div className="w-full">
                     <motion.h3
                       layoutId={`title-${category}-${id}`}
-                      className="bg-[url(images/arrow.png)] bg-size-[70%_100%] bg-center bg-no-repeat py-2 font-medium text-white dark:text-neutral-200 text-2xl mb-4 text-center"
+                      className="bg-[url(images/arrow.png)] bg-size-[70%_100%] bg-center bg-no-repeat py-2 text-white dark:text-neutral-200 poppins text-[24px] font-bold mb-4 text-center"
                     >
                       {activeItem.name}
                     </motion.h3>
                     <motion.p
                       layoutId={`description-${category}-${id}`}
-                      className="text-neutral-600 dark:text-neutral-400 text-base text-center"
+                      className="text-neutral-600 dark:text-neutral-400 text-base text-center text-body"
                     >
                       {activeItem.description}
                     </motion.p>

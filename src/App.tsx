@@ -6,25 +6,21 @@ import {
   Navigate,
 } from "react-router-dom";
 
-import LoginPage from "./pages/Login";
-import SignupPage from "./pages/Signup";
 import AboutUsPage from "./pages/AboutUs";
 import ProcessPage from "./pages/Process";
-import { ContentPage } from "./pages/content/Content";
+import { MascotPage } from "./pages/content/MascotPage";
 import { TracksPage } from "./pages/content/TracksPage";
 import { CharactersPage } from "./pages/content/CharactersPage";
 import { ItemsPage } from "./pages/content/ItemsPage";
-import ForumPage from "./pages/Forum";
 import HomePage from "./pages/Home";
 import LeaderboardPage from "./pages/Leaderboard";
 import NewsAndUpdatesPage from "./pages/NewsAndUpdates";
 import PlayerStatsPage from "./pages/PlayerStats";
 import NoPage from "./pages/NoPage";
 import Navbar from "./components/navbar";
-import ForumPost from "./pages/ForumPost";
 import Footer from "./components/footer";
 import { useEffect, useState } from "react";
-
+import AuthenticationPage from "./pages/Authentication";
 export interface AccountSchema {
   pid: string;
   username: string;
@@ -45,11 +41,11 @@ function App() {
 
       // Set account to dummy data for testing purposes.
       // COMMENT THIS OUT BEFORE YOU BUILD.
-      setAccount({
-        pid: "string",
-        username: "string",
-        pfp: 0,
-      });
+      // setAccount({
+      //   pid: "string",
+      //   username: "string",
+      //   pfp: 0,
+      // });
       return;
     }
     const storedAccount: AccountSchema = {
@@ -74,16 +70,12 @@ function App() {
           <Route path="/" element={<Navigate to="/home" replace />} />
           <Route
             path="/login"
-            element={<LoginPage setAccount={setAccount} />}
+            element={<AuthenticationPage setAccount={setAccount} />}
           />
-          <Route
-            path="/signup"
-            element={<SignupPage setAccount={setAccount} />}
-          />
+
           <Route path="/aboutUs" element={<AboutUsPage />} />
           <Route path="/process" element={<ProcessPage />} />
-          <Route path="/content" element={<ContentPage />} />
-          <Route path="/forum" element={<ForumPage />} />
+          <Route path="/mascot" element={<MascotPage />} />
           <Route
             path="/home"
             element={<HomePage setCurrentPage={setCurrentPage} />}
@@ -96,7 +88,6 @@ function App() {
               <PlayerStatsPage account={account} setAccount={setAccount} />
             }
           />
-          <Route path="/forumPost" element={<ForumPost />} />
           <Route path="/characters" element={<CharactersPage />} />
           <Route path="/tracks" element={<TracksPage />} />
           <Route path="/items" element={<ItemsPage />} />
