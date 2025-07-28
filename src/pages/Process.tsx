@@ -184,7 +184,7 @@ const ProcessPage = () => {
         </div>
 
         {/* Track Dev Info Section */}
-        <h1 className="text-[40px] poppins m-4 mx-0 mb-4">
+        <h1 className="text-header2 m-4 mx-0 mb-4">
           Building our Tracks
         </h1>
         <p className="mb-8 text-body">
@@ -197,7 +197,7 @@ const ProcessPage = () => {
           added as the finishing touch. In addition, track layouts are tweaked
           in response to feedback from playtesters.
         </p>
-        <h1 className="text-header2 m-4 mx-0 mb-4">Building our Tracks</h1>
+  
         <Tabs defaultValue="0" className="w-[90vw]">
           <TabsList className="flex flex-wrap h-full pl-0">
             {tracks.map((t) => {
@@ -213,7 +213,7 @@ const ProcessPage = () => {
             return (
               <TabsContent
                 value={tracks.indexOf(t).toString()}
-                className="text-white"
+                className="text-white text-body"
               >
                 <div className="bg-linear-to-b from-[#F66624] to-[#D84B3A] p-5 rounded-e-2xl rounded-b-2xl mb-3">
                   {t.devDescription}
@@ -225,7 +225,7 @@ const ProcessPage = () => {
             <div className="bg-linear-to-b from-[#F66624] to-[#D84B3A] p-5 rounded-e-2xl rounded-b-2xl mb-3 *:mb-5">
               <div className="flex flex-col md:flex-row">
                 <div className="md:mr-10">
-                  <h1 className="text-3xl font-bold poppins mb-3">
+                  <h1 className="text-header3 mb-3">
                     Quarter-Mile
                   </h1>
                   <p className="text-body">
@@ -245,7 +245,7 @@ const ProcessPage = () => {
               </div>
               <div className="flex flex-col md:flex-row-reverse">
                 <div className="md:ml-10">
-                  <h1 className="text-3xl font-bold poppins mb-3">
+                  <h1 className="text-header3 mb-3">
                     Global Village
                   </h1>
                   <p className="text-body">
@@ -263,7 +263,7 @@ const ProcessPage = () => {
                 />
               </div>
               <div>
-                <h1 className="text-3xl font-bold poppins mb-3">
+                <h1 className="text-header3 mb-3">
                   Other Cut Track Concepts
                 </h1>
                 <ul className="list-disc ml-5 *:mb-2 text-body">
