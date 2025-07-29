@@ -40,20 +40,22 @@ const CharacterCarousel = ({
       className="flex flex-row w-full items-center justify-center h-fit"
     >
       <CarouselPrevious className="w-8" />
-      <CarouselContent className="m-auto drop-shadow-xl/50 justify-between pb-[8rem] pt-[4rem]">
+      <CarouselContent className="w-[100%] drop-shadow-xl/50 justify-between pb-[8rem] pt-[4rem]">
         {characters.map((character, index) => (
-          <CarouselItem className="md:basis-1/3 flex flex-row justify-center pl-0">
+          <CarouselItem className="basis-3/3 md:basis-1/3 flex flex-row justify-center pl-0">
             <Dialog>
-              {/* Clickable carousel picture*/}
-              <DialogTrigger className="cursor-pointer w-[45%] md:[45%] lg:w-[45%] xl:w-[65%] hover:scale-105">
-                <img
-                  src={character.imgUrl}
-                  alt={character.name}
-                  className={`w-[100%] p-auto ${
-                    index === center - 1 ? "scale-130" : ""
-                  }`}
-                />
-              </DialogTrigger>
+              <div className="w-full flex justify-center translate-x-[32px]">
+                  {/* Clickable carousel picture*/}
+                <DialogTrigger className="cursor-pointer w-[45%] md:[45%] lg:w-[45%] xl:w-[65%] hover:scale-105">
+                  <img
+                    src={character.imgUrl}
+                    alt={character.name}
+                    className={`w-[100%] p-auto ${
+                      index === center - 1 ? "scale-130" : ""
+                    }`}
+                  />
+                </DialogTrigger>
+              </div>
 
               {/* Fullscreen content popup*/}
               <DialogContent showCloseButton={false} className={contentClass}>

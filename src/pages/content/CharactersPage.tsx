@@ -17,7 +17,7 @@ const CharactersPage = () => {
           style=
           {{
             backgroundImage:
-            "linear-gradient(rgba(160, 160, 160, 1), rgba(104, 104, 104, 1)), url('images/items-background-darkoutline.png')",
+            "linear-gradient(rgba(104, 104, 104, 1),rgba(104, 104, 104, 1), rgba(160, 160, 160, 1)), url('images/items-background-darkoutline.png')",
         }}
       >
         <img
@@ -38,7 +38,7 @@ const CharactersPage = () => {
                 <>
                   <div
                     className="absolute -top-85 
-                      lg:-top-60 lg:left-0 min-w-60 lg:w-100 z-10"
+                      lg:-top-60 lg:left-0 min-w-60 lg:w-100 z-10 translate-x-[32px]"
                   >
                     <img
                       src={character.imgUrl}
@@ -46,7 +46,7 @@ const CharactersPage = () => {
                       className="max-h-90 lg:max-h-180"
                     />
                   </div>
-                  <div className="absolute lg:-top-10 lg:right-5 w-full lg:w-4/5 flex bg-white justify-end rounded-lg drop-shadow-xl/50 overflow-hidden min-w-1/4 max-w-4xl sm:h-65git ">
+                  <div className="absolute lg:-top-10 lg:right-5 w-full lg:w-4/5 flex bg-white justify-end rounded-lg drop-shadow-xl/50 overflow-hidden min-w-1/4 max-w-4xl ">
                     {/* right side: character name and description */}
                     <DialogDescription className="p-4 w-full lg:min-h-70 text-left">
                       <div className="text-center lg:text-left lg:w-7/10 lg:ml-auto h-full">
