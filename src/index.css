@@ -142,6 +142,13 @@
 
 @font-face {
   font-family: "Poppins";
+  src: url("font/Poppins-Bold.ttf") format("opentype");
+  font-weight: bold;
+  font-display: swap; /* Optional: improves loading behavior */
+}
+
+@font-face {
+  font-family: "Poppins";
   src: url("font/Poppins-Regular.ttf") format("opentype");
   font-weight: normal;
   font-display: swap; /* Optional: improves loading behavior */
