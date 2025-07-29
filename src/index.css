@@ -149,12 +149,19 @@
 
 @font-face {
   font-family: "Next Bravo";
-  src: url('font/Next Bravo.ttf') format('truetype');
+  src: url("font/Next Bravo.ttf") format("truetype");
   font-weight: normal;
   font-display: swap; /* Optional: improves loading behavior */
 }
-.poppins
-{
+
+@font-face {
+  font-family: "Racing Sans One";
+  src: url("font/RacingSansOne-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-display: swap; /* Optional: improves loading behavior */
+}
+
+.poppins {
   font-family: "Poppins", sans-serif;
 }
 
@@ -162,53 +169,46 @@
   font-family: "Bebas Neue", sans-serif;
 }
 
-.graffiti {
-  font-family: "Graffiti Youth", serif;
-  letter-spacing: 1px;
-}
-
 .painterz {
   font-family: "Painterz", sans-serif;
 }
 
 .bravo {
-  font-family: 'Next Bravo';
+  font-family: "Next Bravo";
 }
+
+.racing {
+  font-family: "Racing Sans One";
+}
+
 @media screen and (min-width: 768px) {
   .slanted-text {
-  font-family: 'Aileron-Slight-Slant', sans-serif;
+    font-family: "Aileron-Slight-Slant", sans-serif;
   }
 }
 
 @media screen and (min-width: 1280px) {
   .slanted-text {
-  font-family: 'Aileron-Heavy-Slant', sans-serif;
+    font-family: "Aileron-Heavy-Slant", sans-serif;
   }
 }
 
 .navbar-passive-outline {
-  color:#fffbee
+  color: #fffbee;
 }
 
 .navabar-passive-outline:hover {
- color:#e7ee33
+  color: #e7ee33;
 }
 
 .navbar-active-outline {
   color: #e7ee33;
 }
 
-
 .passive-outline {
-  text-shadow:
-    -1px -1px 0 #e7ee33,
-     0   -1px 0 #e7ee33,
-     1px -1px 0 #e7ee33,
-     1px  0   0 #e7ee33,
-     1px  1px 0 #e7ee33,
-     0    1px 0 #e7ee33,
-    -1px  1px 0 #e7ee33,
-    -1px  0   0 #e7ee33;
+  text-shadow: -1px -1px 0 #e7ee33, 0 -1px 0 #e7ee33, 1px -1px 0 #e7ee33,
+    1px 0 0 #e7ee33, 1px 1px 0 #e7ee33, 0 1px 0 #e7ee33, -1px 1px 0 #e7ee33,
+    -1px 0 0 #e7ee33;
 }
 
 .passive-outline {
