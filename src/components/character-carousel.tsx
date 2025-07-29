@@ -37,19 +37,19 @@ const CharacterCarousel = ({
   return (
     <Carousel
       setApi={setApi}
-      className="flex flex-row w-full items-center justify-between"
+      className="flex flex-row w-full items-center justify-center h-fit"
     >
       <CarouselPrevious className="w-8" />
-      <CarouselContent className="m-auto py-30 drop-shadow-xl/50 justify-between">
+      <CarouselContent className="m-auto drop-shadow-xl/50 justify-between pb-[8rem] pt-[4rem]">
         {characters.map((character, index) => (
           <CarouselItem className="md:basis-1/3 flex flex-row justify-center pl-0">
             <Dialog>
               {/* Clickable carousel picture*/}
-              <DialogTrigger className="cursor-pointer hover:scale-105">
+              <DialogTrigger className="cursor-pointer w-[45%] md:[45%] lg:w-[45%] xl:w-[65%] hover:scale-105">
                 <img
                   src={character.imgUrl}
                   alt={character.name}
-                  className={`w-35 lg:w-55 xl:w-75 p-auto ${
+                  className={`w-[100%] p-auto ${
                     index === center - 1 ? "scale-130" : ""
                   }`}
                 />
