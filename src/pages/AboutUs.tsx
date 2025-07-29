@@ -99,9 +99,9 @@ const AboutUsPage = () => {
       bg-fixed bg-cover bg-repeat bg-blend-difference bg-size-[90%] md:bg-size-[80%]">
         <div className="max-w-7xl mx-auto">
           <img
-            src="images/test-header-banner.png"
-            className="mx-auto w-full md:w-1/2 mb-8"
-            alt="Team banner"
+            src="images/team-header.png"
+            className="mx-auto pt-[2rem] w-full md:w-1/2 mb-4"
+            alt="About The Project"
           />
           <div className="w-full text-center">
             <TeamTabs teamData={teamData} defaultTab="GSP" />

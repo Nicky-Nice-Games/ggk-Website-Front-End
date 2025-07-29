@@ -22,7 +22,7 @@ const CharactersPage = () => {
 
       <img
         src=" images/characters-banner.png"
-        className="flex justify-self-center w-[40%] md:w-[40%] mb-[5px] mt-[5px]"
+        className="mx-auto pt-[2rem] w-full md:w-2/5 mb-4"
       ></img>
 
       <h1 className="text-center poppins text-md text-[#fffbee]">
