@@ -41,7 +41,9 @@ const Navbar = ({
       <button
         className={`cursor-pointer ${
           // Highlight the text if user is on the same page as this button
-          currentPage == "login" ? "navbar-active-outline" : "navbar-passive-outline"
+          currentPage == "login"
+            ? "navbar-active-outline"
+            : "navbar-passive-outline"
         }`}
         onClick={() => {
           scrollToTop();
@@ -64,12 +66,16 @@ const Navbar = ({
     <NavigationMenuItem className="list-none md:mr-4">
       <NavigationMenuTrigger
         className={`${navbarButton} bg-inherit ${
-          currentPage === "stats" ? "navbar-active-outline" : "navbar-passive-outline"
+          currentPage === "stats"
+            ? "navbar-active-outline"
+            : "navbar-passive-outline"
         }`}
       >
         <button
           className={`cursor-pointer ${
-            currentPage === "stats" ? "navbar-active-outline" : "navbar-passive-outline"
+            currentPage === "stats"
+              ? "navbar-active-outline"
+              : "navbar-passive-outline"
           }`}
         >
           {/*Username won't appear on mobile*/}
@@ -136,12 +142,16 @@ const Navbar = ({
       <NavigationMenuItem>
         <NavigationMenuTrigger
           className={`${navbarButton} bg-inherit ${
-            currentPage === "about" ? "navbar-active-outline" : "navbar-passive-outline"
+            currentPage === "about"
+              ? "navbar-active-outline"
+              : "navbar-passive-outline"
           }`}
         >
           <button
             className={`cursor-pointer ${
-              currentPage === "about" ? "navbar-active-outline" : "navbar-passive-outline"
+              currentPage === "about"
+                ? "navbar-active-outline"
+                : "navbar-passive-outline"
             }`}
             onClick={() => {
               scrollToTop();
@@ -180,12 +190,16 @@ const Navbar = ({
       <NavigationMenuItem>
         <NavigationMenuTrigger
           className={`${navbarButton} bg-inherit ${
-            currentPage === "content" ? "navbar-active-outline" : "navbar-passive-outline"
+            currentPage === "content"
+              ? "navbar-active-outline"
+              : "navbar-passive-outline"
           }`}
         >
           <button
             className={`cursor-pointer ${
-              currentPage === "content" ? "navbar-active-outline" : "navbar-passive-outline"
+              currentPage === "content"
+                ? "navbar-active-outline"
+                : "navbar-passive-outline"
             }`}
             onClick={() => {
               scrollToTop();
@@ -245,12 +259,16 @@ const Navbar = ({
       </NavigationMenuItem>
       <NavigationMenuLink
         className={`${navbarButton} ${
-          currentPage === "news" ? "navbar-active-outline" : "navbar-passive-outline"
+          currentPage === "news"
+            ? "navbar-active-outline"
+            : "navbar-passive-outline"
         }`}
       >
         <button
           className={`cursor-pointer ${
-            currentPage === "news" ? "navbar-active-outline" : "navbar-passive-outline"
+            currentPage === "news"
+              ? "navbar-active-outline"
+              : "navbar-passive-outline"
           } mx-1`}
           onClick={() => {
             scrollToTop();
@@ -263,12 +281,16 @@ const Navbar = ({
       </NavigationMenuLink>
       <NavigationMenuLink
         className={`${navbarButton} ${
-          currentPage === "leaderboard" ? "navbar-active-outline" : "navbar-passive-outline"
+          currentPage === "leaderboard"
+            ? "navbar-active-outline"
+            : "navbar-passive-outline"
         }`}
       >
         <button
           className={`cursor-pointer ${
-            currentPage === "leaderboard" ? "navbar-active-outline" : "navbar-passive-outline"
+            currentPage === "leaderboard"
+              ? "navbar-active-outline"
+              : "navbar-passive-outline"
           } mx-1`}
           onClick={() => {
             scrollToTop();
@@ -289,10 +311,12 @@ const Navbar = ({
         <NavigationMenuTrigger className={`${navbarButton} bg-inherit`}>
           <p className="navbar-passive-outline">Pages</p>
         </NavigationMenuTrigger>
-        <NavigationMenuContent className="absolute -left-5 min-w-30">
+        <NavigationMenuContent className="absolute -left-5 min-w-35">
           <NavigationMenuLink
             className={`${
-              currentPage === "about" ? "navbar-active-outline" : "navbar-passive-outline"
+              currentPage === "about"
+                ? "navbar-active-outline"
+                : "navbar-passive-outline"
             }`}
           >
             <button
@@ -308,7 +332,9 @@ const Navbar = ({
           </NavigationMenuLink>
           <NavigationMenuLink
             className={`${
-              currentPage === "content" ? "navbar-active-outline" : "navbar-passive-outline"
+              currentPage === "content"
+                ? "navbar-active-outline"
+                : "navbar-passive-outline"
             }`}
           >
             <button
@@ -324,7 +350,9 @@ const Navbar = ({
           </NavigationMenuLink>
           <NavigationMenuLink
             className={`${
-              currentPage === "news" ? "navbar-active-outline" : "navbar-passive-outline"
+              currentPage === "news"
+                ? "navbar-active-outline"
+                : "navbar-passive-outline"
             }`}
           >
             <button
@@ -364,7 +392,7 @@ const Navbar = ({
   return (
     <NavigationMenu
       viewport={false}
-      className="z-400 bebas tracking-wider h-14 bg-size-[100%] **:font-black sticky top-0 flex flex-row w-full justify-between bg-[url(/ggk/images/navbar/background.png)] font-semibold **:text-base md:**:text-2xl z-300 shadow-xl/20"
+      className="z-400 tracking-wider h-14 bg-size-[100%] **:font-black sticky top-0 flex flex-row w-full justify-between bg-[url(/ggk/images/navbar/background.png)] font-semibold **:text-base md:**:text-xl z-300 shadow-xl/20"
     >
       {/*Left side: Logo button to go home*/}
       <div className="md:min-w-40">
