@@ -46,13 +46,13 @@ const HomePage = ({ setCurrentPage }: HomePageParams) => {
 
   return (
     <>
-      <div className="relative h-[103vh] md:h-[90vh] w-full text-white pb-8 pb-16 bg-black">
+      <div className="relative h-[103vh] md:h-[74vh] w-full text-white pb-8 pb-16 bg-black">
         <div
           id="header-text"
-          className="md:h-9/10 relative md:absolute w-full 
+          className="md:h-3/5 relative md:absolute w-full 
                     md:w-1/2 flex flex-col text-center items-center p-4 z-3 bg-gradient-to-r from-black to-[#0000]"
         >
-          <img className="w-120 md:w-4/5" src="images/Game-Logo.png"></img>
+          <img className="w-120 md:w-7/10" src="images/Game-Logo.png"></img>
           <h3 className="text-xl md:text-4xl poppins text-[#f3f4f6] mt-4 w-full">
             Your Favorite No-Credit Courses!
           </h3>
@@ -64,7 +64,7 @@ const HomePage = ({ setCurrentPage }: HomePageParams) => {
             navigate("/news");
             setCurrentPage("news");
           }}
-          className="absolute bottom-0 md:bottom-12 md:right-12 right-4 z-10 px-10 py-3"
+          className="absolute bottom-0 md:right-12 right-4 z-10 px-10 py-3"
         />
         <HomeCarousel />
       </div>
