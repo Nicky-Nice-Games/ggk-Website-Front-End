@@ -41,11 +41,11 @@ export default function Pfp({
   return (
     <div className={`flex flex-col items-center ${className}`}>
       {/* Picture container - made larger */}
-      <div className="p-1 rounded-full bg-gray-200">
+      <div className="p-1 rounded-full bg-zinc-700">
         <img
           src={pfpList[account.pfp].src}
           alt="Profile"
-          className="rounded-full h-16 w-16 md:h-20 md:w-20 object-cover"
+          className="rounded-full h-18 w-18 md:h-24 md:w-24 object-cover"
         />
       </div>
 
@@ -110,8 +110,8 @@ export default function Pfp({
               })}
             </Tabs>
 
-            <DialogClose className="mt-6 px-6 py-3 w-[30%] text-base border-1 border-white text-white rounded-lg hover:bg-orange-600 transition-colors poppins">
-              Cancel
+            <DialogClose className="cursor-pointer justify-self-center mt-6 px-6 py-3 w-[30%] text-base border-1 border-white text-white rounded-lg hover:bg-orange-600 transition-colors poppins">
+              Done
             </DialogClose>
           </DialogContent>
         </Dialog>

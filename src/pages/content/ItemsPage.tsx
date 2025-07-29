@@ -10,18 +10,18 @@ const ItemsPage = () => {
     <>
       <ContentNavigator currentPage={"items"} />
       <main
-        className="pt-[1rem] min-h-[73vh] bg-size-[110%] bg-blend-multiply w-[100%] bg-size-[90%] md:bg-size-[80%]"
+        className="min-h-[73vh] bg-size-[110%] bg-blend-multiply w-[100%] bg-size-[90%] md:bg-size-[80%]"
         style={{
           backgroundImage:
-            "linear-gradient(rgba(160, 160, 160, 1), rgba(104, 104, 104, 1)), url('images/items-background-darkoutline.png')",
+            "linear-gradient(rgba(104, 104, 104, 1),rgba(104, 104, 104, 1), rgba(160, 160, 160, 1)), url('images/items-background-darkoutline.png')",
         }}
       >
         <img
           src=" images/items-header.png"
-          className="mx-auto pt-[1rem] w-full md:w-2/5 mb-4"
+          className="mx-auto pt-[2rem] w-full md:w-2/5 mb-4"
         ></img>
 
-        <h1 className="text-center text-[#fffbee] poppins text-xl">
+        <h1 className="text-center text-[#fffbee] poppins text-body">
           Click an item to view its effects and levels!
         </h1>
 
