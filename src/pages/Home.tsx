@@ -82,12 +82,12 @@ const HomePage = ({ setCurrentPage }: HomePageParams) => {
 
         <div
           id="introduction"
-          className="pt-20 md:pt-48 w-full pb-16 pl-8 pr-8 w-full 
+          className="pt-20 md:pt-48 pb-16 px-[4vw] md:px-[8vw] w-full 
                     bg-repeat bg-fixed bg-[url('images/black-checker.png')]
-                    text-white"
+                    text-white flex flex-col items-center"
         >
           <h2 className="text-header2 m-4">Game Overview</h2>
-          <p className="text-body m-4">
+          <p className="text-body m-4 text-center">
             Gizmo Go-Kartz is an arcade-style Kart Racer for IGM students to
             play at any time between classes. It has a retro cartoony style
             that's meant to be easily recognizable to students. While having
@@ -114,7 +114,7 @@ const HomePage = ({ setCurrentPage }: HomePageParams) => {
         </div>
         <div
           id="lore"
-          className="px-8 text-center pt-[11%] bg-fixed bg-repeat pb-30 md:pb-50 xl:pb-60 bg-[url('images/white-checker.png')]"
+          className="px-8 md:px-[8vw] text-center pt-[11%] bg-fixed bg-repeat pb-30 md:pb-50 xl:pb-60 bg-[url('images/white-checker.png')]"
         >
           <h2 className="text-header2 m-4">The Lore</h2>
           <p className="text-body m-4">

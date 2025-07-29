@@ -57,7 +57,7 @@ const Navbar = ({
   );
 
   const [loginNavbarItem, setLoginNavbarItem] = useState(loginButton);
-  const isMobileDevice = useMediaQuery({ maxWidth: 500 });
+  const isMobileDevice = useMediaQuery({ maxWidth: 600 });
   const navigate = useNavigate();
 
   // Profile dropdown with link to player stats page and logout button
