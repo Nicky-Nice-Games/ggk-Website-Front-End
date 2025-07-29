@@ -364,7 +364,7 @@ const Navbar = ({
   return (
     <NavigationMenu
       viewport={false}
-      className="z-400 bebas tracking-wider h-14 bg-size-[100%] **:font-black sticky top-0 flex flex-row w-full justify-between bg-[url(/ggk/images/navbar/background.png)] font-semibold **:text-base md:**:text-2xl z-300 shadow-xl/20"
+      className="z-400 poppins tracking-wider h-14 bg-size-[100%] **:font-black sticky top-0 flex flex-row w-full justify-between bg-[url(/ggk/images/navbar/background.png)] font-semibold **:text-base md:**:text-xl shadow-xl/20"
     >
       {/*Left side: Logo button to go home*/}
       <div className="md:min-w-40">
