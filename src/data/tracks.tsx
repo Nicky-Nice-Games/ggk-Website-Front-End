@@ -14,17 +14,16 @@ export const tracks: Track[] = [
     imgUrl: "images/tracks/campus-circuit.png",
     background: `bg-[url(images/tracks/campus-circuit.png)]`,
     name: "Campus Circuit",
-    description:
-      `This Outer Loop is around RIT campus, you may have driven around here as if you drive on campus this loops is used very often,
+    description: `This Outer Loop is around RIT campus, you may have driven around here as if you drive on campus this loops is used very often,
        if you are ready to finally be able to ignore the stop signs and be ready to rev your engine and speed.`,
     devDescription: (
-      <div className="flex flex-col-reverse md:flex-row">
+      <div className="flex flex-col md:flex-row">
         <img
           src="images/tracks/dev-campus-circuit.jpg"
           alt="Outer Loop Sketch"
           className="md:max-w-60 lg:max-w-[20vw]"
         />
-        <p className="md:ml-10 text-center md:text-left">
+        <p className="md:ml-10 text-center md:text-left text-body">
           Campus Circuit is inspired by RIT's "Outer Loop," a large road that
           encircles the entire campus. As such, the track features multiple
           landmarks around campus, such as the Dorm buildings and the Gene
@@ -43,7 +42,12 @@ export const tracks: Track[] = [
       "Remember the days you used to live in the dorm? well if you wanna relive it with a better memory you can, speed around the dorm in tiny karts. if you still live in the dormside or will be living there be ready to live this experience and dont forget to clean your room otherwise little characters might drive around it.",
     devDescription: (
       <div className="flex flex-col md:flex-row">
-        <p className="md:mr-10 text-center md:text-left">
+        <img
+          src="images/tracks/dev-dorm-derby.jpg"
+          alt="Dorm Room Sketch"
+          className="md:max-w-60 lg:max-w-[20vw]"
+        />
+        <p className="md:ml-10 text-center md:text-left text-body">
           The Dorm Room Derby is inspired by RIT's dorm rooms, where students
           make their second homes. Inspired by Mario Kart's Ribbon Road, the
           track was given a clean side and a messy side to its visuals,
@@ -51,11 +55,6 @@ export const tracks: Track[] = [
           track is of intermediate difficulty, testing players that have a basic
           familiarity with the game's mechanics.
         </p>
-        <img
-          src="images/tracks/dev-dorm-derby.jpg"
-          alt="Dorm Room Sketch"
-          className="md:max-w-60 lg:max-w-[20vw]"
-        />
       </div>
     ),
   },
@@ -66,13 +65,13 @@ export const tracks: Track[] = [
     description:
       "Have you ever wanted to go around golisano, well you can now. going past classrooms, up and down the floors.",
     devDescription: (
-      <div className="flex flex-col-reverse md:flex-row">
+      <div className="flex flex-col md:flex-row">
         <img
           src="images/tracks/dev-tech-house.jpg"
           alt="Tech House Sketch"
           className="md:max-w-60 lg:max-w-[20vw]"
         />
-        <p className="md:ml-10">
+        <p className="md:ml-10 text-body">
           Tech House Turnpike is based on Golisano Hall, the primary building
           where many classes for Game Design majors are held. The primary appeal
           of the track is its vertically structured layout, split into 3
@@ -91,7 +90,12 @@ export const tracks: Track[] = [
       do an average rit student event known as an all nighter.`,
     devDescription: (
       <div className="flex flex-col md:flex-row">
-        <p className="md:mr-10">
+        <img
+          src="images/tracks/dev-all-nighter.jpg"
+          alt="Final Brick Road Sketch"
+          className="md:max-w-60 lg:max-w-[20vw]"
+        />
+        <p className="md:ml-10 text-body">
           All-Nighter Expressway is heavily inspired by Mario Kart's Rainbow
           Road, in both aesthetics and challenge level. The track is set in
           nighttime to distinguish itself from the other tracks, which occur in
@@ -100,11 +104,6 @@ export const tracks: Track[] = [
           eponymous practice, All-Nighter Expressway is a final test of skill,
           encompassing the difficulty of all tracks before it.
         </p>
-        <img
-          src="images/tracks/dev-all-nighter.jpg"
-          alt="Final Brick Road Sketch"
-          className="md:max-w-60 lg:max-w-[20vw]"
-        />
       </div>
     ),
   },
