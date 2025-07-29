@@ -15,8 +15,9 @@ export const tracks: Track[] = [
     background: `bg-[url(images/tracks/campus-circuit.png)]`,
     name: "Campus Circuit",
     description:
-      `This Outer Loop is around RIT campus, you may have driven around here as if you drive on campus this loops is used very often,
-       if you are ready to finally be able to ignore the stop signs and be ready to rev your engine and speed.`,
+      `This fast-paced loop around the RIT campus is a perfect place for beginners to rev their engines and get a good feel for kart racing!  
+      Whether you want to take a detour and head through the woods or stay on the main road, the Campus Circuit is an excellent place
+       to practice.`,
     devDescription: (
       <div className="flex flex-col-reverse md:flex-row">
         <img
@@ -40,7 +41,9 @@ export const tracks: Track[] = [
     background: `bg-[url(images/tracks/dorm-derby.png)]`,
     name: "Dorm Room Derby",
     description:
-      "Remember the days you used to live in the dorm? well if you wanna relive it with a better memory you can, speed around the dorm in tiny karts. if you still live in the dormside or will be living there be ready to live this experience and dont forget to clean your room otherwise little characters might drive around it.",
+      `Gizmo seems to have built a miniature racetrack in their own dorm room! 
+      Shrink down to toy-size and race between Gizmo's clean half of the dorm, 
+      and their roommate's dirtier side. Huh... I wonder who Gizmo's roommate is?`,
     devDescription: (
       <div className="flex flex-col md:flex-row">
         <p className="md:mr-10 text-center md:text-left">
@@ -64,7 +67,9 @@ export const tracks: Track[] = [
     background: `bg-[url(images/tracks/tech-house.png)]`,
     name: "Tech House Turnpike",
     description:
-      "Have you ever wanted to go around golisano, well you can now. going past classrooms, up and down the floors.",
+     `Try not to get lost as you navigate the college of technology! With many alternate routes and paths you can take,
+      there are a lot of different ways to reach the finish line. You might not be able to RUN in the halls, but they 
+      never said you couldn't drive...`,
     devDescription: (
       <div className="flex flex-col-reverse md:flex-row">
         <img
@@ -86,9 +91,9 @@ export const tracks: Track[] = [
     imgUrl: "images/tracks/all-nighter.png",
     background: `bg-[url(images/tracks/all-nighter.png)]`,
     name: "All-Nighter Expressway",
-    description: `With finals coming up, and you havent studied yet.
-      What can you do? Go over to academic side at 2 am and 
-      do an average rit student event known as an all nighter.`,
+    description: `With the summer term coming to a close, final exams are just around the corner. 
+    Gizmo has created a special track above the campus as means of nighttime celebration! 
+    Not until after everyone has studied, of course... `,
     devDescription: (
       <div className="flex flex-col md:flex-row">
         <p className="md:mr-10">
