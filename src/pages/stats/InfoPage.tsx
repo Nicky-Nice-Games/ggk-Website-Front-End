@@ -101,9 +101,9 @@ const InfoPage = ({
             </Card>
             {/* Overall stats grid - wider and colorful */}
             <Card className="w-full mx-auto p-0 rounded-b-lg min-h-[16rem] bg-opacity-0 border-none">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:text-[14px] border-t-2 border-zinc-500/80 w-full h-full">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:text-[14px] border-y-2 border-zinc-500/80 w-full h-full">
                 {/* Section 1 */}
-                <div className="flex items-center justify-center bg-zinc-900/80 border-l-2 border-zinc-500/80">
+                <div className="flex items-center justify-center bg-zinc-900/80 border-x-2 border-zinc-500/80">
                   <div className="grid grid-cols-[65%_35%] gap-y-1 w-full h-full">
                     {statsList1.map((stat, idx) => (
                       <React.Fragment key={idx}>
@@ -135,7 +135,7 @@ const InfoPage = ({
                 </div>
 
                 {/* Section 3 */}
-                <div className="flex items-center justify-center bg-zinc-900/80 border-r-2 border-zinc-500/80">
+                <div className="flex items-center justify-center bg-zinc-900/80 border-x-2 border-zinc-500/80">
                   <div className="grid grid-cols-[65%_35%] gap-y-1 w-full h-full">
                     {statsList3.map((stat, idx) => (
                       <React.Fragment key={idx}>
@@ -144,7 +144,7 @@ const InfoPage = ({
                           {stat.name}
                         </div>
                         {/* Value: centered on xs, right-aligned from sm up */}
-                        <div className="sm:text-sm pr-4 py-3 text-left text-[#FFFBEE] font-medium text-base whitespace-nowrap border-b border-gray-700">
+                        <div className="sm:text-sm  pr-4 py-3 text-left text-[#FFFBEE] font-medium text-base lg:whitespace-nowrap border-b border-gray-700">
                           {stat.value}
                         </div>
                       </React.Fragment>
