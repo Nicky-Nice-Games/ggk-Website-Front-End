@@ -156,7 +156,7 @@ export const AchievementsPage = ({
                               }}
                             >
                               <span className="text-2xl md:text-3xl text-yellow-400">
-                                {medals[idx].name || "🏆"}
+                                {"🏆"}
                               </span>
                             </div>
                             {/* Tooltip */}
