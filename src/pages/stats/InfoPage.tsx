@@ -28,10 +28,10 @@ const InfoPage = ({
 
   const statsList1: Stat[] = [
     { name: "Most Used Character", value: characters[playerData.favoriteChara].name,},
+    { name: "Most Played Track",value: tracks[playerData.favoriteTrack].name,},
     { name: "Wins", value: playerData.firstPlace },
     { name: "Podium Finishes", value: playerData.podium },
     { name: "Races", value: playerData.totalRaces },
-    { name: "Wall Crashes", value: playerData.collisionWithWall },
   ];
 
   const offenseUsed = sumNumberListObject(playerData.offenseUsage);
@@ -48,11 +48,10 @@ const InfoPage = ({
   ];
 
   const statsList3: Stat[] = [
-    { name: "Most Played Track",value: tracks[playerData.favoriteTrack].name,},
-    { name: "Campus Circuit Fastest Time", value: formatTime(playerData.fastestTime) },
-    { name: "Techhouse Turnpike Fastest Time", value: formatTime(playerData.fastestTime) },
-    { name: "Dorm Room Derby Fastest Time", value: formatTime(playerData.fastestTime) },
-    { name: "All Nighter Expressway Fastest Time", value: formatTime(playerData.fastestTime) },
+    { name: "Campus Circuit", value: formatTime(playerData.raceTime1) },
+    { name: "Techhouse Turnpike", value: formatTime(playerData.raceTime2) },
+    { name: "Dorm Room Derby", value: formatTime(playerData.raceTime3) },
+    { name: "All Nighter Expressway", value: formatTime(playerData.raceTime4) },
   ];
 
   return (
@@ -110,7 +109,7 @@ const InfoPage = ({
                         <div className="sm:text-sm px-4 py-3 text-left text-[#FFFBEE] font-semibold text-base whitespace-nowrap border-b border-gray-700">
                           {stat.name}
                         </div>
-                        <div className="sm:text-sm px-4 py-3 text-left text-[#FFFBEE] font-medium text-base whitespace-nowrap border-b border-gray-700">
+                        <div className="sm:text-sm px-4 py-3 text-left text-[#FFFBEE] font-medium text-base md:whitespace-nowrap border-b border-gray-700">
                           {stat.value}
                         </div>
                       </React.Fragment>
@@ -137,6 +136,14 @@ const InfoPage = ({
                 {/* Section 3 */}
                 <div className="flex items-center justify-center bg-zinc-900/80 border-x-2 border-zinc-500/80">
                   <div className="grid grid-cols-[65%_35%] gap-y-1 w-full h-full">
+                      <React.Fragment>
+                        {/* Name: centered on xs, left-aligned from sm up */}
+                        <div className="sm:text-lg px-4 py-3 text-left text-[#FFFBEE] font-bold text-base border-b border-gray-700">
+                          Fastest Race Times
+                        </div>
+                        <div className="border-b border-gray-700"></div>
+                        
+                      </React.Fragment>
                     {statsList3.map((stat, idx) => (
                       <React.Fragment key={idx}>
                         {/* Name: centered on xs, left-aligned from sm up */}
