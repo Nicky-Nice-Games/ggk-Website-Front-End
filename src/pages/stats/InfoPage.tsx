@@ -5,8 +5,8 @@ import { characters } from "@/data/characters";
 import { tracks } from "@/data/tracks";
 import { formatTime, sumNumberListObject } from "@/utils";
 import Pfp from "@/components/stats/pfp";
-import { motion } from "framer-motion";
-const AnimatedCard = motion(Card);
+//import { motion } from "framer-motion";
+//const AnimatedCard = motion(Card);
 
 const InfoPage = ({
   playerData,
@@ -27,8 +27,8 @@ const InfoPage = ({
   }
 
   const statsList1: Stat[] = [
+    { name: "Most Used Character", value: characters[playerData.favoriteChara].name,},
     { name: "Wins", value: playerData.firstPlace },
-    { name: "Fastest Time", value: formatTime(playerData.fastestTime) },
     { name: "Podium Finishes", value: playerData.podium },
     { name: "Races", value: playerData.totalRaces },
     { name: "Wall Crashes", value: playerData.collisionWithWall },
@@ -48,28 +48,26 @@ const InfoPage = ({
   ];
 
   const statsList3: Stat[] = [
-    {
-      name: "Most Used Character",
-      value: characters[playerData.favoriteChara].name,
-    },
-    {
-      name: "Most Played Track",
-      value: tracks[playerData.favoriteTrack].name,
-    },
+    { name: "Most Played Track",value: tracks[playerData.favoriteTrack].name,},
+    { name: "Campus Circuit Fastest Time", value: formatTime(playerData.fastestTime) },
+    { name: "Techhouse Turnpike Fastest Time", value: formatTime(playerData.fastestTime) },
+    { name: "Dorm Room Derby Fastest Time", value: formatTime(playerData.fastestTime) },
+    { name: "All Nighter Expressway Fastest Time", value: formatTime(playerData.fastestTime) },
   ];
 
   return (
         <div className="min-h-screen bg-[url('images/items-background.png')] 
     bg-[#BBB] bg-size-[90%] md:bg-size-[80%] bg-repeat bg-fixed bg-cover bg-blend-difference pt-[1rem] poppins">
+
       {/* Main container - wider */}
       <div className="w-full max-w-[1500px] mx-auto pr-8 pl-8">
         {/* Increased max width */}
         {/* Info Sub Page*/}
-          <Card className=" bg-opacity-90 border-none w-full mx-auto m-0 p-0 gap-0">
+          <Card className="bg-opacity-90 border-none w-full mx-auto m-0 p-0 gap-0">
             {/* Header/class nav bar */}
 
             <Card className="h-auto w-full mx-auto rounded-t-lg bg-zinc-900/60 border-0">
-              <CardContent className="flex flex-col md:flex-row md:justify-between md:items-center gap-4 h-full px-2 md:px-4 py-2">
+              <CardContent className="flex flex-col md:flex-row md:justify-between md:items-center gap-2 h-full px-2 md:px-2 py-2">
                 {/* Left side/Buttons */}
                 <div className="flex flex-col sm:flex-row sm:space-x-3 space-y-2 sm:space-y-0 border-2 border-orange-500 bg-[#dc4d31]/90 p-2 rounded-md justify-center items-center">
                   <button
@@ -128,7 +126,7 @@ const InfoPage = ({
                         <div className=" sm:text-sm px-4 py-3 text-left text-[#FFFBEE] font-semibold text-base whitespace-nowrap border-b border-gray-700">
                           {stat.name}
                         </div>
-                        <div className=" sm:text-sm px-4 py-3 text-left text-[#FFFBEE] font-medium text-base whitespace-nowrap border-b border-gray-700 ">
+                        <div className="sm:text-sm px-4 py-3 text-left text-[#FFFBEE] font-medium text-base whitespace-nowrap border-b border-gray-700 ">
                           {stat.value}
                         </div>
                       </React.Fragment>
@@ -142,11 +140,11 @@ const InfoPage = ({
                     {statsList3.map((stat, idx) => (
                       <React.Fragment key={idx}>
                         {/* Name: centered on xs, left-aligned from sm up */}
-                        <div className="text-center sm:text-left sm:text-sm px-4 py-3 text-[#FFFBEE] font-bold text-base whitespace-nowrap border-b border-gray-700">
+                        <div className="sm:text-sm px-4 py-3 text-left text-[#FFFBEE] font-semibold text-base border-b border-gray-700">
                           {stat.name}
                         </div>
                         {/* Value: centered on xs, right-aligned from sm up */}
-                        <div className="text-left sm:text-right sm:text-sm px-4 py-3 text-[#FFFBEE] font-medium text-base whitespace-nowrap border-b border-gray-700">
+                        <div className="sm:text-sm pr-4 py-3 text-left text-[#FFFBEE] font-medium text-base whitespace-nowrap border-b border-gray-700">
                           {stat.value}
                         </div>
                       </React.Fragment>
@@ -166,7 +164,7 @@ const InfoPage = ({
                     return (
                       <div
                         key={race.id}
-                        className="bg-[#dc4d31] hover:bg-[#f25c3f] mb-4 rounded-md p-3 flex justify-between text-white border-2 border-orange-500 transition-colors"
+                        className="bg-[#dc4d31] hover:bg-[#f25c3f] mb-4 rounded-md p-3 flex justify-between text-[#FFFBEE] border-2 border-orange-500 transition-colors"
                       >
                         <span className="text-[#FFFBEE] font-bold">
                           {tracks[race.mapRaced].name}
