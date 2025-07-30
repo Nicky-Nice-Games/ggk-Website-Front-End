@@ -29,26 +29,27 @@ const CharactersPage = () => {
           Click a character to learn more about them!
         </h1>
 
-        <div>
+        <div className="relative">
           {/* Character carousel */}
           <CharacterCarousel
             contentClass="lg:max-w-240 bg-[#0000] border-none shadow-none"
             mappedContent={(character) => {
               return (
                 <>
+                <div className="flex flex-col justify-center h-[100%] relative">
                   <div
-                    className="absolute
-                      md:-top-60 md:left-0 min-w-60 md:w-100 z-10 translate-x-[32px]"
+                    className="absolute md:h-[220%] 2xl:h-[300%] z-10 
+                    md:-translate-x-[50%] lg:-translate-x-[20%] 2xl:-translate-x-[40%]"
                   >
                     <img
                       src={character.imgUrl}
                       alt={character.name}
-                      className="md:max-h-90 lg:max-h-180 hidden md:block"
+                      className="md:h-[100%] hidden md:block"
                     />
                   </div>
-                  <div className="absolute -top-20 md:-top-10 md:right-5 w-full md:w-4/5 flex bg-white justify-end rounded-lg drop-shadow-xl/50 overflow-hidden min-w-1/4 max-w-4xl ">
+                  <div className="w-full bg-white rounded-lg drop-shadow-xl/50">
                     {/* right side: character name and description */}
-                    <DialogDescription className="p-4 md:ml-[2rem] w-full md:min-h-70 text-left">
+                    <DialogDescription className="p-[2rem] md:ml-[8rem] lg:ml-[4rem] text-left">
                       <div className="text-left md:w-7/10 md:ml-auto h-full">
                         <div className="flex flex-row justify-between mb-2">
                           <DialogTitle className="text-black font-bold text-header2 justify-self-start">
@@ -64,6 +65,8 @@ const CharactersPage = () => {
                       </div>
                     </DialogDescription>
                   </div>
+
+                </div>
                 </>
               );
             }}

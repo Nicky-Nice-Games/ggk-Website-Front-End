@@ -37,7 +37,7 @@ const CharacterCarousel = ({
   return (
     <Carousel
       setApi={setApi}
-      className="flex flex-row w-full items-center justify-center h-fit"
+      className="flex flex-row w-full items-center justify-center"
     >
       <CarouselPrevious className="w-8" />
       <CarouselContent className="w-[100%] drop-shadow-xl/50 justify-between pb-[8rem] pt-[4rem]">
