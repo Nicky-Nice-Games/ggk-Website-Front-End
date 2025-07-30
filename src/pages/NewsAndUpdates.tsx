@@ -79,7 +79,7 @@ const NewsAndUpdatesPage = () => {
   return (
     <div
       className="min-h-screen bg-[url('images/items-background.png')] 
-    bg-[#BBB] bg-size-[90%] md:bg-size-[80%] bg-repeat bg-fixed bg-cover bg-blend-difference"
+    bg-[#BBB] bg-size-[90%] md:bg-size-[80%] bg-repeat bg-fixed bg-cover bg-blend-difference pb-4"
     >
       <img
         src=" images/banners/news.png"
