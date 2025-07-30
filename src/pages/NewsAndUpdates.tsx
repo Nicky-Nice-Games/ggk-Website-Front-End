@@ -5,7 +5,6 @@ import { CloseIcon } from "@/components/content/close-icon";
 import { Worker, Viewer, SpecialZoomLevel } from "@react-pdf-viewer/core";
 import { type Update, updates } from "@/data/updates";
 import "@react-pdf-viewer/core/lib/styles/index.css";
-import HeaderBanner from "@/components/ui/header-banner";
 
 // Converts MM/DD/YYYY to YYYY-MM-DD for parsing
 const toISO = (dateStr: string) => {
@@ -77,12 +76,14 @@ const NewsAndUpdatesPage = () => {
   useOutsideClick(ref, () => setActive(null));
 
   return (
-    <div className="min-h-screen bg-[url('images/items-background.png')] 
-    bg-[#BBB] bg-size-[90%] md:bg-size-[80%] bg-repeat bg-fixed bg-cover bg-blend-difference pt-[1rem]">
-       <img
-              src=" images/news-banner.png"
-              className="flex justify-self-center w-[100%] md:w-[45%] 2xl:w-[35%] pt-8 mb-[1rem]"
-            ></img>
+    <div
+      className="min-h-screen bg-[url('images/items-background.png')] 
+    bg-[#BBB] bg-size-[90%] md:bg-size-[80%] bg-repeat bg-fixed bg-cover bg-blend-difference pb-4"
+    >
+      <img
+        src=" images/banners/news.png"
+        className="flex justify-self-center w-full md:w-[40vw] pt-8 mb-[1rem]"
+      ></img>
       {/* <HeaderBanner text="News and Updates" imgsrc="images/blank-header.png"></HeaderBanner> */}
       {/* overlay behind pop up when active */}
       <AnimatePresence>

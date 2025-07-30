@@ -21,7 +21,10 @@ const TracksPage = () => {
     >
       {/*This is the header and description of each item*/}
       <ContentNavigator currentPage="tracks" />
-      <img src=" images/tracks-header.png" className="mx-auto pt-[2rem] w-full md:w-2/5 mb-4 pb-[1rem]" />
+      <img
+        src=" images/banners/tracks.png"
+        className="mx-auto py-8 w-full md:w-[40vw]"
+      />
       <MapSelect
         isDialog={true}
         clickActionOrDialogContent={(track: Track) => {

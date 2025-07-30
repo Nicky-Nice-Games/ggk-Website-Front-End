@@ -17,11 +17,11 @@ const ProcessPage = () => {
     <>
       <main className="mt-0 px-6 md:px-12 relative bg-[url(images/items-background.png)] bg-[#BBB] bg-fixed bg-repeat bg-blend-difference bg-size-[90%] md:bg-size-[80%] *:text-white">
         {/* About Project Section */}
-        
+
         <div>
-             <img
-            src="images/project-header.png"
-            className="mx-auto pt-[2rem] w-full md:w-2/5 mb-4"
+          <img
+            src="images/banners/process.png"
+            className="mx-auto pt-8 md:w-[40vw] mb-4"
             alt="Team banner"
           />
           <h1 className="text-header2 pt-4 mx-0 mb-4"> About the Project</h1>
@@ -192,9 +192,7 @@ const ProcessPage = () => {
         </div>
 
         {/* Track Dev Info Section */}
-        <h1 className="text-header2 m-4 mx-0 mb-4">
-          Building our Tracks
-        </h1>
+        <h1 className="text-header2 m-4 mx-0 mb-4">Building our Tracks</h1>
         <p className="mb-8 text-body">
           The tracks of Gizmo Go-Kartz are largely based on real RIT locations
           with original twists. With an initial plan of 4 tracks per cup and
@@ -233,9 +231,7 @@ const ProcessPage = () => {
               <div className="max-h-[52vh] overflow-y-auto">
                 <div className="flex flex-col md:flex-row">
                   <div className="md:mr-10">
-                    <h1 className="text-header3 mb-3">
-                      Quarter-Mile
-                    </h1>
+                    <h1 className="text-header3 mb-3">Quarter-Mile</h1>
                     <p className="text-body">
                       A track based on RIT's Quarter Mile, a long pathway
                       connecting the dorm buildings to the academic buildings,
