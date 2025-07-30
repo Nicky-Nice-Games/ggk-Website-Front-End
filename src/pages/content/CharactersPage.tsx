@@ -55,9 +55,6 @@ const CharactersPage = () => {
                           <DialogTitle className="text-black font-bold text-header2 justify-self-start">
                             {character.name}
                           </DialogTitle>
-                          <DialogClose>
-                            <CloseIcon />
-                          </DialogClose>
                         </div>
                         <p className="text-gray-600 text-body whitespace-pre-line h-[85%] flex flex-col justify-center">
                           {character.description}
