@@ -14,7 +14,7 @@ const MapSelect = ({
     <div className="flex flex-col md:flex-row flex-wrap items-center md:justify-center">
       {tracks.map((track, index) => {
         return (
-          <div className="md:mx-[2rem] mb-10 w-3/4 md:w-1/3">
+          <div className="mx-[1rem] 2xl:mx-[2rem] mb-10 w-3/4 md:w-[40%] 2xl:w-[20%] drop-shadow-2xl">
             <h1 className="w-fit text-lg text-white font-semibold bg-gradient-to-r from-[#F66624] to-[#D84B3A] m-auto p-[5px] mb-2 px-3 py-1 rounded-lg g">
               {track.name}
             </h1>
