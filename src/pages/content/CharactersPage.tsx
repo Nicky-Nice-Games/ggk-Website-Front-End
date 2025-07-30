@@ -37,21 +37,21 @@ const CharactersPage = () => {
               return (
                 <>
                   <div
-                    className="absolute -top-85 
-                      lg:-top-60 lg:left-0 min-w-60 lg:w-100 z-10 translate-x-[32px]"
+                    className="absolute
+                      md:-top-60 md:left-0 min-w-60 md:w-100 z-10 translate-x-[32px]"
                   >
                     <img
                       src={character.imgUrl}
                       alt={character.name}
-                      className="max-h-90 lg:max-h-180"
+                      className="md:max-h-90 lg:max-h-180 hidden md:block"
                     />
                   </div>
-                  <div className="absolute lg:-top-10 lg:right-5 w-full lg:w-4/5 flex bg-white justify-end rounded-lg drop-shadow-xl/50 overflow-hidden min-w-1/4 max-w-4xl ">
+                  <div className="absolute -top-20 md:-top-10 md:right-5 w-full md:w-4/5 flex bg-white justify-end rounded-lg drop-shadow-xl/50 overflow-hidden min-w-1/4 max-w-4xl ">
                     {/* right side: character name and description */}
-                    <DialogDescription className="p-4 w-full lg:min-h-70 text-left">
-                      <div className="text-center lg:text-left lg:w-7/10 lg:ml-auto h-full">
+                    <DialogDescription className="p-4 md:ml-[2rem] w-full md:min-h-70 text-left">
+                      <div className="text-left md:w-7/10 md:ml-auto h-full">
                         <div className="flex flex-row justify-between mb-2">
-                          <DialogTitle className="text-black font-bold text-header2 justify-self-center lg:justify-self-start">
+                          <DialogTitle className="text-black font-bold text-header2 justify-self-start">
                             {character.name}
                           </DialogTitle>
                           <DialogClose>
