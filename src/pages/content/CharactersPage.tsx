@@ -5,7 +5,6 @@ import {
   DialogDescription,
   DialogTitle,
 } from "@/components/ui/dialog";
-import HeaderBanner from "@/components/ui/header-banner";
 import { CloseIcon } from "@/components/content/close-icon";
 
 const CharactersPage = () => {
@@ -14,15 +13,14 @@ const CharactersPage = () => {
       <ContentNavigator currentPage={"characters"} />
       <main
         className="min-h-[73vh] bg-size-[110%] bg-blend-multiply w-[100%] bg-size-[90%] md:bg-size-[80%]"
-          style=
-          {{
-            backgroundImage:
+        style={{
+          backgroundImage:
             "linear-gradient(rgba(104, 104, 104, 1),rgba(104, 104, 104, 1), rgba(160, 160, 160, 1)), url('images/items-background-darkoutline.png')",
         }}
       >
         <img
-          src=" images/characters-banner.png"
-          className="mx-auto pt-[2rem] w-full md:w-2/5 mb-4"
+          src=" images/banners/characters.png"
+          className="mx-auto pt-8 w-full md:w-[40vw] mb-4"
         ></img>
 
         <h1 className="text-center poppins text-md text-[#fffbee] mb-[1rem]">
@@ -69,8 +67,7 @@ const CharactersPage = () => {
             }}
           />
         </div>
-    </main>
-
+      </main>
     </>
   );
 };

@@ -3,7 +3,6 @@ import { BoostCard } from "@/components/content/boost-card";
 import { DefenseCard } from "@/components/content/defense-card";
 import { OffenseCard } from "@/components/content/offense-card";
 import { TrapCard } from "@/components/content/trap-card";
-import HeaderBanner from "@/components/ui/header-banner";
 
 const ItemsPage = () => {
   return (
@@ -17,8 +16,8 @@ const ItemsPage = () => {
         }}
       >
         <img
-          src=" images/items-header.png"
-          className="mx-auto pt-[2rem] w-full md:w-2/5 mb-4"
+          src=" images/banners/items.png"
+          className="mx-auto pt-8 w-full md:w-[40vw] mb-4"
         ></img>
 
         <h1 className="text-center text-[#fffbee] poppins text-body">
