@@ -22,11 +22,11 @@ export const HomeCarousel = () => {
   function NewsUpdateSlide({ header, image, description }: NewsUpdateProps) {
     return (
       <div className="text-right items-end text-white md:ml-[8rem] mb-[4rem] flex flex-col-reverse md:flex-col">
-        <div className="h-[40vh] md:h-[50vh] object-contain">
+        <div className="h-[40vh] object-contain">
           <img className="h-[100%]" src={image}></img>
         </div>
         <div>
-          <h2 className="text-[40px] md:text-[60px] bebas">{header}</h2>
+          <h2 className="text-[40px] md:text-[60px] racing">{header}</h2>
           <p className="text-[18px]">{description}</p>
         </div>
       </div>
@@ -52,11 +52,8 @@ export const HomeCarousel = () => {
   // Unshift first slide to the beginning
   slides.unshift(
     <div key="1" className="flex flex-row justify-end">
-      <div className="md:w-1/2 md:h-[100%] h-[50vh]">
-        <img
-          src="images/tracks/tech-house.png"
-          className="h-[100%] object-cover"
-        ></img>
+      <div className="md:w-13/30 max-h-[50vh]">
+        <img src="images/tracks/tech-house.png"></img>
       </div>
     </div>
   );

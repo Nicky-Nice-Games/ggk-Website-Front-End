@@ -58,7 +58,7 @@ const CharacterCarousel = ({
               </div>
 
               {/* Fullscreen content popup*/}
-              <DialogContent showCloseButton={false} className={contentClass}>
+              <DialogContent className={contentClass}>
                 {mappedContent(character, index)}
               </DialogContent>
             </Dialog>
