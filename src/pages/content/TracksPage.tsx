@@ -5,6 +5,7 @@ import {
   DialogDescription,
   DialogTitle,
 } from "@/components/ui/dialog";
+import TitleBanner from "@/components/ui/title-banner";
 import { type Track } from "@/data/tracks";
 
 //Tracks Page - Sub Page of Content
@@ -21,10 +22,7 @@ const TracksPage = () => {
     >
       {/*This is the header and description of each item*/}
       <ContentNavigator currentPage="tracks" />
-      <img
-        src=" images/banners/tracks.png"
-        className="mx-auto py-8 w-full md:w-[40vw]"
-      />
+      <TitleBanner color="blue" text="Tracks" className="my-5" />
       <h1 className="text-center text-[#fffbee] poppins text-body">Click a track to view its story!</h1>
       <MapSelect
         isDialog={true}

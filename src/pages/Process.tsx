@@ -8,6 +8,7 @@ import {
 import ArrowButton from "@/components/ui/arrow-button";
 import { useNavigate } from "react-router-dom";
 import CharacterCarousel from "@/components/character-carousel";
+import TitleBanner from "@/components/ui/title-banner";
 
 const ProcessPage = () => {
   const photo: string = "images/placeholder/placeholder.PNG";
@@ -18,12 +19,8 @@ const ProcessPage = () => {
       <main className="mt-0 px-6 md:px-12 relative bg-[url(images/items-background.png)] bg-[#BBB] bg-fixed bg-repeat bg-blend-difference bg-size-[90%] md:bg-size-[80%] *:text-white">
         {/* About Project Section */}
 
-        <div>
-          <img
-            src="images/banners/process.png"
-            className="mx-auto pt-8 md:w-[40vw] mb-4"
-            alt="Team banner"
-          />
+        <div className="pt-5">
+          <TitleBanner color="orange" text="The Process" className="mb-5" />
           <h1 className="text-header2 pt-4 mx-0 mb-4"> About the Project</h1>
           <div className="flex md:flex-row flex-col items-stretch">
             <p className="text-body">

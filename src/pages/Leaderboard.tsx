@@ -5,6 +5,7 @@ import { type Track } from "@/data/tracks";
 import ArrowButton from "@/components/ui/arrow-button";
 import { fetchData } from "@/utils";
 import MapSelect from "@/components/map-select";
+import TitleBanner from "@/components/ui/title-banner";
 
 const LeaderboardPage = () => {
   const [mapId, setMapId] = useState(0);
@@ -20,11 +21,8 @@ const LeaderboardPage = () => {
     return (
       <div className="text-center bg-[url(images/white-checker.png)] bg-size-[80%] md:bg-size-[60%] bg-cover bg-repeat min-h-[80vh]">
         <div className="bg-gradient-to-b from-[#FFF7] via-white to-[#FFF7] from-1% via-50% to-99% min-h-[80vh]">
-          <div className="pb-4">
-            <img
-              src=" images/banners/leaderboard.png"
-              className="flex justify-self-center w-full md:w-[40vw] pt-8 mb-4"
-            ></img>
+          <div className="pb-4 pt-5">
+            <TitleBanner color="blue" text="Leaderboards" className="mb-5" />
             <h2 className="text-body pb-8">
               Click a map to view its leaderboard!
             </h2>
