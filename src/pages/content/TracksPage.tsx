@@ -25,6 +25,7 @@ const TracksPage = () => {
         src=" images/banners/tracks.png"
         className="mx-auto py-8 w-full md:w-[40vw]"
       />
+      <h1 className="text-center text-[#fffbee] poppins text-body">Click a track to view its story!</h1>
       <MapSelect
         isDialog={true}
         clickActionOrDialogContent={(track: Track) => {
