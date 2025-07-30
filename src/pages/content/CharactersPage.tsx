@@ -23,7 +23,7 @@ const CharactersPage = () => {
           className="mx-auto pt-8 w-full md:w-[40vw] mb-4"
         ></img>
 
-        <h1 className="text-center poppins text-md text-[#fffbee] mb-[1rem]">
+        <h1 className="text-center poppins text-md font-semibold text-[#fffbee] mb-[1rem]">
           Click a character to learn more about them!
         </h1>
 
