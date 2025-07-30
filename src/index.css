@@ -188,23 +188,11 @@
   font-family: "Racing Sans One";
 }
 
-@media screen and (min-width: 768px) {
-  .slanted-text {
-    font-family: "Aileron-Slight-Slant", sans-serif;
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .slanted-text {
-    font-family: "Aileron-Heavy-Slant", sans-serif;
-  }
-}
-
 .navbar-passive-outline {
   color: #fffbee;
 }
 
-.navabar-passive-outline:hover {
+.navbar-passive-outline:hover {
   color: #e7ee33;
 }
 

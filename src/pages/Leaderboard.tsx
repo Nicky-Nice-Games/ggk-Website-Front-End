@@ -20,12 +20,12 @@ const LeaderboardPage = () => {
     return (
       <div className="text-center bg-[url(images/white-checker.png)] bg-size-[80%] md:bg-size-[60%] bg-cover bg-repeat min-h-[80vh]">
         <div className="bg-gradient-to-b from-[#FFF7] via-white to-[#FFF7] from-1% via-50% to-99% min-h-[80vh]">
-          <div className=" pb-4">
+          <div className="pb-4">
             <img
-              src=" images/leaderboard-header.png"
-              className="flex justify-self-center w-[100%] md:w-[45%] 2xl:w-[35%] pt-8 mb-[1rem]"
+              src=" images/banners/leaderboard.png"
+              className="flex justify-self-center w-full md:w-[40vw] pt-8 mb-4"
             ></img>
-            <h2 className="text-body pb-[2rem]">
+            <h2 className="text-body pb-8">
               Click a map to view its leaderboard!
             </h2>
           </div>
@@ -79,7 +79,8 @@ const LeaderboardTable = ({ mapId }: { mapId: number }) => {
     });
   }, []);
 
-  if (leaderboardData.length == 0) return <p className="text-body">No data found!</p>;
+  if (leaderboardData.length == 0)
+    return <p className="text-body">No data found!</p>;
 
   return <DataTable columns={columns} data={leaderboardData} />;
 };
