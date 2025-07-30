@@ -5,6 +5,7 @@ import { CloseIcon } from "@/components/content/close-icon";
 import { Worker, Viewer, SpecialZoomLevel } from "@react-pdf-viewer/core";
 import { type Update, updates } from "@/data/updates";
 import "@react-pdf-viewer/core/lib/styles/index.css";
+import TitleBanner from "@/components/ui/title-banner";
 
 // Converts MM/DD/YYYY to YYYY-MM-DD for parsing
 const toISO = (dateStr: string) => {
@@ -78,13 +79,9 @@ const NewsAndUpdatesPage = () => {
   return (
     <div
       className="min-h-screen bg-[url('images/items-background.png')] 
-    bg-[#BBB] bg-size-[90%] md:bg-size-[80%] bg-repeat bg-fixed bg-cover bg-blend-difference pb-4"
+    bg-[#BBB] bg-size-[90%] md:bg-size-[80%] bg-repeat bg-fixed bg-cover bg-blend-difference pt-5"
     >
-      <img
-        src=" images/banners/news.png"
-        className="flex justify-self-center w-full md:w-[40vw] pt-8 mb-[1rem]"
-      ></img>
-      {/* <HeaderBanner text="News and Updates" imgsrc="images/blank-header.png"></HeaderBanner> */}
+      <TitleBanner text="News & Updates" color="purple" />
       {/* overlay behind pop up when active */}
       <AnimatePresence>
         {active && typeof active === "object" && (
@@ -201,11 +198,15 @@ const NewsAndUpdatesPage = () => {
             className="w-full max-h-96 object-cover transition-transform duration-300 hover:scale-120"
           />
           <div className="p-4 bg-white relative z-2">
-            <p className="text-xs text-[#F76902] font-semibold mb-1">
+            <p className="text-xs text-[#F76902] poppins font-semibold mb-1">
               {mostRecentUpdate.date}
             </p>
-            <h2 className="text-lg font-bold">{mostRecentUpdate.title}</h2>
-            <p className="text-sm mt-1">{mostRecentUpdate.subtitle}</p>
+            <h2 className="text-lg poppins font-bold">
+              {mostRecentUpdate.title}
+            </h2>
+            <p className="text-sm text-body mt-1">
+              {mostRecentUpdate.subtitle}
+            </p>
           </div>
         </motion.div>
       </div>
@@ -234,15 +235,18 @@ const NewsAndUpdatesPage = () => {
               className={`${
                 isFullWidth ? "col-span-1 sm:col-span-2 lg:col-span-3" : ""
               } bg-white text-black rounded-xl shadow overflow-hidden 
-              cursor-pointer m-4`}
+              cursor-pointer m-4 `}
             >
               {/* Image */}
               <img
                 src={update.image}
                 alt={update.title}
-                className={`w-full transition-transform duration-300 hover:scale-120 object-fill ${
-                  isFullWidth ? "h-96" : "h-72"
-                } `}
+                className={`w-full transition-transform duration-300 hover:scale-120 object-fill 
+                  ${
+                    isFullWidth
+                      ? "aspect-[16/9]"
+                      : "aspect-[4/3] sm:aspect-[16/10] lg:aspect-[13/9]"
+                  }`}
               />
               {/* Text content of the update */}
               <div className="p-4 relative bg-white z-2">

@@ -6,22 +6,20 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { CloseIcon } from "@/components/content/close-icon";
+import TitleBanner from "@/components/ui/title-banner";
 
 const CharactersPage = () => {
   return (
     <>
       <ContentNavigator currentPage={"characters"} />
       <main
-        className="min-h-[73vh] bg-size-[110%] bg-blend-multiply w-[100%] bg-size-[90%] md:bg-size-[80%]"
+        className="min-h-[73vh] bg-size-[110%] bg-blend-multiply w-[100%] bg-size-[90%] md:bg-size-[80%] pt-5"
         style={{
           backgroundImage:
             "linear-gradient(rgba(104, 104, 104, 1),rgba(104, 104, 104, 1), rgba(160, 160, 160, 1)), url('images/items-background-darkoutline.png')",
         }}
       >
-        <img
-          src=" images/banners/characters.png"
-          className="mx-auto pt-8 w-full md:w-[40vw] mb-4"
-        ></img>
+        <TitleBanner color="green" text="Characters" className="mb-5" />
 
         <h1 className="text-center poppins text-md text-[#fffbee]">
           Click a character to learn more about them!
