@@ -38,8 +38,8 @@ const CharactersPage = () => {
                 <>
                 <div className="flex flex-col justify-center h-[100%] relative">
                   <div
-                    className="absolute md:h-[150%] lg:h-[220%] 2xl:h-[270%] z-10 
-                    md:-translate-x-[50%] lg:-translate-x-[20%] 2xl:-translate-x-[40%]"
+                    className="absolute md:h-[150%] lg:h-[170%] 2xl:h-[250%] z-10 
+                    md:-translate-x-[50%] lg:-translate-x-[15%] 2xl:-translate-x-[25%]"
                   >
                     <img
                       src={character.imgUrl}
