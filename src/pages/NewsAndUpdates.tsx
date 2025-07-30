@@ -5,7 +5,6 @@ import { CloseIcon } from "@/components/content/close-icon";
 import { Worker, Viewer, SpecialZoomLevel } from "@react-pdf-viewer/core";
 import { type Update, updates } from "@/data/updates";
 import "@react-pdf-viewer/core/lib/styles/index.css";
-import HeaderBanner from "@/components/ui/header-banner";
 
 // Converts MM/DD/YYYY to YYYY-MM-DD for parsing
 const toISO = (dateStr: string) => {
