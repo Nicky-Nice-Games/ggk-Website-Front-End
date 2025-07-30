@@ -25,7 +25,7 @@ const CharactersPage = () => {
           className="mx-auto pt-[2rem] w-full md:w-2/5 mb-4"
         ></img>
 
-        <h1 className="text-center poppins text-md text-[#fffbee]">
+        <h1 className="text-center poppins text-md text-[#fffbee] mb-[1rem]">
           Click a character to learn more about them!
         </h1>
 
@@ -38,7 +38,7 @@ const CharactersPage = () => {
                 <>
                 <div className="flex flex-col justify-center h-[100%] relative">
                   <div
-                    className="absolute md:h-[220%] 2xl:h-[300%] z-10 
+                    className="absolute md:h-[150%] lg:h-[220%] 2xl:h-[270%] z-10 
                     md:-translate-x-[50%] lg:-translate-x-[20%] 2xl:-translate-x-[40%]"
                   >
                     <img
@@ -49,7 +49,7 @@ const CharactersPage = () => {
                   </div>
                   <div className="w-full bg-white rounded-lg drop-shadow-xl/50">
                     {/* right side: character name and description */}
-                    <DialogDescription className="p-[2rem] md:ml-[8rem] lg:ml-[4rem] text-left">
+                    <DialogDescription className="p-[2rem] md:ml-[8rem] lg:ml-[4rem] 2xl:ml-[7rem] text-left">
                       <div className="text-left md:w-7/10 md:ml-auto h-full">
                         <div className="flex flex-row justify-between mb-2">
                           <DialogTitle className="text-black font-bold text-header2 justify-self-start">
