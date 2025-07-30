@@ -192,7 +192,9 @@ const ProcessPage = () => {
         </div>
 
         {/* Track Dev Info Section */}
-        <h1 className="text-header2 m-4 mx-0 mb-4">Building our Tracks</h1>
+        <h1 className="text-header2 m-4 mx-0 mb-4">
+          Building our Tracks
+        </h1>
         <p className="mb-8 text-body">
           The tracks of Gizmo Go-Kartz are largely based on real RIT locations
           with original twists. With an initial plan of 4 tracks per cup and
@@ -218,7 +220,7 @@ const ProcessPage = () => {
             return (
               <TabsContent
                 value={tracks.indexOf(t).toString()}
-                className="text-white"
+                className="text-white text-body"
               >
                 <div className="bg-linear-to-b from-[#F66624] to-[#D84B3A] p-5 rounded-e-2xl rounded-b-2xl mb-3">
                   {t.devDescription}
@@ -231,7 +233,7 @@ const ProcessPage = () => {
               <div className="max-h-[52vh] overflow-y-auto">
                 <div className="flex flex-col md:flex-row">
                   <div className="md:mr-10">
-                    <h1 className="text-3xl font-bold poppins mb-3">
+                    <h1 className="text-header3 mb-3">
                       Quarter-Mile
                     </h1>
                     <p className="text-body">
@@ -269,7 +271,7 @@ const ProcessPage = () => {
                   />
                 </div>
                 <div>
-                  <h1 className="text-3xl font-bold poppins mb-3">
+                  <h1 className="text-header3 mb-3">
                     Other Cut Track Concepts
                   </h1>
                   <ul className="list-disc ml-5 *:mb-2 text-body">
