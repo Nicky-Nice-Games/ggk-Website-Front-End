@@ -173,8 +173,8 @@ function CarouselItem({ className, ...props }: React.ComponentProps<"div">) {
 
 function CarouselPrevious({
   className,
-  variant = "outline",
-  size = "icon",
+  variant = "custom",
+  size = "characters",
   ...props
 }: React.ComponentProps<typeof Button>) {
   const { scrollPrev, canScrollPrev } = useCarousel();
@@ -185,14 +185,16 @@ function CarouselPrevious({
       variant={variant}
       size={size}
       className={cn(
-        "size-8 rounded-full w-20 cursor-pointer hover:bg-[#BBB] hover:border-[#888]",
+        "cursor-pointer",
         className
       )}
       disabled={!canScrollPrev}
       onClick={scrollPrev}
       {...props}
     >
-      <ArrowLeft />
+      <div className="w-[70px] h-[70px] bg-contain bg-no-repeat bg-[url('images/previous-arrow.png')] hover:bg-[url('images/previous-arrow-hover.png')]">
+        
+      </div>
       <span className="sr-only">Previous slide</span>
     </Button>
   );
@@ -200,8 +202,8 @@ function CarouselPrevious({
 
 function CarouselNext({
   className,
-  variant = "outline",
-  size = "icon",
+  variant = "custom",
+  size = "characters",
   ...props
 }: React.ComponentProps<typeof Button>) {
   const { scrollNext, canScrollNext } = useCarousel();
@@ -212,14 +214,17 @@ function CarouselNext({
       variant={variant}
       size={size}
       className={cn(
-        "size-8 rounded-full w-20 cursor-pointer hover:bg-[#BBB] hover:border-[#888]",
+        "cursor-pointer",
         className
       )}
       disabled={!canScrollNext}
       onClick={scrollNext}
       {...props}
     >
-      <ArrowRight />
+      <div className="w-[70px] h-[70px] bg-contain bg-no-repeat bg-[url('images/previous-arrow.png')] hover:bg-[url('images/previous-arrow-hover.png')] scale-x-[-1]">
+        
+      </div>
+      
       <span className="sr-only">Next slide</span>
     </Button>
   );

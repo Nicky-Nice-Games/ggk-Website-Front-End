@@ -23,38 +23,36 @@ const CharactersPage = () => {
           className="mx-auto pt-8 w-full md:w-[40vw] mb-4"
         ></img>
 
-        <h1 className="text-center poppins text-md text-[#fffbee]">
+        <h1 className="text-center poppins text-md font-semibold text-[#fffbee] mb-[1rem]">
           Click a character to learn more about them!
         </h1>
 
-        <div>
+        <div className="relative">
           {/* Character carousel */}
           <CharacterCarousel
             contentClass="lg:max-w-240 bg-[#0000] border-none shadow-none"
             mappedContent={(character) => {
               return (
                 <>
+                <div className="flex flex-col justify-center h-[100%] relative">
                   <div
-                    className="absolute -top-85 
-                      lg:-top-60 lg:left-0 min-w-60 lg:w-100 z-10 translate-x-[32px]"
+                    className="absolute md:h-[150%] lg:h-[170%] 2xl:h-[200%] z-10 
+                    md:-translate-x-[50%] lg:-translate-x-[15%] 2xl:-translate-x-[30%]"
                   >
                     <img
                       src={character.imgUrl}
                       alt={character.name}
-                      className="max-h-90 lg:max-h-180"
+                      className="md:h-[100%] hidden md:block"
                     />
                   </div>
-                  <div className="absolute lg:-top-10 lg:right-5 w-full lg:w-4/5 flex bg-white justify-end rounded-lg drop-shadow-xl/50 overflow-hidden min-w-1/4 max-w-4xl ">
+                  <div className="w-full bg-white rounded-lg drop-shadow-xl/50">
                     {/* right side: character name and description */}
-                    <DialogDescription className="p-4 w-full lg:min-h-70 text-left">
-                      <div className="text-center lg:text-left lg:w-7/10 lg:ml-auto h-full">
+                    <DialogDescription className="p-[2rem] md:ml-[8rem] lg:ml-[4rem] 2xl:ml-[7rem] text-left">
+                      <div className="text-left md:w-7/10 md:ml-auto h-full">
                         <div className="flex flex-row justify-between mb-2">
-                          <DialogTitle className="text-black font-bold text-header2 justify-self-center lg:justify-self-start">
+                          <DialogTitle className="text-black font-bold text-header2 justify-self-start">
                             {character.name}
                           </DialogTitle>
-                          <DialogClose>
-                            <CloseIcon />
-                          </DialogClose>
                         </div>
                         <p className="text-gray-600 text-body whitespace-pre-line h-[85%] flex flex-col justify-center">
                           {character.description}
@@ -62,6 +60,8 @@ const CharactersPage = () => {
                       </div>
                     </DialogDescription>
                   </div>
+
+                </div>
                 </>
               );
             }}

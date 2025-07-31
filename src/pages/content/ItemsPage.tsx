@@ -20,7 +20,7 @@ const ItemsPage = () => {
           className="mx-auto pt-8 w-full md:w-[40vw] mb-4"
         ></img>
 
-        <h1 className="text-center text-[#fffbee] poppins text-body">
+        <h1 className="text-center text-[#fffbee] poppins font-semibold">
           Click an item to view its effects and levels!
         </h1>
 

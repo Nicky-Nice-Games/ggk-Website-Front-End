@@ -53,7 +53,6 @@ const PlayerStatsPage = ({
     collisionWithPlayer: 0,
     collisionWithWall: 0,
     felloffmap: 0,
-    fastestTime: 0,
     favoriteChara: 0,
     favoriteTrack: 0,
     offenseUsage: {
@@ -83,9 +82,14 @@ const PlayerStatsPage = ({
     podium: 0,
     firstPlace: 0,
     totalRaces: 0,
+    raceTime1: 0,
+    raceTime2: 0,
+    raceTime3: 0,
+    raceTime4: 0
   });
   // Store a list of the player's most recent races
-  const [recentRaces, setRecentRaces] = useState(null);
+  const [recentRaces, setRecentRaces] = useState(null); 
+  recentRaces;
 
   useEffect(() => {
     if (account) {
