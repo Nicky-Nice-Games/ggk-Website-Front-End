@@ -118,10 +118,12 @@ const HomePage = ({ setCurrentPage }: HomePageParams) => {
         >
           <h2 className="text-header2 m-4">The Lore</h2>
           <p className="text-body m-4">
-            Gizmo, the spirit of IGM, has set up multiple game-style race tracks throughout the RIT campus! 
-            Joined by multiple students who have stayed local during the summer and the RGDC mascot Jamster, 
-            Gizmo seeks to have a fun time before the summer term comes to an end. 
-            But don't worry; he will restore the campus back to it's original state to welcome in students for their fall classes.
+            Gizmo, the spirit of IGM, has set up multiple game-style race tracks
+            throughout the RIT campus! Joined by multiple students who have
+            stayed local during the summer and the RGDC mascot Jamster, Gizmo
+            seeks to have a fun time before the summer term comes to an end. But
+            don't worry; he will restore the campus back to it's original state
+            to welcome in students for their fall classes.
           </p>
         </div>
         <div
