@@ -5,6 +5,7 @@ import {
   DialogDescription,
   DialogTitle,
 } from "@/components/ui/dialog";
+import TitleBanner from "@/components/ui/title-banner";
 import { type Track } from "@/data/tracks";
 
 //Tracks Page - Sub Page of Content
@@ -12,30 +13,24 @@ const TracksPage = () => {
   //information of heading and track carasoul
   return (
     <div
-      className="min-h-[84vh] bg-size-[110%] bg-blend-multiply bg-size-[90%] md:bg-size-[80%]"
-      style={{
-        backgroundImage:
-          "linear-gradient(rgba(232, 232, 232, 1), rgba(205, 205, 205, 1)), url('images/items-background-darkoutline.png')",
-      }}
+      className="min-h-[84vh] bg-size-[110%] bg-blend-multiply bg-size-[90%] md:bg-size-[80%] min-h-[73vh] bg-size-[110%] bg-blend-multiply w-[100%] bg-size-[90%] md:bg-size-[80%]"
+          style=
+          {{
+            backgroundImage:
+            "linear-gradient(rgba(104, 104, 104, 1),rgba(104, 104, 104, 1), rgba(160, 160, 160, 1)), url('images/items-background-darkoutline.png')",
+        }}
     >
       {/*This is the header and description of each item*/}
       <ContentNavigator currentPage="tracks" />
-      <img
-        src=" images/banners/tracks.png"
-        className="mx-auto py-8 w-full md:w-[40vw]"
-      />
-
-        <h1 className="text-center text-[rgba(27, 27, 27, 1)] poppins font-semibold">
-          Click a track to view its story!
-        </h1>
-
-
+      <TitleBanner color="blue" text="Tracks" className="my-5" />
+      <h1 className="text-center text-[#fffbee] poppins text-body mb-5">Click a track to view its story!</h1>
       <MapSelect
         isDialog={true}
         clickActionOrDialogContent={(track: Track) => {
           return (
-            <DialogContent className="bg-[#0000] flex justify-start sm:max-w-3/5 gap-0 p-0">
-              <img src={track.imgUrl} className="w-2/5 rounded-l-lg" />
+            <DialogContent className="bg-[#0000] flex flex-col lg:flex-row lg:justify-start 
+            w-[100%] lg:max-w-[80%] lg:h-[60%] gap-0 p-0 my-auto">
+              <img src={track.imgUrl} className="w-[100%] lg:w-2/5 rounded-l-lg" />
               <div className="bg-gray-200 rounded-r-lg p-5">
                 <DialogTitle className="mb-5">{track.name}</DialogTitle>
                 <DialogDescription>{track.description}</DialogDescription>

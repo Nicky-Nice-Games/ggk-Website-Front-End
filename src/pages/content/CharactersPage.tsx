@@ -6,24 +6,22 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { CloseIcon } from "@/components/content/close-icon";
+import TitleBanner from "@/components/ui/title-banner";
 
 const CharactersPage = () => {
   return (
     <>
       <ContentNavigator currentPage={"characters"} />
       <main
-        className="min-h-[73vh] bg-size-[110%] bg-blend-multiply w-[100%] bg-size-[90%] md:bg-size-[80%]"
+        className="min-h-[73vh] bg-size-[110%] bg-blend-multiply w-[100%] bg-size-[90%] md:bg-size-[80%] pt-5"
         style={{
           backgroundImage:
             "linear-gradient(rgba(104, 104, 104, 1),rgba(104, 104, 104, 1), rgba(160, 160, 160, 1)), url('images/items-background-darkoutline.png')",
         }}
       >
-        <img
-          src=" images/banners/characters.png"
-          className="mx-auto pt-8 w-full md:w-[40vw] mb-4"
-        ></img>
+        <TitleBanner color="green" text="Characters" className="mb-5" />
 
-        <h1 className="text-center poppins text-md font-semibold text-[#fffbee] mb-[1rem]">
+        <h1 className="text-center poppins text-md text-[#fffbee] mb-5">
           Click a character to learn more about them!
         </h1>
 
@@ -45,9 +43,9 @@ const CharactersPage = () => {
                       className="md:h-[100%] hidden md:block"
                     />
                   </div>
-                  <div className="w-full bg-white rounded-lg drop-shadow-xl/50">
+                  <div className="w-full bg-gray-200 rounded-lg drop-shadow-xl/50">
                     {/* right side: character name and description */}
-                    <DialogDescription className="p-[2rem] md:ml-[8rem] lg:ml-[4rem] 2xl:ml-[7rem] text-left">
+                    <DialogDescription className=" p-[2rem] md:ml-[8rem] lg:ml-[4rem] 2xl:ml-[7rem] text-left">
                       <div className="text-left md:w-7/10 md:ml-auto h-full">
                         <div className="flex flex-row justify-between mb-2">
                           <DialogTitle className="text-black font-bold text-header2 justify-self-start">
