@@ -13,7 +13,7 @@ const TitleBanner = ({ color, text, className }: TitleBannerProps) => {
       bannerBackground = "bg-[url(images/banners/purple.png)]";
       break;
     case "red":
-      bannerBackground = "bg-[url(images/banners/red.png)]";
+      bannerBackground = "bg-[url(images/banners/red-md.png)]";
       break;
     case "orange":
       bannerBackground = "bg-[url(images/banners/orange.png)]";
