@@ -199,6 +199,12 @@
   font-size: xx-large;
 }
 
+.racingMobileText {
+  font-family: "Racing Sans One";
+  font-weight: none;
+  font-size: xx-large;
+}
+
 .racingUsername {
   font-family: "Racing Sans One";
   font-weight: none;

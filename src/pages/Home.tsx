@@ -46,17 +46,36 @@ const HomePage = ({ setCurrentPage }: HomePageParams) => {
 
   return (
     <>
-      <div className="relative h-[103vh] md:h-[74vh] w-full text-white pb-8 pb-16 bg-black">
+      <div className="relative h-auto min-h-[100vh] lg:h-[74vh] w-full text-white pb-16 bg-black overflow-hidden">
+        {/* Header Text Section - always on top for medium screens */}
         <div
           id="header-text"
-          className="md:h-3/5 relative md:absolute w-full 
-                    md:w-1/2 flex flex-col text-center items-center p-4 z-3 bg-gradient-to-r from-black to-[#0000]"
+          className="lg:h-3/5 relative lg:absolute w-full 
+              lg:w-1/2 flex flex-col text-center items-center p-4 z-10 
+              bg-gradient-to-r from-black lg:to-[#0000]"
         >
-          <img className="w-120 md:w-7/10" src="images/Game-Logo.png"></img>
-          <h3 className="text-header2 text-[#f3f4f6] mt-4 w-full">
+          {/* Logo - responsive sizing */}
+          <img
+            className="w-[80%] max-w-[400px] lg:w-[70%] mt-8 md:mt-12"
+            src="images/Game-Logo.png"
+            alt="Game Logo"
+          />
+
+          {/* Heading - responsive text sizing */}
+          <h3
+            className="text-header2 text-[#f3f4f6] mt-2 md:mt-4 w-full 
+                  text-xl sm:text-2xl md:text-3xl lg:text-4xl"
+          >
             Your Favorite No-Credit Courses!
           </h3>
         </div>
+
+        {/* Carousel - positioned below on medium screens */}
+        <div className="mt-8 md:mt-12 lg:mt-0">
+          <HomeCarousel />
+        </div>
+
+        {/* Arrow Button - responsive positioning */}
         <ArrowButton
           caption="See all news and updates!"
           clickAction={() => {
@@ -64,9 +83,10 @@ const HomePage = ({ setCurrentPage }: HomePageParams) => {
             navigate("/news");
             setCurrentPage("news");
           }}
-          className="absolute font-semibold bottom-0 md:right-6 right-4 z-10 px-10 py-3"
+          className="fixed lg:absolute bottom-4 left-1/2 transform -translate-x-1/2 
+              lg:left-auto lg:right-6 lg:translate-x-0 z-20 px-6 py-2 lg:px-10 lg:py-3
+              text-sm lg:text-base"
         />
-        <HomeCarousel />
       </div>
 
       <main className="overflow-hidden bg-[url('images/white-checker.png')] bg-fixed">
