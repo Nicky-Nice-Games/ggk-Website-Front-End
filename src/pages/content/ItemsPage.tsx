@@ -17,7 +17,7 @@ const ItemsPage = () => {
         }}
       >
         <TitleBanner color="red" text="Items" className="mb-5" />
-        <h1 className="text-center text-[#fffbee] poppins text-body">
+        <h1 className="text-center text-[#fffbee] poppins text-body mb-5">
           Click an item to view its effects and levels!
         </h1>
 

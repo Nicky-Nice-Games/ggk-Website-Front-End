@@ -36,7 +36,7 @@ const TitleBanner = ({ color, text, className }: TitleBannerProps) => {
     return (
       <div
         className={cn(
-          "w-full max-w-190 bg-size-[100%_100%] m-auto flex items-center justify-center h-20 sm:h-30",
+          "w-full mx-auto max-w-190 bg-size-[100%_100%] flex items-center justify-center h-20 sm:h-30",
           bannerBackground,
           className
         )}

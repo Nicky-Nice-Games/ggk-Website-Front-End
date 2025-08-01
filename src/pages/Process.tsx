@@ -18,7 +18,6 @@ const ProcessPage = () => {
     <>
       <main className="mt-0 px-6 md:px-12 relative bg-[url(images/items-background.png)] bg-[#BBB] bg-fixed bg-repeat bg-blend-difference bg-size-[90%] md:bg-size-[80%] *:text-white">
         {/* About Project Section */}
-
         <div className="pt-5">
           <TitleBanner color="orange" text="The Process" className="mb-5" />
           <h1 className="text-header2 pt-4 mx-0 mb-4"> About the Project</h1>

@@ -64,7 +64,7 @@ const HomePage = ({ setCurrentPage }: HomePageParams) => {
             navigate("/news");
             setCurrentPage("news");
           }}
-          className="absolute bottom-0 md:right-6 right-4 z-10 px-10 py-3"
+          className="absolute font-semibold bottom-0 md:right-6 right-4 z-10 px-10 py-3"
         />
         <HomeCarousel />
       </div>
@@ -118,27 +118,10 @@ const HomePage = ({ setCurrentPage }: HomePageParams) => {
         >
           <h2 className="text-header2 m-4">The Lore</h2>
           <p className="text-body m-4">
-            Lorem ipsum dolor sit amet consectetur. Congue sem auctor
-            pellentesque adipiscing in vel elit dapibus id. Lacus mi euismod
-            tristique in facilisis. Vehicula porttitor iaculis risus tincidunt
-            platea. Sed id platea phasellus vitae lacinia in lectus fames
-            molestie. Eget nibh tellus scelerisque nunc ultrices. Pellentesque
-            blandit amet elementum quam id. Mi consectetur sed adipiscing
-            accumsan sit ut consectetur. Pharetra faucibus gravida commodo
-            quisque at. Dui ac arcu nulla augue sed odio sit. Odio ultrices
-            cursus et arcu neque neque viverra faucibus faucibus. Pellentesque
-            aliquam tellus molestie sed quis sem a. Quam eleifend facilisi et
-            consectetur risus eros nisl lacus. Ut ac ac. Lorem ipsum dolor sit
-            amet consectetur. Congue sem auctor pellentesque adipiscing in vel
-            elit dapibus id. Lacus mi euismod tristique in facilisis. Vehicula
-            porttitor iaculis risus tincidunt platea. Sed id platea phasellus
-            vitae lacinia in lectus fames molestie. Eget nibh tellus scelerisque
-            nunc ultrices. Pellentesque blandit amet elementum quam id. Mi
-            consectetur sed adipiscing accumsan sit ut consectetur. Pharetra
-            faucibus gravida commodo quisque at. Dui ac arcu nulla augue sed
-            odio sit. Odio ultriceset arcu neque neque viverra faucibus
-            faucibus. Pellentesque aliquam tellus molestie sed quis sem a. Quam
-            eleifend facilisi et consectetur risus eros nisl lacus. Ut ac ac.
+            Gizmo, the spirit of IGM, has set up multiple game-style race tracks throughout the RIT campus! 
+            Joined by multiple students who have stayed local during the summer and the RGDC mascot Jamster, 
+            Gizmo seeks to have a fun time before the summer term comes to an end. 
+            But don't worry; he will restore the campus back to it's original state to welcome in students for their fall classes.
           </p>
         </div>
         <div
@@ -177,7 +160,7 @@ const HomePage = ({ setCurrentPage }: HomePageParams) => {
                   navigate("/leaderboard");
                   setCurrentPage("leaderboard");
                 }}
-                className="px-8 py-3"
+                className="px-8 py-3 font-semibold"
               />
             </div>
           </div>

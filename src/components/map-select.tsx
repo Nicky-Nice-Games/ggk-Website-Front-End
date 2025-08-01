@@ -14,8 +14,8 @@ const MapSelect = ({
     <div className="flex flex-col md:flex-row flex-wrap items-center md:justify-center">
       {tracks.map((track, index) => {
         return (
-          <div className="md:mx-[2rem] mb-10 w-3/4 md:w-1/3">
-            <h1 className="w-fit text-lg text-white font-semibold bg-gradient-to-r from-[#F66624] to-[#D84B3A] m-auto p-[5px] mb-2 px-3 py-1 rounded-lg g">
+          <div className="mb-10 mx-[1rem] w-3/4 md:w-[20%] drop-shadow-xl/50">
+            <h1 className="w-fit text-lg text-[#FFFBEE] font-semibold bg-gradient-to-r from-[#F66624] to-[#D84B3A] m-auto p-[5px] mb-2 px-3 py-1 rounded-lg poppins">
               {track.name}
             </h1>
             {isDialog ? (
@@ -35,7 +35,7 @@ const MapSelect = ({
                 onClick={() => {
                   clickActionOrDialogContent(track, index);
                 }}
-                className="cursor-pointer drop-shadow-xl/50 md:w-4/5"
+                className="cursor-pointer drop-shadow-xl/50"
               >
                 <div className="rounded-xl overflow-hidden w-full">
                   <img

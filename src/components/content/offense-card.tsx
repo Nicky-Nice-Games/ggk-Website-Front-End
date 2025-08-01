@@ -7,7 +7,7 @@ export const OffenseCard = () => {
   return (
     <ItemCard
       items={offenseItems}
-      bgGradient="from-[#DC2B2B] to-[#FF5F35]"
+      bgGradient="bg-gradient-to-b from-neutral-400 to-neutral-300"
       category="offense"
     />
   );

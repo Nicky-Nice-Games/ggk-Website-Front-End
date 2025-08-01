@@ -13,26 +13,33 @@ const TracksPage = () => {
   //information of heading and track carasoul
   return (
     <div
-      className="min-h-[84vh] bg-size-[110%] bg-blend-multiply bg-size-[90%] md:bg-size-[80%]"
-      style={{
-        backgroundImage:
-          "linear-gradient(rgba(232, 232, 232, 1), rgba(205, 205, 205, 1)), url('images/items-background-darkoutline.png')",
-      }}
+      className="min-h-[84vh] bg-size-[110%] bg-blend-multiply bg-size-[90%] md:bg-size-[80%] min-h-[73vh] bg-size-[110%] bg-blend-multiply w-[100%] bg-size-[90%] md:bg-size-[80%]"
+          style=
+          {{
+            backgroundImage:
+            "linear-gradient(rgba(104, 104, 104, 1),rgba(104, 104, 104, 1), rgba(160, 160, 160, 1)), url('images/items-background-darkoutline.png')",
+        }}
     >
       {/*This is the header and description of each item*/}
       <ContentNavigator currentPage="tracks" />
       <TitleBanner color="blue" text="Tracks" className="my-5" />
+      <h1 className="text-center text-[#fffbee] poppins text-body mb-8">Click a track to view its story!</h1>
       <MapSelect
         isDialog={true}
         clickActionOrDialogContent={(track: Track) => {
           return (
-            <DialogContent className="bg-[#0000] flex justify-start sm:max-w-3/5 gap-0 p-0">
-              <img src={track.imgUrl} className="w-2/5 rounded-l-lg" />
-              <div className="bg-gray-200 rounded-r-lg p-5">
-                <DialogTitle className="mb-5">{track.name}</DialogTitle>
-                <DialogDescription>{track.description}</DialogDescription>
-              </div>
-            </DialogContent>
+            <div className="rounded-lg shadow-lg">
+              <DialogContent className="bg-[#0000] flex flex-col lg:flex-row 
+              w-[100%] lg:max-w-[80%] lg:h-[60%] gap-0 p-0">
+                <img src={track.imgUrl} className="w-[100%] lg:w-2/5 rounded-l-lg rounded-tr-lg lg:rounded-r-0" />
+                <div className="bg-gray-200 
+                rounded-br-lg rounded-tr-0 
+                lg:rounded-br-lg rounded-bl-lg lg:rounded-l-0 lg:rounded-r-lg p-5">
+                  <DialogTitle className="mb-5">{track.name}</DialogTitle>
+                  <DialogDescription>{track.description}</DialogDescription>
+                </div>
+              </DialogContent>
+            </div>
           );
         }}
       />
