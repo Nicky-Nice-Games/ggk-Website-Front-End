@@ -82,7 +82,7 @@ export const ItemCard = memo(function ItemCard({
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/20 h-full w-full z-40"
+            className="fixed inset-0 bg-black/60 h-full w-full z-40"
           />
         )}
       </AnimatePresence>
@@ -90,11 +90,11 @@ export const ItemCard = memo(function ItemCard({
       {/* Popup Content */}
       <AnimatePresence>
         {isActive && activeItem && (
-          <div className="fixed inset-0 grid place-items-center z-50">
+          <div className="fixed inset-0 grid place-items-center mx-[1rem] z-50">
             <motion.div
               layoutId={`item-${category}-${id}`}
               ref={ref}
-              className="w-full max-w-[600px] h-full md:h-fit md:max-h-[90%] flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden"
+              className="w-full max-w-[600px] mx-[1rem] h-fit my-auto md:h-fit md:max-h-[90%] flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden rounded-lg shadow-lg"
             >
               {/* Header with gradient background */}
               <motion.div
@@ -129,7 +129,7 @@ export const ItemCard = memo(function ItemCard({
                         key={item.level}
                         value={item.level.toString()}
                         onClick={() => setActiveItem(item)}
-                        className="outline-black pt-3"
+                        className="outline-[#7c2d12] pt-3"
                       >
                         Level {item.level}
                       </TabsTrigger>

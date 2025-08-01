@@ -23,19 +23,23 @@ const TracksPage = () => {
       {/*This is the header and description of each item*/}
       <ContentNavigator currentPage="tracks" />
       <TitleBanner color="blue" text="Tracks" className="my-5" />
-      <h1 className="text-center text-[#fffbee] poppins text-body mb-5">Click a track to view its story!</h1>
+      <h1 className="text-center text-[#fffbee] poppins text-body mb-8">Click a track to view its story!</h1>
       <MapSelect
         isDialog={true}
         clickActionOrDialogContent={(track: Track) => {
           return (
-            <DialogContent className="bg-[#0000] flex flex-col lg:flex-row lg:justify-start 
-            w-[100%] lg:max-w-[80%] lg:h-[60%] gap-0 p-0 my-auto">
-              <img src={track.imgUrl} className="w-[100%] lg:w-2/5 rounded-l-lg" />
-              <div className="bg-gray-200 rounded-r-lg p-5">
-                <DialogTitle className="mb-5">{track.name}</DialogTitle>
-                <DialogDescription>{track.description}</DialogDescription>
-              </div>
-            </DialogContent>
+            <div className="rounded-lg shadow-lg">
+              <DialogContent className="bg-[#0000] flex flex-col lg:flex-row 
+              w-[100%] lg:max-w-[80%] lg:h-[60%] gap-0 p-0">
+                <img src={track.imgUrl} className="w-[100%] lg:w-2/5 rounded-l-lg rounded-tr-lg lg:rounded-r-0" />
+                <div className="bg-gray-200 
+                rounded-br-lg rounded-tr-0 
+                lg:rounded-br-lg rounded-bl-lg lg:rounded-l-0 lg:rounded-r-lg p-5">
+                  <DialogTitle className="mb-5">{track.name}</DialogTitle>
+                  <DialogDescription>{track.description}</DialogDescription>
+                </div>
+              </DialogContent>
+            </div>
           );
         }}
       />

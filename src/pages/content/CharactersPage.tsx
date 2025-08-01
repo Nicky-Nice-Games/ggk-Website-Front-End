@@ -52,7 +52,7 @@ const CharactersPage = () => {
                             {character.name}
                           </DialogTitle>
                         </div>
-                        <p className="text-gray-600 text-body whitespace-pre-line h-[85%] flex flex-col justify-center">
+                        <p className="text-[#262626] text-body whitespace-pre-line h-[85%] flex flex-col justify-center">
                           {character.description}
                         </p>
                       </div>
