@@ -64,8 +64,8 @@ const LeaderboardTable = ({ mapId }: { mapId: number }) => {
   const [leaderboardData, setLeaderboardData] = useState([]);
 
   useEffect(() => {
-    const link = "data/leaderboard-data.json";
-    //const link = `https://maventest-a9cc74b8d5cf.herokuapp.com/webservice/leaderboard/%7Bmapid%7D?mapid=${mapId}`;
+    //const link = "data/leaderboard-data.json";
+    const link = `https://maventest-a9cc74b8d5cf.herokuapp.com/webservice/leaderboard/%7Bmapid%7D?mapid=${mapId}`;
 
     fetchData("GET", link, "json", (data: any) => {
       data = data.sort((a: any, b: any) => a.raceTime - b.raceTime);
