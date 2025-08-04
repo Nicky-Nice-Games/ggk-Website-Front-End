@@ -39,7 +39,7 @@ const PreviewLeaderboard = ({ data }: { data: any }) => {
             Username
           </th>
           <th className="racingHeader text-[4vw] md:text-[3vw] lg:text-[2vw] w-[25%] text-center px-2">
-            Race Time
+            Time
           </th>
           <th className="racingHeader text-[4vw] md:text-[3vw] lg:text-[2vw] w-[25%] text-right px-2">
             Score
