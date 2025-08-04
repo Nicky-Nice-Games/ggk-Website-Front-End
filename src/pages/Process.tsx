@@ -22,7 +22,7 @@ const ProcessPage = () => {
           <TitleBanner color="orange" text="The Process" className="mb-5" />
           <h1 className="text-header2 pt-4 mx-0 mb-4"> About the Project</h1>
           <div className="flex md:flex-row flex-col items-stretch">
-            <p className="text-body">
+            <p className="text-body mb-4">
               Gizmo Go-Kartz was constructed by a team of almost 50 RIT students
               of varying grade levels, as an Entrepreneurial Co-op over the
               summer of 2025 sponsored by RIT Professor Nicholas Buonarota. All
@@ -91,34 +91,8 @@ const ProcessPage = () => {
           <h1 className="text-header2 mt-[4rem] m-4 mx-0 mb-4">
             Designing the Game
           </h1>
-          <div className="pb-[1rem] flex md:flex-row flex-col items-stretch">
-            <img
-              src={photo}
-              alt="Picture of RIT"
-              className="md:mr-[2rem] mb-[2rem] md:mt-0 self-center md:self-end md:w-[400px] w-full md:w-1/4 max-h-[300px]"
-            />
-            <p className="text-body">
-              Our Game Systems Programming (GSP) team is the backbone of our
-              game's functionality. Given the scope of their work, they follow
-              several practices to stay organized and efficient. To keep the
-              GitHub repo clean and avoid merge conflicts, GSP uses feature
-              branches and forks for development. All code pushed to main goes
-              through a pull request and approval process, ensuring no broken
-              code makes it into the daily builds. Daily builds of the game are
-              created to quickly catch and resolve functionality issues, and to
-              ensure there's always an updated version ready for playtesting.
-              The team regularly peer programs, which helps with idea
-              brainstorming, faster debugging, and overall productivity. As GSP
-              remote lead Logan Larrondo said, “Peer programming helps
-              brainstorm ideas, debug faster, and is often more efficient than
-              working alone.” To stay on track, the team fills out daily Google
-              Forms, logging progress and helping with planning. When major bugs
-              appear, GSP tackles them together, through research, code reviews,
-              or simply joining a call to talk things out.
-            </p>
-          </div>
           <div className="flex md:flex-row flex-col items-stretch">
-            <p className="mr-8 text-body">
+            <p className="mr-8 text-body mb-4">
               The look of Gizmo Go‑Kartz feels fun and nostalgic, echoing early
               3D kart racers like Mario Kart 64. We use a simple, low‑poly art
               style and a bold, RIT‑inspired color scheme, like warm reds,
@@ -187,7 +161,39 @@ const ProcessPage = () => {
           </div>
         </div>
 
-        {/* Track Dev Info Section */}
+        {/* Developing Game Section */}
+        <div>
+          <h1 className="text-header2 mt-[4rem] m-4 mx-0 mb-4">
+            Developing the Game
+          </h1>
+          <div className="pb-[1rem] flex md:flex-row flex-col items-stretch">
+            <img
+              src={photo}
+              alt="Picture of RIT"
+              className="md:mr-[2rem] mb-[2rem] md:mt-0 self-center md:self-end md:w-[400px] w-full md:w-1/4 max-h-[300px]"
+            />
+            <p className="text-body">
+              Our Game Systems Programming (GSP) team is the backbone of our
+              game's functionality. Given the scope of their work, they follow
+              several practices to stay organized and efficient. To keep the
+              GitHub repo clean and avoid merge conflicts, GSP uses feature
+              branches and forks for development. All code pushed to main goes
+              through a pull request and approval process, ensuring no broken
+              code makes it into the daily builds. Daily builds of the game are
+              created to quickly catch and resolve functionality issues, and to
+              ensure there's always an updated version ready for playtesting.
+              The team regularly peer programs, which helps with idea
+              brainstorming, faster debugging, and overall productivity. As GSP
+              remote lead Logan Larrondo said, “Peer programming helps
+              brainstorm ideas, debug faster, and is often more efficient than
+              working alone.” To stay on track, the team fills out daily Google
+              Forms, logging progress and helping with planning. When major bugs
+              appear, GSP tackles them together, through research, code reviews,
+              or simply joining a call to talk things out.
+            </p>
+          </div>
+        </div>
+
         <h1 className="text-header2 m-4 mx-0 mb-4">Building our Tracks</h1>
         <p className="mb-8 text-body">
           The tracks of Gizmo Go-Kartz are largely based on real RIT locations
