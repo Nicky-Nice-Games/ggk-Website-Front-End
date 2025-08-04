@@ -56,18 +56,11 @@ const HomePage = ({ setCurrentPage }: HomePageParams) => {
         >
           {/* Logo - responsive sizing */}
           <img
-            className="w-[80%] max-w-[400px] lg:w-[70%] mt-8 md:mt-12"
-            src="images/Game-Logo.png"
+            className="w-[80%] lg:w-[80%] mt-8 md:mt-12"
+            src="images/Game-Logo-with-tagline.png"
             alt="Game Logo"
           />
 
-          {/* Heading - responsive text sizing */}
-          <h3
-            className="text-header2 text-[#f3f4f6] mt-2 md:mt-4 w-full 
-                  text-xl sm:text-2xl md:text-3xl lg:text-4xl"
-          >
-            Your Favorite No-Credit Courses!
-          </h3>
         </div>
 
         {/* Carousel - positioned below on medium screens */}
