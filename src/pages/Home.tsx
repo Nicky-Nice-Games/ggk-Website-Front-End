@@ -46,15 +46,19 @@ const HomePage = ({ setCurrentPage }: HomePageParams) => {
 
   return (
     <>
-      <div className="relative h-[103vh] md:h-[74vh] w-full text-white pb-8 pb-16 bg-black">
+      <div className="relative h-auto min-h-[100vh] lg:h-[74vh] w-full text-white pb-16 bg-black overflow-hidden">
+        {/* Header Text Section - always on top for medium screens */}
         <div
           id="header-text"
-          className="md:h-3/5 relative md:absolute w-full 
-                    md:w-1/2 flex flex-col text-center items-center p-4 z-3 bg-gradient-to-r from-black to-[#0000]"
+          className="lg:h-3/5 relative lg:absolute w-full 
+              lg:w-1/2 flex flex-col text-center items-center p-4 z-10 
+              bg-gradient-to-r from-black lg:to-[#0000]"
         >
           <img className="w-120 md:w-7/10" src="images/Game-Logo.png"></img>
           
         </div>
+
+        {/* Arrow Button - responsive positioning */}
         <ArrowButton
           caption="See all news and updates!"
           clickAction={() => {
@@ -62,9 +66,10 @@ const HomePage = ({ setCurrentPage }: HomePageParams) => {
             navigate("/news");
             setCurrentPage("news");
           }}
-          className="absolute font-semibold bottom-0 md:right-6 right-4 z-10 px-10 py-3"
+          className="fixed lg:absolute bottom-4 left-1/2 transform -translate-x-1/2 
+              lg:left-auto lg:right-6 lg:translate-x-0 z-20 px-6 py-2 lg:px-10 lg:py-3
+              text-sm lg:text-base"
         />
-        <HomeCarousel />
       </div>
 
       <main className="overflow-hidden bg-[url('images/white-checker.png')] bg-fixed">
@@ -116,10 +121,12 @@ const HomePage = ({ setCurrentPage }: HomePageParams) => {
         >
           <h2 className="text-header2 m-4">The Lore</h2>
           <p className="text-body m-4">
-            Gizmo, the spirit of IGM, has set up multiple game-style race tracks throughout the RIT campus! 
-            Joined by multiple students who have stayed local during the summer and the RGDC mascot Jamster, 
-            Gizmo seeks to have a fun time before the summer term comes to an end. 
-            But don't worry; he will restore the campus back to it's original state to welcome in students for their fall classes.
+            Gizmo, the spirit of IGM, has set up multiple game-style race tracks
+            throughout the RIT campus! Joined by multiple students who have
+            stayed local during the summer and the RGDC mascot Jamster, Gizmo
+            seeks to have a fun time before the summer term comes to an end. But
+            don't worry; he will restore the campus back to it's original state
+            to welcome in students for their fall classes.
           </p>
         </div>
         <div

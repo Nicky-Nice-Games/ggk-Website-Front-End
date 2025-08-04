@@ -32,16 +32,16 @@ const PreviewLeaderboard = ({ data }: { data: any }) => {
                     flex flex-col items-center m-8 z-10 "
       >
         <tr className="w-full flex flex-row justify-between text-gray-200">
-          <th className="bebas text-[4vw] md:text-[3vw] lg:text-[2vw] w-1/4">
+          <th className="racingHeader text-[4vw] md:text-[3vw] lg:text-[2vw] w-[20%] text-left">
             Placing
           </th>
-          <th className="bebas text-[4vw] md:text-[3vw] lg:text-[2vw]">
+          <th className="racingHeader text-[4vw] md:text-[3vw] lg:text-[2vw] w-[30%] text-left px-2">
             Username
           </th>
-          <th className="bebas text-[4vw] md:text-[3vw] lg:text-[2vw]">
+          <th className="racingHeader text-[4vw] md:text-[3vw] lg:text-[2vw] w-[25%] text-center px-2">
             Race Time
           </th>
-          <th className="bebas text-[4vw] md:text-[3vw] lg:text-[2vw]">
+          <th className="racingHeader text-[4vw] md:text-[3vw] lg:text-[2vw] w-[25%] text-right px-2">
             Score
           </th>
         </tr>
@@ -54,6 +54,7 @@ const PreviewLeaderboard = ({ data }: { data: any }) => {
               time={formatTime(player.raceTime)}
               score={player.score}
               color={getPlacementColor(index)}
+              className=""
             />
           );
         })}
@@ -61,5 +62,4 @@ const PreviewLeaderboard = ({ data }: { data: any }) => {
     </>
   );
 };
-
 export default PreviewLeaderboard;
