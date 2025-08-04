@@ -78,7 +78,7 @@ export const columns: ColumnDef<Racer>[] = [
       return (
         <Button
           variant="ghost"
-          className="text-xs md:text-base"
+          className="text-xs md:text-base has-[>svg]:pr-0 md:has-[>svg]:pr-3"
           onClick={() => column.toggleSorting(isSorted === "asc")}
         >
           Race Time
@@ -89,7 +89,7 @@ export const columns: ColumnDef<Racer>[] = [
     cell: ({ row }) => {
       if (!row.getValue("raceTime")) return;
       return (
-        <h2 className="text-sm md:text-lg text-right">
+        <h2 className="text-xs md:text-lg text-right">
           {formatTime(row.getValue("raceTime"))}
         </h2>
       );
@@ -114,7 +114,7 @@ export const columns: ColumnDef<Racer>[] = [
       return (
         <Button
           variant="ghost"
-          className="text-right text-xs md:text-base"
+          className="text-right text-xs md:text-base has-[>svg]:pr-0 md:has-[>svg]:pr-3"
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
         >
           Score
@@ -125,7 +125,7 @@ export const columns: ColumnDef<Racer>[] = [
     cell: ({ row }) => {
       if (!row.getValue("index")) return;
       return (
-        <h2 className={`text-right text-sm md:text-lg`}>
+        <h2 className={`text-right text-xs md:text-lg`}>
           {row.getValue("score")}
         </h2>
       );

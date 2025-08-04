@@ -3,10 +3,6 @@ import { sumNumberListObject } from "@/utils";
 import { Card, CardContent } from "@/components/ui/card";
 import Pfp from "@/components/stats/pfp";
 import { achievementData } from "@/data/achievements";
-import { motion } from "framer-motion";
-import { Car } from "lucide-react";
-
-const AnimatedCard = motion(Card);
 
 //#region Helper Functions
 const getTotalItemsUsed = (playerData: any): number => {
@@ -77,11 +73,11 @@ export const AchievementsPage = ({
   ];
 
   return (
-    <div className="min-h-screen bg-[url('images/items-background.png')] 
-    bg-[#BBB] bg-size-[90%] md:bg-size-[80%] bg-repeat bg-fixed bg-cover bg-blend-difference pt-[1rem] poppins">
-
+    <div
+      className="min-h-screen bg-[url('images/items-background.png')] 
+    bg-[#BBB] bg-size-[90%] md:bg-size-[80%] bg-repeat bg-fixed bg-cover bg-blend-difference pt-[1rem] poppins"
+    >
       <div className="w-full max-w-[1500px] mx-auto pr-8 pl-8">
-
         <Card className="bg-opacity-90 border-none w-full mx-auto m-0 p-0 gap-0">
           {/* Header/nav bar - matches InfoPage */}
           <Card className="h-auto w-full mx-auto rounded-t-lg bg-zinc-900/60 border-0">
@@ -188,9 +184,9 @@ export const AchievementsPage = ({
               );
             })}
           </div>
-          </Card>
-          </div>
+        </Card>
       </div>
+    </div>
   );
 };
 

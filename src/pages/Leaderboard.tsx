@@ -46,14 +46,14 @@ const LeaderboardPage = () => {
     <div
       className={`${mapImage} pt-10 bg-gray-400 bg-cover bg-center bg-blend-soft-light min-h-[80vh]`}
     >
-      <div className="text-center max-w-8/10 m-auto bg-[#FFF4] rounded-lg">
+      <div className="text-center max-w-8/10 m-auto rounded-lg">
         <ArrowButton
           caption="Back"
           clickAction={() => setMapId(0)}
-          className="absolute left-[11%] top-34 md:top-25 px-4 sm:px-7"
+          className="absolute left-[10%] top-15 md:top-26 font-semibold px-7"
           direction="left"
         />
-        <h2 className="mb-2 text-header2">{mapName}</h2>
+        <h2 className="mb-2 text-header2 m-auto">{mapName}</h2>
         <LeaderboardTable mapId={mapId} />
       </div>
     </div>
@@ -64,7 +64,7 @@ const LeaderboardTable = ({ mapId }: { mapId: number }) => {
   const [leaderboardData, setLeaderboardData] = useState([]);
 
   useEffect(() => {
-    //const link = "./data/leaderboard-data.json";
+    //const link = "data/leaderboard-data.json";
     const link = `https://maventest-a9cc74b8d5cf.herokuapp.com/webservice/leaderboard/%7Bmapid%7D?mapid=${mapId}`;
 
     fetchData("GET", link, "json", (data: any) => {

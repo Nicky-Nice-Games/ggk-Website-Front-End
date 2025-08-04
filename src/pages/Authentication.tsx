@@ -98,11 +98,11 @@ const AuthPage = ({ setAccount }: { setAccount: Function }) => {
                 }
                 localStorage.setItem("pid", info.pid);
                 localStorage.setItem("username", info.username);
-                localStorage.setItem("pfp", info.pfp);
+                localStorage.setItem("pfp", info.pfpLink);
                 successCallback({
                   pid: info.pid,
                   username: info.username,
-                  pfp: info.pfp,
+                  pfp: info.pfpLink,
                 });
               },
               JSON.stringify({

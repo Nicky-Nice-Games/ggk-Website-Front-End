@@ -131,7 +131,7 @@ export function DataTable<TData, TValue>({
           Previous
         </Button>
         <div>
-          <p className="text-lg">
+          <p className="text-sm md:text-lg">
             Page
             <input
               id="page-number-input"
