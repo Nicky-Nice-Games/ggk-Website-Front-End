@@ -21,9 +21,9 @@ const CharactersPage = () => {
       >
         <TitleBanner color="green" text="Characters" className="mb-5" />
 
-        <h1 className="text-center poppins text-md text-[#fffbee] mb-5">
+        <p className="text-center text-body text-[#fffbee] mb-5">
           Click a character to learn more about them!
-        </h1>
+        </p>
 
         <div className="relative">
           {/* Character carousel */}

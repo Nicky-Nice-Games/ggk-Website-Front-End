@@ -23,7 +23,7 @@ const TracksPage = () => {
       {/*This is the header and description of each item*/}
       <ContentNavigator currentPage="tracks" />
       <TitleBanner color="blue" text="Tracks" className="my-5" />
-      <h1 className="text-center text-[#fffbee] poppins text-body mb-8">Click a track to view its story!</h1>
+      <p className="text-center text-[#fffbee] text-body mb-8">Click a track to view its story!</p>
       <MapSelect
         isDialog={true}
         clickActionOrDialogContent={(track: Track) => {

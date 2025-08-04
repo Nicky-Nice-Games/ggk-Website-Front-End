@@ -14,7 +14,7 @@ const MascotPage = () => {
         <TitleBanner color="gray" text="Gizmo The Ghost" className="mb-5" />
         <div className="flex flex-col-reverse md:flex-row md:justify-between">
           <p className="m-3 mx-[2rem] mb-[3rem] p-4 md:p-8 rounded-xl md:max-w-[50%] 
-          bg-[#d4d4d4] text-black text-body border-3 border-black">
+          bg-[#C2C2C2] text-black text-body border-3 border-black">
             Gizmo is a curious spirit that lingers in the IGM Open Lab at RIT. 
             They carved a life-sized wooden doll to possess, 
             allowing them to express themselves with a physical form. 
