@@ -2,8 +2,6 @@ import * as React from "react";
 import useEmblaCarousel, {
   type UseEmblaCarouselType,
 } from "embla-carousel-react";
-import { ArrowLeft, ArrowRight } from "lucide-react";
-
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
@@ -184,17 +182,12 @@ function CarouselPrevious({
       data-slot="carousel-previous"
       variant={variant}
       size={size}
-      className={cn(
-        "cursor-pointer",
-        className
-      )}
+      className={cn("cursor-pointer", className)}
       disabled={!canScrollPrev}
       onClick={scrollPrev}
       {...props}
     >
-      <div className="w-[70px] h-[70px] bg-contain bg-no-repeat bg-[url('images/previous-arrow.png')] hover:bg-[url('images/previous-arrow-hover.png')]">
-        
-      </div>
+      <div className="w-[70px] h-[70px] bg-contain bg-no-repeat bg-[url('images/previous-arrow.png')] hover:bg-[url('images/previous-arrow-hover.png')]"></div>
       <span className="sr-only">Previous slide</span>
     </Button>
   );
@@ -213,18 +206,13 @@ function CarouselNext({
       data-slot="carousel-next"
       variant={variant}
       size={size}
-      className={cn(
-        "cursor-pointer",
-        className
-      )}
+      className={cn("cursor-pointer", className)}
       disabled={!canScrollNext}
       onClick={scrollNext}
       {...props}
     >
-      <div className="w-[70px] h-[70px] bg-contain bg-no-repeat bg-[url('images/previous-arrow.png')] hover:bg-[url('images/previous-arrow-hover.png')] scale-x-[-1]">
-        
-      </div>
-      
+      <div className="w-[70px] h-[70px] bg-contain bg-no-repeat bg-[url('images/previous-arrow.png')] hover:bg-[url('images/previous-arrow-hover.png')] scale-x-[-1]"></div>
+
       <span className="sr-only">Next slide</span>
     </Button>
   );

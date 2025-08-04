@@ -16,9 +16,11 @@ type ContentFunction = (character: Character, index: number) => ReactElement;
 const CharacterCarousel = ({
   mappedContent,
   contentClass,
+  showDialogClose = true,
 }: {
   mappedContent: ContentFunction;
   contentClass: string;
+  showDialogClose?: boolean;
 }) => {
   const [center, setCenter] = useState(0);
 
@@ -45,7 +47,7 @@ const CharacterCarousel = ({
           <CarouselItem className="basis-3/3 md:basis-1/3 flex flex-row justify-center pl-0">
             <Dialog>
               <div className="w-full flex justify-center translate-x-[24px]">
-                  {/* Clickable carousel picture*/}
+                {/* Clickable carousel picture*/}
                 <DialogTrigger className="cursor-pointer w-[40%] max-sm:w-[65%] lg:w-[50%] xl:w-[50%] hover:scale-105">
                   <img
                     src={character.imgUrl}
@@ -58,7 +60,10 @@ const CharacterCarousel = ({
               </div>
 
               {/* Fullscreen content popup*/}
-              <DialogContent className={contentClass}>
+              <DialogContent
+                className={contentClass}
+                showCloseButton={showDialogClose}
+              >
                 {mappedContent(character, index)}
               </DialogContent>
             </Dialog>
