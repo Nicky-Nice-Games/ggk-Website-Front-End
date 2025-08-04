@@ -1,8 +1,7 @@
 @import "tailwindcss";
 @import "tw-animate-css";
-@custom-variant dark (&:is(.dark *));
 
-@theme inline {
+ :inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -109,15 +108,6 @@
   --sidebar-ring: oklch(0.553 0.013 58.071);
 }
 
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-}
-
 @font-face {
   font-family: "Bebas Neue";
   src: url("font/BebasNeue-Regular.ttf") format("truetype");
@@ -170,10 +160,6 @@
 
 .poppins {
   font-family: "Poppins", sans-serif;
-}
-
-.bebas {
-  font-family: "Bebas Neue", sans-serif;
 }
 
 .painterz {
@@ -234,17 +220,6 @@
   }
 }
 
-@theme inline {
-  --animate-scroll: scroll var(--animation-duration, 40s)
-    var(--animation-direction, forwards) linear infinite;
-
-  @keyframes scroll {
-    to {
-      transform: translate(calc(-50% - 0.5rem));
-    }
-  }
-}
-
 @keyframes scroll {
   0% {
     transform: translateX(0%);
@@ -257,12 +232,6 @@
 .animate-scroll {
   animation: scroll var(--animation-duration, 40s) linear infinite;
   animation-direction: var(--animation-direction, forwards);
-}
-
-@layer components {
-  .h1-style {
-    @apply text-white text-4xl font-bold;
-  }
 }
 
 #score,
@@ -318,5 +287,11 @@
 @media screen and (min-width: 1300px) {
   .text-body {
     font-size: 18px;
+  }
+}
+
+@media (max-width: 640px) {
+  .text-header2 {
+    font-size: 36px;
   }
 }
