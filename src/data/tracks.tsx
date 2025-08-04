@@ -15,16 +15,15 @@ export const tracks: Track[] = [
     background: `bg-[url(images/tracks/campus-circuit.png)]`,
     name: "Campus Circuit",
 
-    description:
-      `This fast-paced loop around the RIT campus is a perfect place for beginners to rev their engines and get a good feel for kart racing!  
+    description: `This fast-paced loop around the RIT campus is a perfect place for beginners to rev their engines and get a good feel for kart racing!  
       Whether you want to take a detour and head through the woods or stay on the main road, the Campus Circuit is an excellent place
        to practice.`,
     devDescription: (
-      <div className="flex flex-col md:flex-row">
+      <div className="flex flex-col md:flex-row h-[60%]">
         <img
           src="images/tracks/dev-campus-circuit.jpg"
           alt="Outer Loop Sketch"
-          className="md:max-w-60 lg:max-w-[20vw]"
+          className="md:max-w-60 lg:max-w-[20vw] h-[60%]"
         />
         <p className="md:ml-10 text-center md:text-left text-body">
           Campus Circuit is inspired by RIT's "Outer Loop," a large road that
@@ -41,8 +40,7 @@ export const tracks: Track[] = [
     imgUrl: "images/tracks/dorm-derby.png",
     background: `bg-[url(images/tracks/dorm-derby.png)]`,
     name: "Dorm Room Derby",
-    description:
-      `Gizmo seems to have built a miniature racetrack in their own dorm room! 
+    description: `Gizmo seems to have built a miniature racetrack in their own dorm room! 
       Shrink down to toy-size and race between Gizmo's clean half of the dorm, 
       and their roommate's dirtier side. Huh... I wonder who Gizmo's roommate is?`,
     devDescription: (
@@ -67,8 +65,7 @@ export const tracks: Track[] = [
     imgUrl: "images/tracks/tech-house.png",
     background: `bg-[url(images/tracks/tech-house.png)]`,
     name: "Tech House Turnpike",
-    description:
-     `Try not to get lost as you navigate the college of technology! With many alternate routes and paths you can take,
+    description: `Try not to get lost as you navigate the college of technology! With many alternate routes and paths you can take,
       there are a lot of different ways to reach the finish line. You might not be able to RUN in the halls, but they 
       never said you couldn't drive...`,
     devDescription: (

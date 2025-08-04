@@ -194,6 +194,7 @@ const ProcessPage = () => {
           </div>
         </div>
 
+        {/* Tracks Section */}
         <h1 className="text-header2 m-4 mx-0 mb-4">Building our Tracks</h1>
         <p className="mb-8 text-body">
           The tracks of Gizmo Go-Kartz are largely based on real RIT locations
@@ -205,6 +206,7 @@ const ProcessPage = () => {
           added as the finishing touch. In addition, track layouts are tweaked
           in response to feedback from playtesters.
         </p>
+
         <Tabs defaultValue="0" className="w-[90vw]">
           <TabsList className="flex flex-wrap h-full pl-0">
             {tracks.map((t) => {
@@ -231,7 +233,7 @@ const ProcessPage = () => {
           <TabsContent value="cut">
             <div className="bg-linear-to-b from-[#F66624] to-[#D84B3A] p-5 rounded-e-2xl rounded-b-2xl mb-3 *:mb-5">
               <div className="max-h-[52vh] overflow-y-auto">
-                <div className="flex flex-col md:flex-row">
+                <div className="flex flex-col md:flex-row h-[60%]">
                   <div className="md:mr-10">
                     <h1 className="text-header3 mb-3">Quarter-Mile</h1>
                     <p className="text-body">
@@ -243,13 +245,15 @@ const ProcessPage = () => {
                       track with 3 laps.
                     </p>
                   </div>
-                  <img
-                    src="images/tracks/dev-quarter-mile.jpg"
-                    alt="Quarter Mile Sketch"
-                    className="md:max-w-80 lg:max-w-[25vw]"
-                  />
+                  <div className="h-[60%]">
+                    <img
+                      src="images/tracks/dev-quarter-mile.jpg"
+                      alt="Quarter Mile Sketch"
+                      className="md:max-w-80 lg:max-w-[25vw] h-[60%] object-contain"
+                    />
+                  </div>
                 </div>
-                <div className="flex flex-col md:flex-row-reverse">
+                <div className="flex flex-col md:flex-row-reverse h-[60%]">
                   <div className="md:ml-10">
                     <h1 className="text-3xl font-bold poppins mb-3">
                       Global Village
@@ -262,11 +266,13 @@ const ProcessPage = () => {
                       not modeled or incorporated into the roster.
                     </p>
                   </div>
-                  <img
-                    src="images/tracks/dev-global-village.jpg"
-                    alt="Global Village Sketch"
-                    className="md:max-w-40 lg:max-w-[20vw]"
-                  />
+                  <div className="h-[60%]">
+                    <img
+                      src="images/tracks/dev-global-village.jpg"
+                      alt="Global Village Sketch"
+                      className="md:max-w-40 lg:max-w-[20vw] h-[60%] object-contain"
+                    />
+                  </div>
                 </div>
                 <div>
                   <h1 className="text-header3 mb-3">
