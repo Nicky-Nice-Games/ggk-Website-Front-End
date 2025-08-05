@@ -28,20 +28,23 @@ const PreviewLeaderboard = ({ data }: { data: any }) => {
       <table
         id="scoreboard"
         className="absolute top-[27%] 
-                    w-3/5 lg:w-[37%] h-125 
-                    flex flex-col items-center m-8 z-10 "
+                    w-[70%] lg:w-[37%] h-125 
+                    flex flex-col items-center m-8 z-10 mx-auto"
       >
-        <tr className="w-full flex flex-row justify-between text-gray-200">
-          <th className="racingHeader text-[4vw] md:text-[3vw] lg:text-[2vw] w-[20%] text-left">
+        <tr className="w-full flex flex-row text-gray-200 text-center mx-auto">
+          <th className="racingHeader text-[4vw] md:text-[3vw] lg:text-[2vw] w-[20%] text-center">
             Placing
           </th>
-          <th className="racingHeader text-[4vw] md:text-[3vw] lg:text-[2vw] w-[30%] text-left px-2">
-            Username
+          <th className="racingHeader text-[4vw] md:text-[3vw] lg:text-[2vw] w-[20%] text-center">
+
           </th>
-          <th className="racingHeader text-[4vw] md:text-[3vw] lg:text-[2vw] w-[25%] text-center px-2">
+          <th className="racingHeader text-[4vw] md:text-[3vw] lg:text-[2vw] w-[20%] text-center">
+            Player
+          </th>
+          <th className="racingHeader text-[4vw] md:text-[3vw] lg:text-[2vw] w-[20%] text-center">
             Time
           </th>
-          <th className="racingHeader text-[4vw] md:text-[3vw] lg:text-[2vw] w-[25%] text-right px-2">
+          <th className="racingHeader text-[4vw] md:text-[3vw] lg:text-[2vw] w-[20%] text-center">
             Score
           </th>
         </tr>
