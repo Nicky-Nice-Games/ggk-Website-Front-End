@@ -19,8 +19,10 @@ export const tracks: Track[] = [
       Whether you want to take a detour and head through the woods or stay on the main road, the Campus Circuit is an excellent place
        to practice.`,
     devDescription: (
-      <div className="flex flex-col md:flex-row">
-        <div className="h-[60%] md:max-w-60 lg:max-w-[20vw]">
+      <div>
+        <h2 className="text-header2 mb-[1rem]">Campus Circuit</h2>
+        <div className="flex flex-col md:flex-row">
+        <div className="md:max-w-60 lg:max-w-[20%] mb-[2rem]">
           <img
           src="images/tracks/dev-campus-circuit.jpg"
           alt="Outer Loop Sketch"
@@ -37,6 +39,8 @@ export const tracks: Track[] = [
           familiarize themselves with the game's mechanics.
         </p>
       </div>
+      </div>
+      
     ),
   },
   {
@@ -47,14 +51,16 @@ export const tracks: Track[] = [
       Shrink down to toy-size and race between Gizmo's clean half of the dorm, 
       and their roommate's dirtier side. Huh... I wonder who Gizmo's roommate is?`,
     devDescription: (
-      <div className="flex flex-col md:flex-row">
-        <div className="w-[100%] h-[50vh] lg:w-[50%] lg:h-[40vh]">
-          <img
+      <div>
+        
+        <h2 className="text-header2 mb-[1rem]">Dorm Room Derby</h2>
+
+        <div className="flex flex-col md:flex-row">
+        <img
           src="images/tracks/dev-dorm-derby.jpg"
           alt="Dorm Room Sketch"
-          className="w-[100%] h-[100%]"
+          className="md:max-w-60 lg:max-w-[20%] mb-[2rem]"
         />
-        </div>
         
         <p className="md:ml-10 text-center md:text-left text-body">
           The Dorm Room Derby is inspired by RIT's dorm rooms, where students
@@ -64,6 +70,8 @@ export const tracks: Track[] = [
           track is of intermediate difficulty, testing players that have a basic
           familiarity with the game's mechanics.
         </p>
+        </div>
+
       </div>
     ),
   },
@@ -75,11 +83,14 @@ export const tracks: Track[] = [
       there are a lot of different ways to reach the finish line. You might not be able to RUN in the halls, but they 
       never said you couldn't drive...`,
     devDescription: (
-      <div className="flex flex-col md:flex-row">
+      <div>
+        <h2 className="text-header2 mb-[1rem]">Tech House Turnpike</h2>
+
+        <div className="flex flex-col md:flex-row">
         <img
           src="images/tracks/dev-tech-house.jpg"
           alt="Tech House Sketch"
-          className="md:max-w-60 lg:max-w-[20vw]"
+          className="md:max-w-60 lg:max-w-[20%] mb-[2rem]"
         />
         <p className="md:ml-10 text-body">
           Tech House Turnpike is based on Golisano Hall, the primary building
@@ -88,6 +99,7 @@ export const tracks: Track[] = [
           separate floors. Its goal is to be particularly recognizable to Game
           Design students, who frequently visit the building it's based on.
         </p>
+      </div>
       </div>
     ),
   },
@@ -99,11 +111,14 @@ export const tracks: Track[] = [
     Gizmo has created a special track above the campus as means of nighttime celebration! 
     Not until after everyone has studied, of course... `,
     devDescription: (
-      <div className="flex flex-col md:flex-row">
+      <div>
+        <h2 className="text-header2 mb-[1rem]">All-Nighter Expressway</h2>
+
+        <div className="flex flex-col md:flex-row">
         <img
           src="images/tracks/dev-all-nighter.jpg"
           alt="Final Brick Road Sketch"
-          className="md:max-w-60 lg:max-w-[20vw]"
+          className="md:max-w-60 lg:max-w-[20%] mb-[2rem]"
         />
         <p className="md:ml-10 text-body">
           All-Nighter Expressway is heavily inspired by Mario Kart's Rainbow
@@ -115,6 +130,8 @@ export const tracks: Track[] = [
           encompassing the difficulty of all tracks before it.
         </p>
       </div>
+      </div>
+      
     ),
   },
 ];

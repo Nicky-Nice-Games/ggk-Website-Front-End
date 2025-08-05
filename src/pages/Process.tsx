@@ -107,9 +107,9 @@ const ProcessPage = () => {
               experience.
             </p>
             <img
-              src={photo}
+              src="images/RIT.jpg"
               alt="Picture of RIT"
-              className="md:mt-0 self-center md:self-end md:w-[400px] w-full md:w-1/4 max-h-[300px]"
+              className="md:mt-0 self-center md:self-end md:w-[500px] w-full md:w-1/4 max-h-[400px]"
             />
           </div>
         </div>
@@ -144,7 +144,7 @@ const ProcessPage = () => {
                         {c.occupation ? ` - ${c.occupation}` : ""}
                       </DialogTitle>
                     </DialogHeader>
-                    <div className="max-h-[70vh] overflow-auto flex flex-col items-center text-center">
+                    <div className="max-h-[70vh] overflow-auto flex flex-col items-center text-center bg-gray-200">
                       <img
                         src={c.conceptImgUrl}
                         alt={`${c.name} concept`}
@@ -207,7 +207,7 @@ const ProcessPage = () => {
           in response to feedback from playtesters.
         </p>
 
-        <Tabs defaultValue="0" className="w-[90vw]">
+        <Tabs defaultValue="0" className="w-[90vw] pb-[2rem]">
           <TabsList className="flex flex-wrap h-full pl-0">
             {tracks.map((t) => {
               return (
@@ -216,7 +216,7 @@ const ProcessPage = () => {
                 </TabsTrigger>
               );
             })}
-            <TabsTrigger value="cut">Cut Content</TabsTrigger>
+            <TabsTrigger value="cut">Back Burner Content</TabsTrigger>
           </TabsList>
           {tracks.map((t) => {
             return (
@@ -224,19 +224,20 @@ const ProcessPage = () => {
                 value={tracks.indexOf(t).toString()}
                 className="text-white text-body"
               >
-                <div className="bg-linear-to-b from-[#F66624] to-[#D84B3A] p-5 rounded-e-2xl rounded-b-2xl mb-3">
+                <div className="bg-linear-to-b from-[#F66624] to-[#D84B3A] p-5 rounded-e-2xl rounded-b-2xl mb-3 h-[70vh] overflow-y-auto">
                   {t.devDescription}
                 </div>
               </TabsContent>
             );
           })}
           <TabsContent value="cut">
-            <div className="bg-linear-to-b from-[#F66624] to-[#D84B3A] p-5 rounded-e-2xl rounded-b-2xl mb-3 *:mb-5">
-              <div className="max-h-[52vh] overflow-y-auto">
-                <div className="flex flex-col md:flex-row h-[60%]">
+            <div className="bg-linear-to-b from-[#F66624] to-[#D84B3A] p-5 rounded-e-2xl rounded-b-2xl mb-3 *:mb-5 h-[70vh] overflow-y-auto">
+              <div className="">
+                <h2 className="text-header2 mb-[1rem]">On the back burner...</h2>
+                <div className="flex flex-col md:flex-row">
                   <div className="md:mr-10">
-                    <h1 className="text-header3 mb-3">Quarter-Mile</h1>
-                    <p className="text-body">
+                    <h3 className="text-header3 mb-3">Quarter-Mile</h3>
+                    <p className="text-body mb-[1rem]">
                       A track based on RIT's Quarter Mile, a long pathway
                       connecting the dorm buildings to the academic buildings,
                       was developed and tested several times, but eventually cut
@@ -245,20 +246,20 @@ const ProcessPage = () => {
                       track with 3 laps.
                     </p>
                   </div>
-                  <div className="h-[60%] md:max-w-80 lg:max-w-[25vw]">
+                  <div className="">
                     <img
                       src="images/tracks/dev-quarter-mile.jpg"
                       alt="Quarter Mile Sketch"
-                      className="w-[100%] h-[100%] object-contain"
+                      className="md:max-w-80 lg:max-w-[25vw] mb-[1rem]"
                     />
                   </div>
                 </div>
-                <div className="flex flex-col md:flex-row-reverse h-[60%]">
+                <div className="flex flex-col md:flex-row-reverse">
                   <div className="md:ml-10">
                     <h1 className="text-3xl font-bold poppins mb-3">
                       Global Village
                     </h1>
-                    <p className="text-body">
+                    <p className="text-body mb-[1rem]">
                       A track based on RIT's Global Village was drafted early
                       into development, going through several proposed layouts
                       that emphasized several branching pathways. However, there
@@ -266,11 +267,11 @@ const ProcessPage = () => {
                       not modeled or incorporated into the roster.
                     </p>
                   </div>
-                  <div className="h-[60%] md:max-w-40 lg:max-w-[20vw]">
+                  <div className="">
                     <img
                       src="images/tracks/dev-global-village.jpg"
                       alt="Global Village Sketch"
-                      className="w-[100%] h-[100%] object-contain"
+                      className="md:max-w-40 lg:max-w-[20vw] mb-[1rem]"
                     />
                   </div>
                 </div>
