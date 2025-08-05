@@ -47,13 +47,13 @@ const HomePage = ({ setCurrentPage }: HomePageParams) => {
     <>      
     <main className="overflow-hidden bg-[url('images/black-checker.png')] bg-fixed">
 
-      <div className="relative w-full text-white py-8 md:py-4 bg-[url(images/splash-title-art.png)] md:bg-cover sm:bg-auto bg-no-repeat">
+      <div className="relative w-full text-white py-8 md:py-4 bg-[url(images/splash-title-art.png)] bg-contain bg-no-repeat">
         {/* Header Text Section - always on top for medium screens */}
         <img
           className="w-full md:w-[70%] min-h-40 m-auto opacity-0"
           src="images/splash-title-art.png"
         ></img>
-          <div className="overflow-hidden rotate-6 w-[120%] h-75 origin-top-left flex ">
+          <div className="overflow-hidden rotate-6 w-[120%] h-75 origin-top-left flex">
             <InfiniteMovingCards
               items={bannerImages}
               direction="right"
