@@ -13,7 +13,7 @@ export interface Character {
 export const characters: Character[] = [
   {
     imgUrl: "images/characters/gizmo.png",
-    conceptImgUrl: "images/characters/dev-gizmo.png",
+    conceptImgUrl: "images/process/gizmo.png",
     name: "Gizmo",
     description: (
       <div>
@@ -33,7 +33,7 @@ export const characters: Character[] = [
   },
   {
     imgUrl: "images/characters/morgan.png",
-    conceptImgUrl: "images/characters/dev-morgan.PNG",
+    conceptImgUrl: "images/process/morgan.PNG",
     name: "Morgan",
     occupation: "Skater Freshman",
     description: (
@@ -53,7 +53,7 @@ export const characters: Character[] = [
   },
   {
     imgUrl: "images/characters/reese.png",
-    conceptImgUrl: "images/characters/dev-reese.png",
+    conceptImgUrl: "images/process/reese.png",
     name: "Reese",
     occupation: "Dining Sophomore",
     description: (
@@ -79,7 +79,7 @@ export const characters: Character[] = [
   },
   {
     imgUrl: "images/characters/emma.png",
-    conceptImgUrl: "images/characters/dev-emma.png",
+    conceptImgUrl: "images/process/emma.png",
     name: "Emma",
     occupation: "OL Junior",
     description: (
@@ -105,7 +105,7 @@ export const characters: Character[] = [
   },
   {
     imgUrl: "images/characters/kai.png",
-    conceptImgUrl: "images/characters/dev-kai.PNG",
+    conceptImgUrl: "images/process/kai.PNG",
     name: "Kai",
     occupation: "Hockey Senior",
     description: (
@@ -130,7 +130,7 @@ export const characters: Character[] = [
   },
   {
     imgUrl: "images/characters/jamster.png",
-    conceptImgUrl: "images/characters/dev-jamster.png",
+    conceptImgUrl: "images/process/jamster.png",
     name: "Jamster",
     description: (
       <div>
