@@ -112,14 +112,8 @@ const NewsAndUpdatesPage = () => {
               {isMobile ? (
                 // Mobile layout
                 <>
-                  <motion.div layoutId={`image-${active.title}-${id}`}>
-                    <img // Moblie image
-                      src={active.image}
-                      alt={active.title}
-                      className="w-full max-h-72 object-top"
-                    />
-                  </motion.div>
-                  <div className="relative w-full flex flex-col p-6 h-full overflow-hidden">
+                  
+                  <div className="relative w-full bg-gray-200 flex flex-col p-6 h-full overflow-hidden">
                     {/* x button */}
                     <motion.button
                   layout
@@ -159,7 +153,7 @@ const NewsAndUpdatesPage = () => {
                     />
                   </motion.div>
 
-                  <div className="relative w-full flex flex-col p-6 min-w-3/5 xl:min-w-2/5 h-full overflow-hidden">
+                  <div className="relative w-full bg-gray-200 flex flex-col p-6 min-w-3/5 xl:min-w-2/5 h-full overflow-hidden">
                     {/* x button */}
                     <motion.button
                   layout
