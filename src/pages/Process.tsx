@@ -245,11 +245,11 @@ const ProcessPage = () => {
                       track with 3 laps.
                     </p>
                   </div>
-                  <div className="h-[60%]">
+                  <div className="h-[60%] md:max-w-80 lg:max-w-[25vw]">
                     <img
                       src="images/tracks/dev-quarter-mile.jpg"
                       alt="Quarter Mile Sketch"
-                      className="md:max-w-80 lg:max-w-[25vw] h-[60%] object-contain"
+                      className="w-[100%] h-[100%] object-contain"
                     />
                   </div>
                 </div>
@@ -266,11 +266,11 @@ const ProcessPage = () => {
                       not modeled or incorporated into the roster.
                     </p>
                   </div>
-                  <div className="h-[60%]">
+                  <div className="h-[60%] md:max-w-40 lg:max-w-[20vw]">
                     <img
                       src="images/tracks/dev-global-village.jpg"
                       alt="Global Village Sketch"
-                      className="md:max-w-40 lg:max-w-[20vw] h-[60%] object-contain"
+                      className="w-[100%] h-[100%] object-contain"
                     />
                   </div>
                 </div>

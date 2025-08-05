@@ -19,12 +19,15 @@ export const tracks: Track[] = [
       Whether you want to take a detour and head through the woods or stay on the main road, the Campus Circuit is an excellent place
        to practice.`,
     devDescription: (
-      <div className="flex flex-col md:flex-row h-[60%]">
-        <img
+      <div className="flex flex-col md:flex-row">
+        <div className="h-[60%] md:max-w-60 lg:max-w-[20vw]">
+          <img
           src="images/tracks/dev-campus-circuit.jpg"
           alt="Outer Loop Sketch"
-          className="md:max-w-60 lg:max-w-[20vw] h-[60%]"
-        />
+          className="w-[100%] h-[100%]"
+          />
+        </div>
+        
         <p className="md:ml-10 text-center md:text-left text-body">
           Campus Circuit is inspired by RIT's "Outer Loop," a large road that
           encircles the entire campus. As such, the track features multiple
@@ -45,11 +48,14 @@ export const tracks: Track[] = [
       and their roommate's dirtier side. Huh... I wonder who Gizmo's roommate is?`,
     devDescription: (
       <div className="flex flex-col md:flex-row">
-        <img
+        <div className="w-[100%] h-[50vh] lg:w-[50%] lg:h-[40vh]">
+          <img
           src="images/tracks/dev-dorm-derby.jpg"
           alt="Dorm Room Sketch"
-          className="md:max-w-60 lg:max-w-[20vw]"
+          className="w-[100%] h-[100%]"
         />
+        </div>
+        
         <p className="md:ml-10 text-center md:text-left text-body">
           The Dorm Room Derby is inspired by RIT's dorm rooms, where students
           make their second homes. Inspired by Mario Kart's Ribbon Road, the
