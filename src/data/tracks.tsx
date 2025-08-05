@@ -20,7 +20,7 @@ export const tracks: Track[] = [
        to practice.`,
     devDescription: (
       <div>
-        <h2 className="text-header2 mb-[1rem]">Campus Circuit</h2>
+        <h2 className="text-header3 mb-[1rem]">Campus Circuit</h2>
         <div className="flex flex-col md:flex-row">
         <div className="md:max-w-60 lg:max-w-[20%] mb-[2rem]">
           <img
@@ -53,7 +53,7 @@ export const tracks: Track[] = [
     devDescription: (
       <div>
         
-        <h2 className="text-header2 mb-[1rem]">Dorm Room Derby</h2>
+        <h2 className="text-header3 mb-[1rem]">Dorm Room Derby</h2>
 
         <div className="flex flex-col md:flex-row">
         <img
@@ -84,7 +84,7 @@ export const tracks: Track[] = [
       never said you couldn't drive...`,
     devDescription: (
       <div>
-        <h2 className="text-header2 mb-[1rem]">Tech House Turnpike</h2>
+        <h2 className="text-header3 mb-[1rem]">Tech House Turnpike</h2>
 
         <div className="flex flex-col md:flex-row">
         <img
@@ -112,7 +112,7 @@ export const tracks: Track[] = [
     Not until after everyone has studied, of course... `,
     devDescription: (
       <div>
-        <h2 className="text-header2 mb-[1rem]">All-Nighter Expressway</h2>
+        <h2 className="text-header3 mb-[1rem]">All-Nighter Expressway</h2>
 
         <div className="flex flex-col md:flex-row">
         <img

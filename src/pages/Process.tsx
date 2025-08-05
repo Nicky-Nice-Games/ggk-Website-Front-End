@@ -29,36 +29,36 @@ const ProcessPage = () => {
               students are split into 8 sub-teams by their specialty:
               <ul className="list-disc *:my-2 ml-5">
                 <li>
-                  <b className="text-xl">Production:</b> Oversees the entire
+                  <b className="font-bold text-[#fb923c]">Production:</b> Oversees the entire
                   team's work, assigning tasks and handling marketing.
                 </li>
                 <li>
-                  <b className="text-xl">Gameplay and Systems Programming:</b>{" "}
+                  <b className="font-bold text-[#fb923c]">Gameplay and Systems Programming:</b>{" "}
                   Programs all of the game's features and mechanics in Unity.
                 </li>
                 <li>
-                  <b className="text-xl">Web Development:</b> Programs the
+                  <b className="font-bold text-[#fb923c]">Web Development:</b> Programs the
                   game's website, summarizing information and displaying game
                   statistics.
                 </li>
                 <li>
-                  <b className="text-xl">Level Design:</b> Designs and iterates
+                  <b className="font-bold text-[#fb923c]">Level Design:</b> Designs and iterates
                   on the layouts and themes of the game's tracks.
                 </li>
                 <li>
-                  <b className="text-xl">Content Development:</b> Creates all
+                  <b className="font-bold text-[#fb923c]">Content Development:</b> Creates all
                   the game's art assets and intellectual property.
                 </li>
                 <li>
-                  <b className="text-xl">Quality Assurance:</b> Ensures code and
+                  <b className="font-bold text-[#fb923c]">Quality Assurance:</b> Ensures code and
                   documentation is well-organized through frequent testing.
                 </li>
                 <li>
-                  <b className="text-xl">Support:</b> Assists other teams in
+                  <b className="font-bold text-[#fb923c]">Support:</b> Assists other teams in
                   various areas and ensures progress doesn't slow down.
                 </li>
                 <li>
-                  <b className="text-xl">Research &amp; Development:</b>{" "}
+                  <b className="font-bold text-[#fb923c]">Research &amp; Development:</b>{" "}
                   Researches construction of the game's arcade cabinet and
                   potential features.
                 </li>
@@ -137,7 +137,7 @@ const ProcessPage = () => {
               contentClass="lg:max-w-[60%]"
               mappedContent={(c) => {
                 return (
-                  <>
+                  <div className="bg-white">
                     <DialogHeader className="text-left">
                       <DialogTitle className="text-header3 mb-4">
                         {c.name}
@@ -154,7 +154,7 @@ const ProcessPage = () => {
                         {c.devDescription}
                       </DialogDescription>
                     </div>
-                  </>
+                  </div>
                 );
               }}
             />
@@ -168,8 +168,8 @@ const ProcessPage = () => {
           </h1>
           <div className="pb-[1rem] flex md:flex-row flex-col items-stretch">
             <img
-              src={photo}
-              alt="Picture of RIT"
+              src="images/GSP.jpg"
+              alt="Picture of GSP"
               className="md:mr-[2rem] mb-[2rem] md:mt-0 self-center md:self-end md:w-[400px] w-full md:w-1/4 max-h-[300px]"
             />
             <p className="text-body">
@@ -233,10 +233,10 @@ const ProcessPage = () => {
           <TabsContent value="cut">
             <div className="bg-linear-to-b from-[#F66624] to-[#D84B3A] p-5 rounded-e-2xl rounded-b-2xl mb-3 *:mb-5 h-[70vh] overflow-y-auto">
               <div className="">
-                <h2 className="text-header2 mb-[1rem]">On the back burner...</h2>
+                <h2 className="text-header3 mb-[1rem]">On the back burner...</h2>
                 <div className="flex flex-col md:flex-row">
                   <div className="md:mr-10">
-                    <h3 className="text-header3 mb-3">Quarter-Mile</h3>
+                    <h3 className="text-header4 mb-3">Quarter-Mile</h3>
                     <p className="text-body mb-[1rem]">
                       A track based on RIT's Quarter Mile, a long pathway
                       connecting the dorm buildings to the academic buildings,
@@ -256,7 +256,7 @@ const ProcessPage = () => {
                 </div>
                 <div className="flex flex-col md:flex-row-reverse">
                   <div className="md:ml-10">
-                    <h1 className="text-3xl font-bold poppins mb-3">
+                    <h1 className="text-header4 mb-3">
                       Global Village
                     </h1>
                     <p className="text-body mb-[1rem]">
@@ -276,7 +276,7 @@ const ProcessPage = () => {
                   </div>
                 </div>
                 <div>
-                  <h1 className="text-header3 mb-3">
+                  <h1 className="text-header4 mb-3">
                     Other Cut Track Concepts
                   </h1>
                   <ul className="list-disc ml-5 *:mb-2 text-body">
