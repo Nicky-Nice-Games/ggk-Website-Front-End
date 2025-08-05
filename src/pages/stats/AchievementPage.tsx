@@ -66,10 +66,10 @@ export const AchievementsPage = ({
   );
 
   const achievementSections = [
-    { name: "1st Place Finishes", progress: firstPlaceAchievements },
-    { name: "Podium Finishes", progress: top3Achievements },
-    { name: "Races", progress: totalRaceAchievements },
-    { name: "Items Collected", progress: itemsUsedAchievements },
+    { name: "1st Place Finishes", progress: firstPlaceAchievements},
+    { name: "Podium Finishes", progress: top3Achievements},
+    { name: "Races", progress: totalRaceAchievements},
+    { name: "Items Collected", progress: itemsUsedAchievements},
   ];
 
   return (
@@ -139,21 +139,13 @@ export const AchievementsPage = ({
                         {unlocked ? (
                           <div className="relative transform transition-transform hover:scale-110">
                             {/* Ribbon */}
-                            <div className="absolute -top-3 md:-top-4 left-1/2 transform -translate-x-1/2 flex flex-col items-center">
-                              <div className="w-5 h-5 md:w-6 md:h-6 bg-orange-500 rounded-t-full" />
-                              <div className="w-5 h-1.5 md:w-6 md:h-2 bg-black" />
-                            </div>
                             {/* Hexagon medal */}
                             <div
-                              className="w-22 h-22 md:w-24 md:h-24 border-4 border-orange-400 flex items-center justify-center"
-                              style={{
-                                backgroundColor: "#111827", // Dark gray background
-                                clipPath: hexagonClip,
-                              }}
-                            >
-                              <span className="text-2xl md:text-3xl text-yellow-400">
-                                {"🏆"}
-                              </span>
+                              className="w-22 h-22 md:w-24 md:h-24 border-0 flex items-center justify-center"
+  
+                            > 
+                              <img src={medals[idx].img} alt="achievement icon"/>
+
                             </div>
                             {/* Tooltip */}
                             <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-2 py-1 bg-black text-orange-300 text-xs md:text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap border border-orange-500">

@@ -24,7 +24,7 @@ export const tracks: Track[] = [
         <div className="flex flex-col md:flex-row">
         <div className="md:max-w-60 lg:max-w-[20%] mb-[2rem]">
           <img
-          src="images/tracks/dev-campus-circuit.jpg"
+          src="images/process/campus-circuit.jpg"
           alt="Outer Loop Sketch"
           className="w-[100%] h-[100%]"
           />
@@ -57,7 +57,7 @@ export const tracks: Track[] = [
 
         <div className="flex flex-col md:flex-row">
         <img
-          src="images/tracks/dev-dorm-derby.jpg"
+          src="images/process/dorm-derby.jpg"
           alt="Dorm Room Sketch"
           className="md:max-w-60 lg:max-w-[20%] mb-[2rem]"
         />
@@ -88,7 +88,7 @@ export const tracks: Track[] = [
 
         <div className="flex flex-col md:flex-row">
         <img
-          src="images/tracks/dev-tech-house.jpg"
+          src="images/process/tech-house.jpg"
           alt="Tech House Sketch"
           className="md:max-w-60 lg:max-w-[20%] mb-[2rem]"
         />
@@ -116,7 +116,7 @@ export const tracks: Track[] = [
 
         <div className="flex flex-col md:flex-row">
         <img
-          src="images/tracks/dev-all-nighter.jpg"
+          src="images/process/all-nighter.jpg"
           alt="Final Brick Road Sketch"
           className="md:max-w-60 lg:max-w-[20%] mb-[2rem]"
         />

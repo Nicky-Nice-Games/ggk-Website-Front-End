@@ -25,8 +25,8 @@ export const HomeCarousel = () => {
         <div className="h-[40vh] object-contain">
           <img className="h-[100%]" src={image}></img>
         </div>
-        <div>
-          <h2 className="text-[40px] md:text-[60px] racing">{header}</h2>
+        <div className="w-[60%]">
+          <h2 className="text-[40px] racing">{header}</h2>
           <p className="text-[18px]">{description}</p>
         </div>
       </div>
