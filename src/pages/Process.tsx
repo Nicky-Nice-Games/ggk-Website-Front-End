@@ -29,36 +29,46 @@ const ProcessPage = () => {
               students are split into 8 sub-teams by their specialty:
               <ul className="list-disc *:my-2 ml-5">
                 <li>
-                  <b className="font-bold text-[#fb923c]">Production:</b> Oversees the entire
-                  team's work, assigning tasks and handling marketing.
+                  <b className="font-bold text-[#fb923c]">Production:</b>{" "}
+                  Oversees the entire team's work, assigning tasks and handling
+                  marketing.
                 </li>
                 <li>
-                  <b className="font-bold text-[#fb923c]">Gameplay and Systems Programming:</b>{" "}
+                  <b className="font-bold text-[#fb923c]">
+                    Gameplay and Systems Programming:
+                  </b>{" "}
                   Programs all of the game's features and mechanics in Unity.
                 </li>
                 <li>
-                  <b className="font-bold text-[#fb923c]">Web Development:</b> Programs the
-                  game's website, summarizing information and displaying game
-                  statistics.
+                  <b className="font-bold text-[#fb923c]">Web Development:</b>{" "}
+                  Programs the game's website, summarizing information and
+                  displaying game statistics.
                 </li>
                 <li>
-                  <b className="font-bold text-[#fb923c]">Level Design:</b> Designs and iterates
-                  on the layouts and themes of the game's tracks.
+                  <b className="font-bold text-[#fb923c]">Level Design:</b>{" "}
+                  Designs and iterates on the layouts and themes of the game's
+                  tracks.
                 </li>
                 <li>
-                  <b className="font-bold text-[#fb923c]">Content Development:</b> Creates all
-                  the game's art assets and intellectual property.
+                  <b className="font-bold text-[#fb923c]">
+                    Content Development:
+                  </b>{" "}
+                  Creates all the game's art assets and intellectual property.
                 </li>
                 <li>
-                  <b className="font-bold text-[#fb923c]">Quality Assurance:</b> Ensures code and
-                  documentation is well-organized through frequent testing.
+                  <b className="font-bold text-[#fb923c]">Quality Assurance:</b>{" "}
+                  Ensures code and documentation is well-organized through
+                  frequent testing.
                 </li>
                 <li>
-                  <b className="font-bold text-[#fb923c]">Support:</b> Assists other teams in
-                  various areas and ensures progress doesn't slow down.
+                  <b className="font-bold text-[#fb923c]">Support:</b> Assists
+                  other teams in various areas and ensures progress doesn't slow
+                  down.
                 </li>
                 <li>
-                  <b className="font-bold text-[#fb923c]">Research &amp; Development:</b>{" "}
+                  <b className="font-bold text-[#fb923c]">
+                    Research &amp; Development:
+                  </b>{" "}
                   Researches construction of the game's arcade cabinet and
                   potential features.
                 </li>
@@ -228,16 +238,18 @@ const ProcessPage = () => {
                 value={tracks.indexOf(t).toString()}
                 className="text-white text-body"
               >
-                <div className="bg-linear-to-b from-[#F66624] to-[#D84B3A] p-5 rounded-e-2xl rounded-b-2xl mb-3 h-[70vh] overflow-y-auto">
+                <div className="bg-linear-to-b from-[#F66624] to-[#D84B3A] p-5 xl:rounded-e-2xl rounded-b-2xl mb-3 h-[70vh]">
                   {t.devDescription}
                 </div>
               </TabsContent>
             );
           })}
           <TabsContent value="cut">
-            <div className="bg-linear-to-b from-[#F66624] to-[#D84B3A] p-5 rounded-e-2xl rounded-b-2xl mb-3 *:mb-5 h-[70vh] overflow-y-auto">
-              <div className="">
-                <h2 className="text-header3 mb-[1rem]">On the back burner...</h2>
+            <div className="bg-linear-to-b from-[#F66624] to-[#D84B3A] p-5 xl:rounded-e-2xl rounded-b-2xl mb-3 *:mb-5 h-[70vh] ">
+              <div className="max-h-full overflow-y-auto">
+                <h2 className="text-header3 mb-[1rem]">
+                  On the back burner...
+                </h2>
                 <div className="flex flex-col md:flex-row">
                   <div className="md:mr-10">
                     <h3 className="text-header4 mb-3">Quarter-Mile</h3>
@@ -260,9 +272,7 @@ const ProcessPage = () => {
                 </div>
                 <div className="flex flex-col md:flex-row-reverse">
                   <div className="md:ml-10">
-                    <h1 className="text-header4 mb-3">
-                      Global Village
-                    </h1>
+                    <h1 className="text-header4 mb-3">Global Village</h1>
                     <p className="text-body mb-[1rem]">
                       A track based on RIT's Global Village was drafted early
                       into development, going through several proposed layouts
