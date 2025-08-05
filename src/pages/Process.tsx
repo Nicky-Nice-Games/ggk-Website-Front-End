@@ -22,43 +22,53 @@ const ProcessPage = () => {
           <TitleBanner color="orange" text="The Process" className="mb-5" />
           <h1 className="text-header2 pt-4 mx-0 mb-4"> About the Project</h1>
           <div className="flex md:flex-row flex-col items-stretch">
-            <p className="text-body">
+            <p className="text-body mb-4">
               Gizmo Go-Kartz was constructed by a team of almost 50 RIT students
               of varying grade levels, as an Entrepreneurial Co-op over the
               summer of 2025 sponsored by RIT Professor Nicholas Buonarota. All
               students are split into 8 sub-teams by their specialty:
               <ul className="list-disc *:my-2 ml-5">
                 <li>
-                  <b className="text-xl">Production:</b> Oversees the entire
-                  team's work, assigning tasks and handling marketing.
+                  <b className="font-bold text-[#fb923c]">Production:</b>{" "}
+                  Oversees the entire team's work, assigning tasks and handling
+                  marketing.
                 </li>
                 <li>
-                  <b className="text-xl">Gameplay and Systems Programming:</b>{" "}
+                  <b className="font-bold text-[#fb923c]">
+                    Gameplay and Systems Programming:
+                  </b>{" "}
                   Programs all of the game's features and mechanics in Unity.
                 </li>
                 <li>
-                  <b className="text-xl">Web Development:</b> Programs the
-                  game's website, summarizing information and displaying game
-                  statistics.
+                  <b className="font-bold text-[#fb923c]">Web Development:</b>{" "}
+                  Programs the game's website, summarizing information and
+                  displaying game statistics.
                 </li>
                 <li>
-                  <b className="text-xl">Level Design:</b> Designs and iterates
-                  on the layouts and themes of the game's tracks.
+                  <b className="font-bold text-[#fb923c]">Level Design:</b>{" "}
+                  Designs and iterates on the layouts and themes of the game's
+                  tracks.
                 </li>
                 <li>
-                  <b className="text-xl">Content Development:</b> Creates all
-                  the game's art assets and intellectual property.
+                  <b className="font-bold text-[#fb923c]">
+                    Content Development:
+                  </b>{" "}
+                  Creates all the game's art assets and intellectual property.
                 </li>
                 <li>
-                  <b className="text-xl">Quality Assurance:</b> Ensures code and
-                  documentation is well-organized through frequent testing.
+                  <b className="font-bold text-[#fb923c]">Quality Assurance:</b>{" "}
+                  Ensures code and documentation is well-organized through
+                  frequent testing.
                 </li>
                 <li>
-                  <b className="text-xl">Support:</b> Assists other teams in
-                  various areas and ensures progress doesn't slow down.
+                  <b className="font-bold text-[#fb923c]">Support:</b> Assists
+                  other teams in various areas and ensures progress doesn't slow
+                  down.
                 </li>
                 <li>
-                  <b className="text-xl">Research &amp; Development:</b>{" "}
+                  <b className="font-bold text-[#fb923c]">
+                    Research &amp; Development:
+                  </b>{" "}
                   Researches construction of the game's arcade cabinet and
                   potential features.
                 </li>
@@ -88,37 +98,11 @@ const ProcessPage = () => {
 
         {/* Designing Game Section */}
         <div>
-          <h1 className="text-header2 mt-[4rem] m-4 mx-0 mb-4">
+          <h1 className="text-header2 mt-[6rem] m-4 mx-0 mb-4">
             Designing the Game
           </h1>
-          <div className="pb-[1rem] flex md:flex-row flex-col items-stretch">
-            <img
-              src={photo}
-              alt="Picture of RIT"
-              className="md:mr-[2rem] mb-[2rem] md:mt-0 self-center md:self-end md:w-[400px] w-full md:w-1/4 max-h-[300px]"
-            />
-            <p className="text-body">
-              Our Game Systems Programming (GSP) team is the backbone of our
-              game's functionality. Given the scope of their work, they follow
-              several practices to stay organized and efficient. To keep the
-              GitHub repo clean and avoid merge conflicts, GSP uses feature
-              branches and forks for development. All code pushed to main goes
-              through a pull request and approval process, ensuring no broken
-              code makes it into the daily builds. Daily builds of the game are
-              created to quickly catch and resolve functionality issues, and to
-              ensure there's always an updated version ready for playtesting.
-              The team regularly peer programs, which helps with idea
-              brainstorming, faster debugging, and overall productivity. As GSP
-              remote lead Logan Larrondo said, “Peer programming helps
-              brainstorm ideas, debug faster, and is often more efficient than
-              working alone.” To stay on track, the team fills out daily Google
-              Forms, logging progress and helping with planning. When major bugs
-              appear, GSP tackles them together, through research, code reviews,
-              or simply joining a call to talk things out.
-            </p>
-          </div>
           <div className="flex md:flex-row flex-col items-stretch">
-            <p className="mr-8 text-body">
+            <p className="mr-8 text-body mb-4">
               The look of Gizmo Go‑Kartz feels fun and nostalgic, echoing early
               3D kart racers like Mario Kart 64. We use a simple, low‑poly art
               style and a bold, RIT‑inspired color scheme, like warm reds,
@@ -133,9 +117,9 @@ const ProcessPage = () => {
               experience.
             </p>
             <img
-              src={photo}
+              src="images/RIT.jpg"
               alt="Picture of RIT"
-              className="md:mt-0 self-center md:self-end md:w-[400px] w-full md:w-1/4 max-h-[300px]"
+              className="md:mt-0 self-center md:self-end md:w-[500px] w-full md:w-1/4 max-h-[400px]"
             />
           </div>
         </div>
@@ -163,31 +147,68 @@ const ProcessPage = () => {
               contentClass="lg:max-w-[60%]"
               mappedContent={(c) => {
                 return (
-                  <>
+                  <div className="">
                     <DialogHeader className="text-left">
-                      <DialogTitle className="text-header3 mb-4">
-                        {c.name}
-                        {c.occupation ? ` - ${c.occupation}` : ""}
+                      <DialogTitle>
+                        <h3 className="text-header3 mb-[1rem]">
+                          {c.name}
+                          {c.occupation ? ` - ${c.occupation}` : ""}
+                        </h3>
                       </DialogTitle>
                     </DialogHeader>
-                    <div className="max-h-[70vh] overflow-auto flex flex-col items-center text-center">
+                    <div className="h-[60vh] overflow-auto flex flex-col items-center text-center bg-gray-200">
                       <img
                         src={c.conceptImgUrl}
                         alt={`${c.name} concept`}
-                        className="mb-2 max-h-100"
+                        className="mb-[1rem] h-[70%]"
                       />
-                      <DialogDescription className="text-body text-black">
-                        {c.devDescription}
+                      <DialogDescription>
+                        <p className="text-body text-black">
+                          {c.devDescription}
+                        </p>
                       </DialogDescription>
                     </div>
-                  </>
+                  </div>
                 );
               }}
             />
           </div>
         </div>
 
-        {/* Track Dev Info Section */}
+        {/* Developing Game Section */}
+        <div>
+          <h1 className="text-header2 mt-[2rem] m-4 mx-0 mb-4">
+            Developing the Game
+          </h1>
+          <div className="pb-[1rem] flex md:flex-row flex-col items-stretch">
+            <img
+              src="images/GSP.jpg"
+              alt="Picture of GSP"
+              className="md:mr-[2rem] mb-[2rem] md:mt-0 self-center md:self-end md:w-[400px] w-full md:w-1/4 max-h-[300px]"
+            />
+            <p className="text-body">
+              Our Game Systems Programming (GSP) team is the backbone of our
+              game's functionality. Given the scope of their work, they follow
+              several practices to stay organized and efficient. To keep the
+              GitHub repo clean and avoid merge conflicts, GSP uses feature
+              branches and forks for development. All code pushed to main goes
+              through a pull request and approval process, ensuring no broken
+              code makes it into the daily builds. Daily builds of the game are
+              created to quickly catch and resolve functionality issues, and to
+              ensure there's always an updated version ready for playtesting.
+              The team regularly peer programs, which helps with idea
+              brainstorming, faster debugging, and overall productivity. As GSP
+              remote lead Logan Larrondo said, “Peer programming helps
+              brainstorm ideas, debug faster, and is often more efficient than
+              working alone.” To stay on track, the team fills out daily Google
+              Forms, logging progress and helping with planning. When major bugs
+              appear, GSP tackles them together, through research, code reviews,
+              or simply joining a call to talk things out.
+            </p>
+          </div>
+        </div>
+
+        {/* Tracks Section */}
         <h1 className="text-header2 m-4 mx-0 mb-4">Building our Tracks</h1>
         <p className="mb-8 text-body">
           The tracks of Gizmo Go-Kartz are largely based on real RIT locations
@@ -199,7 +220,8 @@ const ProcessPage = () => {
           added as the finishing touch. In addition, track layouts are tweaked
           in response to feedback from playtesters.
         </p>
-        <Tabs defaultValue="0" className="w-[90vw]">
+
+        <Tabs defaultValue="0" className="w-[90vw] pb-[2rem]">
           <TabsList className="flex flex-wrap h-full pl-0">
             {tracks.map((t) => {
               return (
@@ -208,7 +230,7 @@ const ProcessPage = () => {
                 </TabsTrigger>
               );
             })}
-            <TabsTrigger value="cut">Cut Content</TabsTrigger>
+            <TabsTrigger value="cut">Back Burner Content</TabsTrigger>
           </TabsList>
           {tracks.map((t) => {
             return (
@@ -216,19 +238,22 @@ const ProcessPage = () => {
                 value={tracks.indexOf(t).toString()}
                 className="text-white text-body"
               >
-                <div className="bg-linear-to-b from-[#F66624] to-[#D84B3A] p-5 rounded-e-2xl rounded-b-2xl mb-3">
+                <div className="bg-linear-to-b from-[#F66624] to-[#D84B3A] p-5 xl:rounded-e-2xl rounded-b-2xl mb-3 h-[70vh]">
                   {t.devDescription}
                 </div>
               </TabsContent>
             );
           })}
           <TabsContent value="cut">
-            <div className="bg-linear-to-b from-[#F66624] to-[#D84B3A] p-5 rounded-e-2xl rounded-b-2xl mb-3 *:mb-5">
-              <div className="max-h-[52vh] overflow-y-auto">
+            <div className="bg-linear-to-b from-[#F66624] to-[#D84B3A] p-5 xl:rounded-e-2xl rounded-b-2xl mb-3 *:mb-5 h-[70vh] ">
+              <div className="max-h-full overflow-y-auto">
+                <h2 className="text-header3 mb-[1rem]">
+                  On the back burner...
+                </h2>
                 <div className="flex flex-col md:flex-row">
                   <div className="md:mr-10">
-                    <h1 className="text-header3 mb-3">Quarter-Mile</h1>
-                    <p className="text-body">
+                    <h3 className="text-header4 mb-3">Quarter-Mile</h3>
+                    <p className="text-body mb-[1rem]">
                       A track based on RIT's Quarter Mile, a long pathway
                       connecting the dorm buildings to the academic buildings,
                       was developed and tested several times, but eventually cut
@@ -237,18 +262,18 @@ const ProcessPage = () => {
                       track with 3 laps.
                     </p>
                   </div>
-                  <img
-                    src="images/tracks/dev-quarter-mile.jpg"
-                    alt="Quarter Mile Sketch"
-                    className="md:max-w-80 lg:max-w-[25vw]"
-                  />
+                  <div className="">
+                    <img
+                      src="images/tracks/dev-quarter-mile.jpg"
+                      alt="Quarter Mile Sketch"
+                      className="md:max-w-80 lg:max-w-[25vw] mb-[1rem]"
+                    />
+                  </div>
                 </div>
                 <div className="flex flex-col md:flex-row-reverse">
                   <div className="md:ml-10">
-                    <h1 className="text-3xl font-bold poppins mb-3">
-                      Global Village
-                    </h1>
-                    <p className="text-body">
+                    <h1 className="text-header4 mb-3">Global Village</h1>
+                    <p className="text-body mb-[1rem]">
                       A track based on RIT's Global Village was drafted early
                       into development, going through several proposed layouts
                       that emphasized several branching pathways. However, there
@@ -256,14 +281,16 @@ const ProcessPage = () => {
                       not modeled or incorporated into the roster.
                     </p>
                   </div>
-                  <img
-                    src="images/tracks/dev-global-village.jpg"
-                    alt="Global Village Sketch"
-                    className="md:max-w-40 lg:max-w-[20vw]"
-                  />
+                  <div className="">
+                    <img
+                      src="images/tracks/dev-global-village.jpg"
+                      alt="Global Village Sketch"
+                      className="md:max-w-40 lg:max-w-[20vw] mb-[1rem]"
+                    />
+                  </div>
                 </div>
                 <div>
-                  <h1 className="text-header3 mb-3">
+                  <h1 className="text-header4 mb-3">
                     Other Cut Track Concepts
                   </h1>
                   <ul className="list-disc ml-5 *:mb-2 text-body">
