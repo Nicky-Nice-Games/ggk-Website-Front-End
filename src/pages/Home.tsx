@@ -2,7 +2,6 @@ import * as React from "react";
 import { useNavigate } from "react-router-dom";
 import InfiniteMovingCards from "@/components/ui/carousel-banner";
 import ArrowButton from "@/components/ui/arrow-button";
-import { HomeCarousel } from "@/components/home/home-carousel";
 import { fetchData } from "@/utils";
 import PreviewLeaderboard from "@/components/home/preview-leaderboard";
 
@@ -46,27 +45,12 @@ const HomePage = ({ setCurrentPage }: HomePageParams) => {
 
   return (
     <>
-      <div className="relative h-[103vh] md:h-[74vh] w-full text-white pb-8 pb-16 bg-black">
-        <div
-          id="header-text"
-          className="md:h-3/5 relative md:absolute w-full 
-                    md:w-1/2 flex flex-col text-center items-center p-4 z-3 bg-gradient-to-r from-black to-[#0000]"
-        >
-          <img className="w-120 md:w-7/10" src="images/Game-Logo.png"></img>
-          <h3 className="text-header2 text-[#f3f4f6] mt-4 w-full">
-            Your Favorite No-Credit Courses!
-          </h3>
-        </div>
-        <ArrowButton
-          caption="See all news and updates!"
-          clickAction={() => {
-            window.scrollTo({ top: 0, behavior: "instant" });
-            navigate("/news");
-            setCurrentPage("news");
-          }}
-          className="absolute font-semibold bottom-0 md:right-6 right-4 z-10 px-10 py-3"
-        />
-        <HomeCarousel />
+      <div className="relative w-full text-white py-8 md:py-4 bg-black">
+        {/* Header Text Section - always on top for medium screens */}
+        <img
+          className="w-full md:w-[70%] min-h-60 m-auto"
+          src="images/splash-title-art.png"
+        ></img>
       </div>
 
       <main className="overflow-hidden bg-[url('images/white-checker.png')] bg-fixed">
@@ -118,10 +102,12 @@ const HomePage = ({ setCurrentPage }: HomePageParams) => {
         >
           <h2 className="text-header2 m-4">The Lore</h2>
           <p className="text-body m-4">
-            Gizmo, the spirit of IGM, has set up multiple game-style race tracks throughout the RIT campus! 
-            Joined by multiple students who have stayed local during the summer and the RGDC mascot Jamster, 
-            Gizmo seeks to have a fun time before the summer term comes to an end. 
-            But don't worry; he will restore the campus back to it's original state to welcome in students for their fall classes.
+            Gizmo, the spirit of IGM, has set up multiple game-style race tracks
+            throughout the RIT campus! Joined by multiple students who have
+            stayed local during the summer and the RGDC mascot Jamster, Gizmo
+            seeks to have a fun time before the summer term comes to an end. But
+            don't worry; he will restore the campus back to it's original state
+            to welcome in students for their fall classes.
           </p>
         </div>
         <div
