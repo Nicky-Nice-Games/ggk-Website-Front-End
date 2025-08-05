@@ -1,7 +1,15 @@
 import { cn } from "@/lib/utils";
 
 interface TitleBannerProps {
-  color: "purple" | "red" | "orange" | "green" | "blue" | "gray" | undefined;
+  color:
+    | "purple"
+    | "red"
+    | "orange"
+    | "green"
+    | "blue"
+    | "gray"
+    | "dark-gray"
+    | undefined;
   text: string;
   className?: string;
 }
@@ -23,6 +31,9 @@ const TitleBanner = ({ color, text, className }: TitleBannerProps) => {
       break;
     case "blue":
       bannerBackground = "bg-[url(images/banners/blue.png)]";
+      break;
+    case "dark-gray":
+      bannerBackground = "bg-[url(images/banners/dark-gray.png)]";
       break;
     default:
       bannerBackground = "bg-[url(images/banners/gray.png)]";
