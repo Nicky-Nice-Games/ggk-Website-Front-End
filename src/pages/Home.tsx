@@ -2,7 +2,6 @@ import * as React from "react";
 import { useNavigate } from "react-router-dom";
 import InfiniteMovingCards from "@/components/ui/carousel-banner";
 import ArrowButton from "@/components/ui/arrow-button";
-import { HomeCarousel } from "@/components/home/home-carousel";
 import { fetchData } from "@/utils";
 import PreviewLeaderboard from "@/components/home/preview-leaderboard";
 
@@ -46,30 +45,12 @@ const HomePage = ({ setCurrentPage }: HomePageParams) => {
 
   return (
     <>
-      <div className="relative h-auto min-h-[100vh] lg:h-[74vh] w-full text-white pb-16 bg-black overflow-hidden">
+      <div className="relative w-full text-white py-8 md:py-4 bg-black">
         {/* Header Text Section - always on top for medium screens */}
-        <div
-          id="header-text"
-          className="lg:h-3/5 relative lg:absolute w-full 
-              lg:w-1/2 flex flex-col text-center items-center p-4 z-10 
-              bg-gradient-to-r from-black lg:to-[#0000]"
-        >
-          <img className="w-120 md:w-7/10" src="images/Game-Logo.png"></img>
-          
-        </div>
-
-        {/* Arrow Button - responsive positioning */}
-        <ArrowButton
-          caption="See all news and updates!"
-          clickAction={() => {
-            window.scrollTo({ top: 0, behavior: "instant" });
-            navigate("/news");
-            setCurrentPage("news");
-          }}
-          className="fixed lg:absolute bottom-4 left-1/2 transform -translate-x-1/2 
-              lg:left-auto lg:right-6 lg:translate-x-0 z-20 px-6 py-2 lg:px-10 lg:py-3
-              text-sm lg:text-base"
-        />
+        <img
+          className="w-full md:w-[70%] min-h-60 m-auto"
+          src="images/splash-title-art.png"
+        ></img>
       </div>
 
       <main className="overflow-hidden bg-[url('images/white-checker.png')] bg-fixed">

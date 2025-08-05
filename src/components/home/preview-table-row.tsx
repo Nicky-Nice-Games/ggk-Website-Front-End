@@ -41,17 +41,17 @@ const PreviewTableRow = ({
 
       <td className="w-[25%] min-w-0 mx-auto text-center">
         <p
-            className="font-racingMobileText sm:font-racingText 
-             text-[10px] xs:text-[11px] sm:text-[14px] md:text-[16px] lg:text-[18px] xl:text-[20px]"
-          >
-            {name}
-          </p>
+          className="font-racingMobileText sm:font-racingText 
+             text-[11px] xs:text-[13px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[20px]"
+        >
+          {name}
+        </p>
       </td>
 
       <td className="w-[25%] min-w-0 mx-auto text-center">
         <p
           className="font-racingMobileText lg:font-racingText 
-             text-[10px] xs:text-[11px] sm:text-[14px] md:text-[16px] lg:text-[18px] xl:text-[20px] whitespace-nowrap"
+             text-[11px] xs:text-[13px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[20px] whitespace-nowrap"
         >
           {time}
         </p>
@@ -60,7 +60,7 @@ const PreviewTableRow = ({
       <td className="w-[25%] min-w-0 mx-auto text-center">
         <p
           className="font-racingMobileText sm:font-racingText 
-             text-[10px] xs:text-[11px] sm:text-[14px] md:text-[16px] lg:text-[18px] xl:text-[20px] whitespace-nowrap"
+             text-[11px] xs:text-[13px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[20px] whitespace-nowrap"
         >
           {score}
         </p>
