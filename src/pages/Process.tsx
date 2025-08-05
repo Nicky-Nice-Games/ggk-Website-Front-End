@@ -88,7 +88,7 @@ const ProcessPage = () => {
 
         {/* Designing Game Section */}
         <div>
-          <h1 className="text-header2 mt-[4rem] m-4 mx-0 mb-4">
+          <h1 className="text-header2 mt-[6rem] m-4 mx-0 mb-4">
             Designing the Game
           </h1>
           <div className="flex md:flex-row flex-col items-stretch">
@@ -137,21 +137,25 @@ const ProcessPage = () => {
               contentClass="lg:max-w-[60%]"
               mappedContent={(c) => {
                 return (
-                  <div className="bg-white">
+                  <div className="">
                     <DialogHeader className="text-left">
-                      <DialogTitle className="text-header3 mb-4">
-                        {c.name}
-                        {c.occupation ? ` - ${c.occupation}` : ""}
+                      <DialogTitle>
+                        <h3 className="text-header3 mb-[1rem]">
+                          {c.name}
+                          {c.occupation ? ` - ${c.occupation}` : ""}
+                        </h3>
                       </DialogTitle>
                     </DialogHeader>
-                    <div className="max-h-[70vh] overflow-auto flex flex-col items-center text-center bg-gray-200">
+                    <div className="h-[60vh] overflow-auto flex flex-col items-center text-center bg-gray-200">
                       <img
                         src={c.conceptImgUrl}
                         alt={`${c.name} concept`}
-                        className="mb-2 max-h-100"
+                        className="mb-[1rem] h-[70%]"
                       />
-                      <DialogDescription className="text-body text-black">
-                        {c.devDescription}
+                      <DialogDescription>
+                        <p className="text-body text-black">
+                          {c.devDescription}
+                        </p>
                       </DialogDescription>
                     </div>
                   </div>
@@ -163,7 +167,7 @@ const ProcessPage = () => {
 
         {/* Developing Game Section */}
         <div>
-          <h1 className="text-header2 mt-[4rem] m-4 mx-0 mb-4">
+          <h1 className="text-header2 mt-[2rem] m-4 mx-0 mb-4">
             Developing the Game
           </h1>
           <div className="pb-[1rem] flex md:flex-row flex-col items-stretch">
