@@ -54,7 +54,7 @@ const HomePage = ({ setCurrentPage }: HomePageParams) => {
       </div>
 
       <main className="overflow-hidden bg-[url('images/white-checker.png')] bg-fixed">
-        <div className="bg-black">
+        <div className="bg-repeat bg-fixed bg-[url('images/black-checker.png')]">
           <div className="overflow-hidden rotate-6 w-[120%] h-75 origin-top-left flex">
             <InfiniteMovingCards
               items={bannerImages}
@@ -93,6 +93,7 @@ const HomePage = ({ setCurrentPage }: HomePageParams) => {
               items={bannerImages}
               direction="right"
               speed="verySlow"
+              className="relative top-15 sm:top-0"
             ></InfiniteMovingCards>
           </div>
         </div>
@@ -116,8 +117,7 @@ const HomePage = ({ setCurrentPage }: HomePageParams) => {
         >
           <div
             className="overflow-hidden -rotate-6 w-[120%] h-75 origin-bottom-left flex
-            relative bg-[#BBB] bg-[url('images/items-background.png')] bg-fixed bg-cover bg-repeat 
-            bg-blend-difference bg-size-[90%] md:bg-size-[80%]"
+            relative"
           >
             <InfiniteMovingCards
               items={bannerImages}
