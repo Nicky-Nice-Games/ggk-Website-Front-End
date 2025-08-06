@@ -77,13 +77,11 @@ const NewsAndUpdatesPage = () => {
   useOutsideClick(ref, () => setActive(null));
 
   return (
-    <div className="min-h-screen bg-[url('images/items-background.png')] 
-    bg-[#BBB] bg-size-[90%] md:bg-size-[80%] bg-repeat bg-fixed bg-cover bg-blend-difference pt-[1rem]">
-      <img
-        src=" images/news-banner.png"
-        className="flex justify-self-center w-[100%] md:w-[45%] 2xl:w-[35%] pt-8 mb-[1rem]"
-      ></img>
-      {/* <HeaderBanner text="News and Updates" imgsrc="images/blank-header.png"></HeaderBanner> */}
+    <div
+      className="min-h-screen bg-[url('images/items-background.png')] 
+    bg-[#BBB] bg-size-[90%] md:bg-size-[80%] bg-repeat bg-fixed bg-cover bg-blend-difference pt-5"
+    >
+      <TitleBanner text="News & Updates" color="purple" />
 
       {/* overlay behind pop up when active */}
       <AnimatePresence>
