@@ -5,11 +5,11 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
 interface SignupFormProps extends React.ComponentProps<"div"> {
-  onSignupClick?: () => void;
+  onLoginClick?: () => void;
 }
 export function SignupForm({
   className,
-  onSignupClick,
+  onLoginClick,
   ...props
 }: SignupFormProps) {
   return (
@@ -83,8 +83,8 @@ export function SignupForm({
               <div className="text-center text-sm text-[#D0D3D4]">
                 Already have an account?{" "}
                 <button
-                  onClick={onSignupClick}
-                  className="underline underline-offset-4 cursor-pointer text-[#F76902]"
+                  onClick={onLoginClick}
+                  className="hover:underline underline-offset-4 cursor-pointer text-[#F76902]"
                 >
                   Login
                 </button>
