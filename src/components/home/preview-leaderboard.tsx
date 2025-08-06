@@ -21,7 +21,7 @@ const getPlacementColor = (index: number): string => {
 const PreviewLeaderboard = ({ data }: { data: any }) => {
   return (
     <>
-    <div className="top-0 z-0 w-full h-[80vh] lg:w-3/5 md:h-225 bg-[url('images/arcade-machine-2.png')] 
+    <div className="top-0 z-0 w-full h-[90vh] lg:w-3/5 md:h-225 bg-[url('images/arcade-machine-2.png')] 
     xl:bg-[url('images/arcade-machine-wide.png')] bg-no-repeat bg-size-[100%_100%]">
     </div>
       <table
