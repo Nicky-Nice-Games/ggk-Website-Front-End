@@ -209,7 +209,7 @@ const AuthPage = ({ setAccount }: { setAccount: Function }) => {
             <img src="images/logo/gizmo-icon-hover.svg" alt="Gizmo Icon" />
           </div>
           <div className="flex w-full max-w-sm flex-col gap-6">
-            <h1 className="text-white poppins font-bold text-center text-4xl">
+            <h1 className="text-white text-header2 font-bold text-center text-4xl">
               Gizmo Go-Kartz
             </h1>
             <SignupForm
