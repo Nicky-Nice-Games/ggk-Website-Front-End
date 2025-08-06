@@ -2,8 +2,8 @@ import type { AccountSchema } from "@/App";
 import { useNavigate } from "react-router-dom";
 import { fetchData } from "@/utils";
 import { useState } from "react";
-import { SignupForm } from "@/components/signup-form";
-import { LoginForm } from "@/components/login-form";
+import { SignupForm } from "@/components/auth/signup-form";
+import { LoginForm } from "@/components/auth/login-form";
 const AuthPage = ({ setAccount }: { setAccount: Function }) => {
   const navigate = useNavigate();
   const [isLogin, setIsLogin] = useState(true);

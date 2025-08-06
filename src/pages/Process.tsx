@@ -7,7 +7,7 @@ import {
 } from "@/components/ui/dialog";
 import ArrowButton from "@/components/ui/arrow-button";
 import { useNavigate } from "react-router-dom";
-import CharacterCarousel from "@/components/character-carousel";
+import CharacterCarousel from "@/components/content/character-carousel";
 import TitleBanner from "@/components/ui/title-banner";
 import ProcessDropdown from "@/components/process-dropdown";
 

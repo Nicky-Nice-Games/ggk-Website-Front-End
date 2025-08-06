@@ -1,5 +1,5 @@
 import { ContentNavigator } from "@/components/content/content-navigator";
-import CharacterCarousel from "@/components/character-carousel";
+import CharacterCarousel from "@/components/content/character-carousel";
 import {
   DialogClose,
   DialogDescription,
