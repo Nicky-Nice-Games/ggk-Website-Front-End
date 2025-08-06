@@ -46,9 +46,9 @@ const NewsAndUpdatesPage = () => {
   const paginatedUpdates = isMobile
     ? restUpdates
     : restUpdates.slice(
-        (currentPage - 1) * itemsPerPage,
-        currentPage * itemsPerPage
-      );
+      (currentPage - 1) * itemsPerPage,
+      currentPage * itemsPerPage
+    );
   // Handlers
   const nextPage = () =>
     setCurrentPage((prev) => Math.min(prev + 1, totalPages));
@@ -82,6 +82,7 @@ const NewsAndUpdatesPage = () => {
     bg-[#BBB] bg-size-[90%] md:bg-size-[80%] bg-repeat bg-fixed bg-cover bg-blend-difference pt-5"
     >
       <TitleBanner text="News & Updates" color="purple" />
+
       {/* overlay behind pop up when active */}
       <AnimatePresence>
         {active && typeof active === "object" && (
@@ -97,42 +98,41 @@ const NewsAndUpdatesPage = () => {
       {/* expanded item pop up */}
       <AnimatePresence>
         {active && typeof active === "object" ? (
-          <div className="fixed inset-0 grid place-items-center z-[100]">
+          <div className="fixed inset-0 grid place-items-center z-[999]">
             <motion.div
               layoutId={`item-${active.title}-${id}`}
               ref={ref}
-              className={`w-18/20 h-[90%] md:h-150 md:max-h-[70%] bg-white dark:bg-neutral-900 rounded-3xl overflow-hidden ${
-                isMobile
+              className={`w-18/20 h-[90%] md:h-150 md:max-h-[70%] bg-white dark:bg-neutral-900 rounded-3xl overflow-hidden ${isMobile
                   ? "flex flex-col overflow-y-auto"
                   : "flex flex-col md:flex-row"
-              }`}
+                }`}
             >
               {isMobile ? (
                 // Mobile layout
                 <>
-                  
-                  <div className="relative w-full bg-gray-200 flex flex-col p-6 h-full overflow-hidden">
+
+                  <div className="relative w-full flex flex-col p-6 h-full overflow-hidden">
                     {/* x button */}
                     <motion.button
-                  layout
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  className="self-end rounded-full h-6 mt-1 mr-1"
-                  onClick={() => setActive(false)}
-                >
-                  <CloseIcon />
-                </motion.button>
+                      layout
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      className="self-end rounded-full h-6 mt-1 mr-1"
+                      onClick={() => setActive(false)}
+                    >
+                      <CloseIcon />
+                    </motion.button>
                     <motion.h3 // Mobile title
                       layoutId={`title-${active.title}-${id}`}
-                      className="text-header3 text-black mb-4"
+                      className="text-header2 text-black mb-4"
                     >
                       {active.title}
                     </motion.h3>
                     <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.worker.min.js">
                       <Viewer
                         fileUrl={active.contentLink}
-                        defaultScale={SpecialZoomLevel.PageWidth}
+                        defaultScale={.6}
                       />
                     </Worker>
                   </div>
@@ -151,22 +151,22 @@ const NewsAndUpdatesPage = () => {
                     />
                   </motion.div>
 
-                  <div className="relative w-full bg-gray-200 flex flex-col p-6 min-w-3/5 xl:min-w-2/5 h-full overflow-hidden">
+                  <div className="relative w-full flex flex-col p-6 min-w-3/5 xl:min-w-2/5 h-full overflow-hidden">
                     {/* x button */}
                     <motion.button
-                  layout
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  className="self-end rounded-full h-6 mt-1 mr-1"
-                  onClick={() => setActive(false)}
-                >
-                  <CloseIcon />
-                </motion.button>
+                      layout
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      className="self-end rounded-full h-6 mt-1 mr-1"
+                      onClick={() => setActive(false)}
+                    >
+                      <CloseIcon />
+                    </motion.button>
 
                     <motion.h3 // Desktop title
                       layoutId={`title-${active.title}-${id}`}
-                      className="text-header3 text-black mb-4"
+                      className="text-header2 text-black mb-4 -mt-3"
                     >
                       {active.title}
                     </motion.h3>
@@ -232,9 +232,8 @@ const NewsAndUpdatesPage = () => {
               key={update.id} // Unique key for each item
               onClick={() => setActive(update)}
               // Full width for all images, but height depends on if it's full-width or not
-              className={`${
-                isFullWidth ? "col-span-1 sm:col-span-2 lg:col-span-3" : ""
-              } bg-white text-black rounded-xl shadow overflow-hidden 
+              className={`${isFullWidth ? "col-span-1 sm:col-span-2 lg:col-span-3" : ""
+                } bg-white text-black rounded-xl shadow overflow-hidden 
               cursor-pointer m-4 `}
             >
               {/* Image */}
