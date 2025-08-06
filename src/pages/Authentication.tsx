@@ -4,6 +4,7 @@ import { fetchData } from "@/utils";
 import { useState } from "react";
 import { SignupForm } from "@/components/signup-form";
 import { LoginForm } from "@/components/login-form";
+import ArrowButton from "@/components/ui/arrow-button";
 const AuthPage = ({ setAccount }: { setAccount: Function }) => {
   const navigate = useNavigate();
   const [isLogin, setIsLogin] = useState(true);
@@ -181,7 +182,7 @@ const AuthPage = ({ setAccount }: { setAccount: Function }) => {
             <img src="images/logo/gizmo-icon.svg" alt="Gizmo Icon" />
           </div>
           <div className="flex w-full max-w-sm flex-col gap-6">
-            <h1 className="poppins font-bold text-center text-white text-4xl">
+            <h1 className="text-header2 font-bold text-center text-white text-4xl">
               Gizmo Go-Kartz
             </h1>
             <LoginForm

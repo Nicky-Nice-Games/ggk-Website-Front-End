@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-
+import ArrowButton from "@/components/ui/arrow-button";
 interface LoginFormProps extends React.ComponentProps<"div"> {
   onSignupClick?: () => void;
 }
@@ -17,7 +17,7 @@ export function LoginForm({
     <div className={cn("flex flex-col gap-6", className)} {...props}>
       <Card className="bg-[#1a1a1a]">
         <CardHeader className="text-center">
-          <CardTitle className="text-xl text-white">
+          <CardTitle className="poppins text-xl text-white">
             Welcome Back, Racers
           </CardTitle>
         </CardHeader>
@@ -27,18 +27,22 @@ export function LoginForm({
               <div className="grid gap-6">
                 <p id="error-message" className="text-red-600 text-center"></p>
                 <div className="grid gap-3 text-[#D0D3D4]">
-                  <Label htmlFor="username">Username</Label>
+                  <Label htmlFor="username" className="poppins">
+                    Username
+                  </Label>
                   <Input
                     id="username"
                     type="username"
-                    className="border-[#D0D3D4]"
+                    className="border-[#D0D3D4] poppins"
                     placeholder="username..."
                     required
                   />
                 </div>
                 <div className="grid gap-3">
                   <div className="flex items-center text-[#D0D3D4]">
-                    <Label htmlFor="password">Password</Label>
+                    <Label htmlFor="password" className="poppins">
+                      Password
+                    </Label>
                   </div>
                   <Input
                     id="password"
@@ -47,18 +51,17 @@ export function LoginForm({
                     required
                   />
                 </div>
-                <Button
+                <ArrowButton
                   type="submit"
-                  className="w-full border border-1 text-white bg-[#F76902]" //onSubmit={() => login()}
-                >
-                  Start Racing
-                </Button>
+                  className=" w-[85%] mx-auto"
+                  caption="Start Racing"
+                />
               </div>
-              <div className="text-center text-sm text-[#D0D3D4]">
+              <div className="text-center text-sm text-[#D0D3D4] poppins">
                 Don&apos;t have an account?{" "}
                 <button
                   onClick={onSignupClick}
-                  className="underline underline-offset-4 cursor-pointer text-[#F76902]"
+                  className="underline underline-offset-4 cursor-pointer text-[#F76902] poppins"
                 >
                   Sign up
                 </button>
