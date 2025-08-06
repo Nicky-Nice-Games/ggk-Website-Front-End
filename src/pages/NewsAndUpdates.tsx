@@ -110,22 +110,19 @@ const NewsAndUpdatesPage = () => {
               {isMobile ? (
                 // Mobile layout
                 <>
-                  <motion.div layoutId={`image-${active.title}-${id}`}>
-                    <img // Moblie image
-                      src={active.image}
-                      alt={active.title}
-                      className="w-full max-h-72 object-top"
-                    />
-                  </motion.div>
-                  <div className="relative w-full flex flex-col p-6 h-full overflow-hidden">
+                  
+                  <div className="relative w-full bg-gray-200 flex flex-col p-6 h-full overflow-hidden">
                     {/* x button */}
-                    <button
-                      onClick={() => setActive(null)}
-                      className="absolute top-4 right-4 z-50 bg-white dark:bg-neutral-900 p-1 rounded-full shadow hover:scale-105"
-                      aria-label="Close"
-                    >
-                      <CloseIcon />
-                    </button>
+                    <motion.button
+                  layout
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  className="self-end rounded-full h-6 mt-1 mr-1"
+                  onClick={() => setActive(false)}
+                >
+                  <CloseIcon />
+                </motion.button>
                     <motion.h3 // Mobile title
                       layoutId={`title-${active.title}-${id}`}
                       className="text-header3 text-black mb-4"
@@ -154,15 +151,18 @@ const NewsAndUpdatesPage = () => {
                     />
                   </motion.div>
 
-                  <div className="relative w-full flex flex-col p-6 min-w-3/5 xl:min-w-2/5 h-full overflow-hidden">
+                  <div className="relative w-full bg-gray-200 flex flex-col p-6 min-w-3/5 xl:min-w-2/5 h-full overflow-hidden">
                     {/* x button */}
-                    <button
-                      onClick={() => setActive(null)}
-                      className="absolute top-4 right-4 z-50 bg-white dark:bg-neutral-900 p-1 rounded-full shadow hover:scale-105"
-                      aria-label="Close"
-                    >
-                      <CloseIcon />
-                    </button>
+                    <motion.button
+                  layout
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  className="self-end rounded-full h-6 mt-1 mr-1"
+                  onClick={() => setActive(false)}
+                >
+                  <CloseIcon />
+                </motion.button>
 
                     <motion.h3 // Desktop title
                       layoutId={`title-${active.title}-${id}`}

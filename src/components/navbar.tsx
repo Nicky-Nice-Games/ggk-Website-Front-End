@@ -298,7 +298,7 @@ const Navbar = ({
             setCurrentPage("leaderboard");
           }}
         >
-          Leaderboard
+          Leaderboards
         </button>
       </NavigationMenuLink>
     </NavigationMenuList>

@@ -5,6 +5,7 @@ type PreviewTableRowProps = {
   time: string;
   score: string;
   color: string;
+  className?: string;
 };
 
 const PreviewTableRow = ({
@@ -14,34 +15,55 @@ const PreviewTableRow = ({
   time,
   score,
   color,
+  className = "",
 }: PreviewTableRowProps) => {
   return (
-    <tr className="w-full flex flex-row justify-between items-center text-gray-300 my-1 md:my-4 2xl:my-3">
-      <td className="w-[3/5] flex flex-row justify-between items-center">
+    <tr
+      className={`w-full flex flex-row items-center text-gray-300 mx-[5%] py-1 md:py-2 ${className}`}
+    >
+      <td className="w-[25%] min-w-0 mx-auto text-center ">
         <h3
-          className={`painterz text-[7vw] md:text-6xl ${color} min-w-[15vw] md:min-w-25`}
+          className={`racing text-[20px] xs:text-[24px] sm:text-[28px] md:text-[36px] lg:text-[48px] ${color} min-w-[30px] xs:min-w-[40px] sm:min-w-[50px] md:min-w-[60px]`}
         >
           {place}
         </h3>
-        <img
-          src={imgPath}
-          alt={`Photo of ${name}`}
-          className="hidden lg:block w-15 outline-[5px] outline-[#38bdf8] h-[60px] rounded-full"
-        />
       </td>
 
-      <td>
-        <p className="ml-auto md:m-2 bebas text-[5vw] md:text-[3vw] lg:text-[2vw]">
+      <td className="w-[25%] min-w-0 mx-auto text-center">
+        <div className="">
+          <img
+            src={imgPath}
+            alt={`Photo of ${name}`}
+            className="w-6 h-6 xs:w-8 xs:h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full border-2 border-[#38bdf8] mx-auto"
+          />
+        </div>
+      </td>
+
+      <td className="w-[25%] min-w-0 mx-auto text-center">
+        <p
+          className="font-racingMobileText sm:font-racingText 
+             text-[11px] xs:text-[13px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[20px]"
+        >
           {name}
         </p>
       </td>
 
-      <td className="relative md:left-2">
-        <p className="bebas text-[4vw] md:text-[3vw] lg:text-[2vw]">{time}</p>
+      <td className="w-[25%] min-w-0 mx-auto text-center">
+        <p
+          className="font-racingMobileText lg:font-racingText 
+             text-[11px] xs:text-[13px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[20px] whitespace-nowrap"
+        >
+          {time}
+        </p>
       </td>
 
-      <td>
-        <p className="bebas text-[4vw] md:text-[3vw] lg:text-[2vw]">{score}</p>
+      <td className="w-[25%] min-w-0 mx-auto text-center">
+        <p
+          className="font-racingMobileText sm:font-racingText 
+             text-[11px] xs:text-[13px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[20px] whitespace-nowrap"
+        >
+          {score}
+        </p>
       </td>
     </tr>
   );
