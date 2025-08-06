@@ -75,7 +75,7 @@ const HomePage = ({ setCurrentPage }: HomePageParams) => {
 
         <div
           id="introduction"
-          className="pt-20 md:pt-48 pb-16 px-[4vw] md:px-[8vw] w-full 
+          className="pt-[20%] md:pt-[15%] md:pb-[15%] pb:[10%] px-[4vw] md:px-[8vw] w-full 
                     bg-repeat bg-fixed bg-[url('images/black-checker.png')]
                     text-white flex flex-col items-center"
         >
@@ -91,19 +91,20 @@ const HomePage = ({ setCurrentPage }: HomePageParams) => {
             style.
           </p>
         </div>
-        <div className="mb-8 bg-fixed bg-repeat bg-[url('images/black-checker.png')]">
-          <div className="overflow-hidden rotate-6 w-[120%] h-75 origin-top-left flex">
+        <div className="bg-fixed bg-repeat bg-[url('images/black-checker.png')]">
+          <div className="overflow-hidden rotate-6 w-[120%] h-75 origin-top-left flex bottom-0">
             <InfiniteMovingCards
               items={bannerImages}
               direction="right"
               speed="verySlow"
-              className="relative top-15 sm:top-0"
+              className="relative top-15 sm:top-0 bottom-0 bg-[url('images/items-background.png')] bg-fixed bg-cover bg-repeat bg-size-[90%] md:bg-size-[80%]"
             ></InfiniteMovingCards>
           </div>
         </div>
         <div
           id="lore"
-          className="px-8 md:px-[8vw] text-center pt-[11%] bg-fixed bg-repeat pb-30 md:pb-50 xl:pb-60 bg-[url('images/white-checker.png')]"
+          className="px-8 md:px-[8vw] text-center pt-[18%] bg-fixed bg-repeat pb-[20%]
+          bg-[url('images/items-background.png')] bg-fixed bg-cover bg-repeat bg-size-[90%] md:bg-size-[80%]"
         >
           <h2 className="text-header2 m-4">The Lore</h2>
           <p className="text-body m-4">
@@ -117,7 +118,7 @@ const HomePage = ({ setCurrentPage }: HomePageParams) => {
         </div>
         <div
           className=" relative bg-[#BBB] bg-[url('images/items-background.png')] bg-fixed bg-cover bg-repeat 
-            bg-blend-difference bg-size-[90%] md:bg-size-[80%]"
+            bg-blend-difference bg-size-[90%] md:bg-size-[80%] h-fit"
         >
           <div
             className="overflow-hidden -rotate-6 w-[120%] h-75 origin-bottom-left flex
@@ -131,7 +132,7 @@ const HomePage = ({ setCurrentPage }: HomePageParams) => {
           </div>
         </div>
         <div
-          className="pt-8 w-full relative relative bg-[#BBB] bg-[url('images/items-background.png')] bg-fixed bg-cover bg-repeat 
+          className="pt-[5%] w-full relative relative bg-[#BBB] bg-[url('images/items-background.png')] bg-fixed bg-cover bg-repeat 
             bg-blend-difference bg-size-[90%] md:bg-size-[80%]"
         >
           <div
