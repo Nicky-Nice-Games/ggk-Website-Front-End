@@ -28,20 +28,23 @@ const PreviewLeaderboard = ({ data }: { data: any }) => {
       <table
         id="scoreboard"
         className="absolute top-[27%] 
-                    w-3/5 lg:w-[37%] h-125 
-                    flex flex-col items-center m-8 z-10 "
+                    w-[70%] lg:w-[37%] h-125 
+                    flex flex-col items-center m-8 z-10 mx-auto"
       >
-        <tr className="w-full flex flex-row justify-between text-gray-200">
-          <th className="bebas text-[4vw] md:text-[3vw] lg:text-[2vw] w-1/4">
+        <tr className="w-full flex flex-row text-gray-200 text-center mx-auto">
+          <th className="racingHeader text-[4vw] md:text-[3vw] lg:text-[2vw] w-[20%] text-center">
             Placing
           </th>
-          <th className="bebas text-[4vw] md:text-[3vw] lg:text-[2vw]">
-            Username
+          <th className="racingHeader text-[4vw] md:text-[3vw] lg:text-[2vw] w-[20%] text-center">
+
           </th>
-          <th className="bebas text-[4vw] md:text-[3vw] lg:text-[2vw]">
-            Race Time
+          <th className="racingHeader text-[4vw] md:text-[3vw] lg:text-[2vw] w-[20%] text-center">
+            Player
           </th>
-          <th className="bebas text-[4vw] md:text-[3vw] lg:text-[2vw]">
+          <th className="racingHeader text-[4vw] md:text-[3vw] lg:text-[2vw] w-[20%] text-center">
+            Time
+          </th>
+          <th className="racingHeader text-[4vw] md:text-[3vw] lg:text-[2vw] w-[20%] text-center">
             Score
           </th>
         </tr>
@@ -54,6 +57,7 @@ const PreviewLeaderboard = ({ data }: { data: any }) => {
               time={formatTime(player.raceTime)}
               score={player.score}
               color={getPlacementColor(index)}
+              className=""
             />
           );
         })}
@@ -61,5 +65,4 @@ const PreviewLeaderboard = ({ data }: { data: any }) => {
     </>
   );
 };
-
 export default PreviewLeaderboard;

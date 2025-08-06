@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { fetchData } from "@/utils";
 import { TeamTabs } from "@/components/about-us/team-tabs";
 import type { TeamDataMap } from "@/components/about-us/types";
+import TitleBanner from "@/components/ui/title-banner";
 const AboutUsPage = () => {
   //String arrays to hold each team's data
   const [gspData, setGspData] = useState<string[][]>([]);
@@ -94,15 +95,13 @@ const AboutUsPage = () => {
 
   return (
     <>
-      <main className="min-h-screen p-4 md:p-8 md:px-3 pb-[4rem] 
+      <main
+        className="min-h-screen md:px-3 pb-16 pt-5
       bg-[#BBB] bg-[url('images/items-background.png')] 
-      bg-fixed bg-cover bg-repeat bg-blend-difference bg-size-[90%] md:bg-size-[80%]">
+      bg-fixed bg-cover bg-repeat bg-blend-difference bg-size-[90%] md:bg-size-[80%] "
+      >
         <div className="max-w-7xl mx-auto">
-          <img
-            src="images/team-header.png"
-            className="mx-auto pt-[2rem] w-full md:w-1/2 mb-4"
-            alt="About The Project"
-          />
+          <TitleBanner color="orange" text="Meet the Team!" className="mb-5" />
           <div className="w-full text-center">
             <TeamTabs teamData={teamData} defaultTab="GSP" />
           </div>

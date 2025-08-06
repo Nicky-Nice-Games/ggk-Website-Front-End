@@ -85,7 +85,8 @@ export const Footer = () => {
               </a>
 
               {/* Email Icon*/}
-              <div
+              <a href="mailto:gizmogokartz@nickynicegames.com"  target="_blank">
+                <div
                 className="w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center bg-none transform transition-transform duration-200 
                 hover:-translate-y-1 text-white hover:text-red-500"
               >
@@ -105,6 +106,7 @@ export const Footer = () => {
                   <rect x="2" y="4" width="20" height="16" rx="2" />
                 </svg>
               </div>
+              </a>
             </div>
             <div className="text-3xl sm:text-4xl">Contact us!</div>
           </div>

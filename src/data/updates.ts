@@ -51,9 +51,9 @@ const updates: Update[] = [
   },
    {
     id: 6,
-    title: "Your Story 1 - The Curse Of Spare Jamster",
+    title: "The Curse Of Spare Jamster",
     date: "07/28/2025",
-    subtitle: "Hes Here",
+    subtitle: "He's Here",
     image: "images/dev-blogs/your-story-1.png",
     contentLink: "data/dev-blogs/your-story-1.pdf",
   }

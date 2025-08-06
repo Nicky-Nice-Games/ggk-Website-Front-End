@@ -82,7 +82,7 @@ export const ItemCard = memo(function ItemCard({
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/20 h-full w-full z-40"
+            className="fixed inset-0 bg-black/60 h-full w-full z-40"
           />
         )}
       </AnimatePresence>
@@ -90,11 +90,11 @@ export const ItemCard = memo(function ItemCard({
       {/* Popup Content */}
       <AnimatePresence>
         {isActive && activeItem && (
-          <div className="fixed inset-0 grid place-items-center z-50">
+          <div className="fixed inset-0 grid place-items-center mx-[1rem] z-50">
             <motion.div
               layoutId={`item-${category}-${id}`}
               ref={ref}
-              className="w-full max-w-[600px] h-full md:h-fit md:max-h-[90%] flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden"
+              className="w-full max-w-[600px] mx-[1rem] h-fit my-auto md:h-fit md:max-h-[90%] flex flex-col bg-white sm:rounded-3xl overflow-hidden rounded-lg shadow-lg"
             >
               {/* Header with gradient background */}
               <motion.div
@@ -129,7 +129,7 @@ export const ItemCard = memo(function ItemCard({
                         key={item.level}
                         value={item.level.toString()}
                         onClick={() => setActiveItem(item)}
-                        className="outline-black pt-3"
+                        className="outline-[#7c2d12] pt-3"
                       >
                         Level {item.level}
                       </TabsTrigger>
@@ -140,17 +140,17 @@ export const ItemCard = memo(function ItemCard({
 
               {/* Item Info */}
               <div className="p-4">
-                <div className="flex justify-between items-start">
-                  <div className="w-full">
+                <div className="flex justify-between items-start ">
+                  <div className="w-full ">
                     <motion.h3
                       layoutId={`title-${category}-${id}`}
-                      className="bg-[url(images/arrow.png)] bg-size-[70%_100%] bg-center bg-no-repeat py-2 text-white dark:text-neutral-200 poppins text-[24px] font-bold mb-4 text-center"
+                      className="bg-[url(images/arrow.png)] bg-size-[70%_100%] bg-center bg-no-repeat py-2 text-white poppins text-[24px] font-bold mb-4 text-center"
                     >
                       {activeItem.name}
                     </motion.h3>
                     <motion.p
                       layoutId={`description-${category}-${id}`}
-                      className="text-neutral-600 dark:text-neutral-400 text-base text-center text-body"
+                      className="text-neutral-600 text-base text-center text-body"
                     >
                       {activeItem.description}
                     </motion.p>

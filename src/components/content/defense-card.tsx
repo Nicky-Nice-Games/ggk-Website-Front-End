@@ -7,7 +7,7 @@ export const DefenseCard = () => {
   return (
     <ItemCard
       items={defenseItems}
-      bgGradient="from-[#342BDC] to-[#35C8FF]"
+      bgGradient="bg-gradient-to-b from-neutral-400 to-neutral-300"
       category="defense"
     />
   );

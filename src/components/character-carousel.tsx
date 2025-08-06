@@ -16,9 +16,11 @@ type ContentFunction = (character: Character, index: number) => ReactElement;
 const CharacterCarousel = ({
   mappedContent,
   contentClass,
+  showDialogClose = true,
 }: {
   mappedContent: ContentFunction;
   contentClass: string;
+  showDialogClose?: boolean;
 }) => {
   const [center, setCenter] = useState(0);
 
@@ -37,16 +39,16 @@ const CharacterCarousel = ({
   return (
     <Carousel
       setApi={setApi}
-      className="flex flex-row w-full items-center justify-center h-fit"
+      className="flex flex-row w-full items-center justify-center"
     >
-      <CarouselPrevious className="w-8" />
+      <CarouselPrevious className="w-[40px] lg:w-[60px]" />
       <CarouselContent className="w-[100%] drop-shadow-xl/50 justify-between pb-[8rem] pt-[4rem]">
         {characters.map((character, index) => (
           <CarouselItem className="basis-3/3 md:basis-1/3 flex flex-row justify-center pl-0">
             <Dialog>
-              <div className="w-full flex justify-center translate-x-[32px]">
-                  {/* Clickable carousel picture*/}
-                <DialogTrigger className="cursor-pointer w-[45%] md:[45%] lg:w-[45%] xl:w-[65%] hover:scale-105">
+              <div className="w-full flex justify-center translate-x-[24px]">
+                {/* Clickable carousel picture*/}
+                <DialogTrigger className="cursor-pointer w-[40%] max-sm:w-[65%] lg:w-[50%] xl:w-[50%] hover:scale-105">
                   <img
                     src={character.imgUrl}
                     alt={character.name}
@@ -58,7 +60,10 @@ const CharacterCarousel = ({
               </div>
 
               {/* Fullscreen content popup*/}
-              <DialogContent className={contentClass}>
+              <DialogContent
+                className={contentClass}
+                showCloseButton={showDialogClose}
+              >
                 {mappedContent(character, index)}
               </DialogContent>
             </Dialog>
@@ -66,7 +71,7 @@ const CharacterCarousel = ({
         ))}
       </CarouselContent>
 
-      <CarouselNext className="w-8" />
+      <CarouselNext className="w-[40px] lg:w-[60px]" />
     </Carousel>
   );
 };

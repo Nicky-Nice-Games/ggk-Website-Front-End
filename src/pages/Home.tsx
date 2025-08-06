@@ -2,7 +2,6 @@ import * as React from "react";
 import { useNavigate } from "react-router-dom";
 import InfiniteMovingCards from "@/components/ui/carousel-banner";
 import ArrowButton from "@/components/ui/arrow-button";
-import { HomeCarousel } from "@/components/home/home-carousel";
 import { fetchData } from "@/utils";
 import PreviewLeaderboard from "@/components/home/preview-leaderboard";
 
@@ -46,32 +45,26 @@ const HomePage = ({ setCurrentPage }: HomePageParams) => {
 
   return (
     <>
-      <div className="relative h-[103vh] md:h-[74vh] w-full text-white pb-8 pb-16 bg-black">
-        <div
-          id="header-text"
-          className="md:h-3/5 relative md:absolute w-full 
-                    md:w-1/2 flex flex-col text-center items-center p-4 z-3 bg-gradient-to-r from-black to-[#0000]"
-        >
-          <img className="w-120 md:w-7/10" src="images/Game-Logo.png"></img>
-          <h3 className="text-header2 text-[#f3f4f6] mt-4 w-full">
-            Your Favorite No-Credit Courses!
-          </h3>
-        </div>
-        <ArrowButton
-          caption="See all news and updates!"
-          clickAction={() => {
-            window.scrollTo({ top: 0, behavior: "instant" });
-            navigate("/news");
-            setCurrentPage("news");
-          }}
-          className="absolute bottom-0 md:right-6 right-4 z-10 px-10 py-3"
-        />
-        <HomeCarousel />
-      </div>
-
-      <main className="overflow-hidden bg-[url('images/white-checker.png')] bg-fixed">
-        <div className="bg-black">
-          <div className="overflow-hidden rotate-6 w-[120%] h-75 origin-top-left flex">
+      <main className="overflow-hidden bg-[url('images/black-checker.png')] bg-fixed">
+        <div className="relative w-full text-white bg-[url(images/splash-title-art.png)] bg-cover bg-no-repeat bg-top">
+          {/* Header Text Section - always on top for medium screens */}
+          <div className="flex flex-col w-full md:w-2/5 md:ml-auto items-center relative top-20 sm:top-5 md:top-13 xl:top-20">
+            <img
+              src="images/logo.png"
+              className="w-4/5 md:w-full lg:w-4/5 min-w-70"
+            />
+            <ArrowButton
+              caption="Download Now!"
+              clickAction={() =>
+                window.open(
+                  "https://github.com/Nicky-Nice-Games/ggk-UnityProject/releases",
+                  "_blank"
+                )
+              }
+              className="w-50 h-12 font-bold mt-5"
+            />
+          </div>
+          <div className="overflow-hidden rotate-6 w-[120%] h-75 origin-top-left flex relative top-24 sm:top-0">
             <InfiniteMovingCards
               items={bannerImages}
               direction="right"
@@ -97,11 +90,6 @@ const HomePage = ({ setCurrentPage }: HomePageParams) => {
             concept for many future Co-ops to be created with the same IP and
             style.
           </p>
-          <img
-            className="ml-4"
-            src="images/placeholder/placeholder.PNG"
-            alt="Photo of arcade machines"
-          />
         </div>
         <div className="mb-8 bg-fixed bg-repeat bg-[url('images/black-checker.png')]">
           <div className="overflow-hidden rotate-6 w-[120%] h-75 origin-top-left flex">
@@ -109,6 +97,7 @@ const HomePage = ({ setCurrentPage }: HomePageParams) => {
               items={bannerImages}
               direction="right"
               speed="verySlow"
+              className="relative top-15 sm:top-0"
             ></InfiniteMovingCards>
           </div>
         </div>
@@ -118,27 +107,12 @@ const HomePage = ({ setCurrentPage }: HomePageParams) => {
         >
           <h2 className="text-header2 m-4">The Lore</h2>
           <p className="text-body m-4">
-            Lorem ipsum dolor sit amet consectetur. Congue sem auctor
-            pellentesque adipiscing in vel elit dapibus id. Lacus mi euismod
-            tristique in facilisis. Vehicula porttitor iaculis risus tincidunt
-            platea. Sed id platea phasellus vitae lacinia in lectus fames
-            molestie. Eget nibh tellus scelerisque nunc ultrices. Pellentesque
-            blandit amet elementum quam id. Mi consectetur sed adipiscing
-            accumsan sit ut consectetur. Pharetra faucibus gravida commodo
-            quisque at. Dui ac arcu nulla augue sed odio sit. Odio ultrices
-            cursus et arcu neque neque viverra faucibus faucibus. Pellentesque
-            aliquam tellus molestie sed quis sem a. Quam eleifend facilisi et
-            consectetur risus eros nisl lacus. Ut ac ac. Lorem ipsum dolor sit
-            amet consectetur. Congue sem auctor pellentesque adipiscing in vel
-            elit dapibus id. Lacus mi euismod tristique in facilisis. Vehicula
-            porttitor iaculis risus tincidunt platea. Sed id platea phasellus
-            vitae lacinia in lectus fames molestie. Eget nibh tellus scelerisque
-            nunc ultrices. Pellentesque blandit amet elementum quam id. Mi
-            consectetur sed adipiscing accumsan sit ut consectetur. Pharetra
-            faucibus gravida commodo quisque at. Dui ac arcu nulla augue sed
-            odio sit. Odio ultriceset arcu neque neque viverra faucibus
-            faucibus. Pellentesque aliquam tellus molestie sed quis sem a. Quam
-            eleifend facilisi et consectetur risus eros nisl lacus. Ut ac ac.
+            Gizmo, the spirit of IGM, has set up multiple game-style race tracks
+            throughout the RIT campus! Joined by multiple students who have
+            stayed local during the summer and the RGDC mascot Jamster, Gizmo
+            seeks to have a fun time before the summer term comes to an end. But
+            don't worry; he will restore the campus back to it's original state
+            to welcome in students for their fall classes.
           </p>
         </div>
         <div
@@ -147,8 +121,7 @@ const HomePage = ({ setCurrentPage }: HomePageParams) => {
         >
           <div
             className="overflow-hidden -rotate-6 w-[120%] h-75 origin-bottom-left flex
-            relative bg-[#BBB] bg-[url('images/items-background.png')] bg-fixed bg-cover bg-repeat 
-            bg-blend-difference bg-size-[90%] md:bg-size-[80%]"
+            relative"
           >
             <InfiniteMovingCards
               items={bannerImages}
@@ -177,7 +150,7 @@ const HomePage = ({ setCurrentPage }: HomePageParams) => {
                   navigate("/leaderboard");
                   setCurrentPage("leaderboard");
                 }}
-                className="px-8 py-3"
+                className="px-8 py-3 font-semibold"
               />
             </div>
           </div>

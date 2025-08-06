@@ -11,7 +11,7 @@ export const BoostCard = () => {
   return (
     <ItemCard
       items={boostItems}
-      bgGradient="from-[#39DC2B] to-[#35FF7A]"
+      bgGradient="bg-gradient-to-b from-neutral-400 to-neutral-300"
       category="boost"
     />
   );

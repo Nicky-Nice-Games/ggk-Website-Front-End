@@ -5,6 +5,7 @@ import { type Track } from "@/data/tracks";
 import ArrowButton from "@/components/ui/arrow-button";
 import { fetchData } from "@/utils";
 import MapSelect from "@/components/map-select";
+import TitleBanner from "@/components/ui/title-banner";
 
 const LeaderboardPage = () => {
   const [mapId, setMapId] = useState(0);
@@ -20,12 +21,9 @@ const LeaderboardPage = () => {
     return (
       <div className="text-center bg-[url(images/white-checker.png)] bg-size-[80%] md:bg-size-[60%] bg-cover bg-repeat min-h-[80vh]">
         <div className="bg-gradient-to-b from-[#FFF7] via-white to-[#FFF7] from-1% via-50% to-99% min-h-[80vh]">
-          <div className=" pb-4">
-            <img
-              src=" images/leaderboard-header.png"
-              className="flex justify-self-center w-[100%] md:w-[45%] 2xl:w-[35%] pt-8 mb-[1rem]"
-            ></img>
-            <h2 className="text-body pb-[2rem]">
+          <div className="pb-4 pt-5">
+            <TitleBanner color="blue" text="Leaderboards" className="mb-5" />
+            <h2 className="text-body pb-8">
               Click a map to view its leaderboard!
             </h2>
           </div>
@@ -48,14 +46,14 @@ const LeaderboardPage = () => {
     <div
       className={`${mapImage} pt-10 bg-gray-400 bg-cover bg-center bg-blend-soft-light min-h-[80vh]`}
     >
-      <div className="text-center max-w-8/10 m-auto bg-[#FFF4] rounded-lg">
+      <div className="text-center max-w-8/10 m-auto rounded-lg">
         <ArrowButton
           caption="Back"
           clickAction={() => setMapId(0)}
-          className="absolute left-[11%] top-34 md:top-25 px-4 sm:px-7"
+          className="absolute left-[10%] top-15 md:top-26 font-semibold px-7"
           direction="left"
         />
-        <h2 className="mb-2 text-header2">{mapName}</h2>
+        <h2 className="mb-2 text-header2 m-auto">{mapName}</h2>
         <LeaderboardTable mapId={mapId} />
       </div>
     </div>
@@ -66,7 +64,7 @@ const LeaderboardTable = ({ mapId }: { mapId: number }) => {
   const [leaderboardData, setLeaderboardData] = useState([]);
 
   useEffect(() => {
-    //const link = "./data/leaderboard-data.json";
+    //const link = "data/leaderboard-data.json";
     const link = `https://maventest-a9cc74b8d5cf.herokuapp.com/webservice/leaderboard/%7Bmapid%7D?mapid=${mapId}`;
 
     fetchData("GET", link, "json", (data: any) => {
@@ -79,7 +77,8 @@ const LeaderboardTable = ({ mapId }: { mapId: number }) => {
     });
   }, []);
 
-  if (leaderboardData.length == 0) return <p className="text-body">No data found!</p>;
+  if (leaderboardData.length == 0)
+    return <p className="text-body">No data found!</p>;
 
   return <DataTable columns={columns} data={leaderboardData} />;
 };

@@ -5,7 +5,7 @@ import { CloseIcon } from "@/components/content/close-icon";
 import { Worker, Viewer, SpecialZoomLevel } from "@react-pdf-viewer/core";
 import { type Update, updates } from "@/data/updates";
 import "@react-pdf-viewer/core/lib/styles/index.css";
-import HeaderBanner from "@/components/ui/header-banner";
+import TitleBanner from "@/components/ui/title-banner";
 
 // Converts MM/DD/YYYY to YYYY-MM-DD for parsing
 const toISO = (dateStr: string) => {
@@ -84,6 +84,7 @@ const NewsAndUpdatesPage = () => {
         className="flex justify-self-center w-[100%] md:w-[45%] 2xl:w-[35%] pt-8 mb-[1rem]"
       ></img>
       {/* <HeaderBanner text="News and Updates" imgsrc="images/blank-header.png"></HeaderBanner> */}
+
       {/* overlay behind pop up when active */}
       <AnimatePresence>
         {active && typeof active === "object" && (
@@ -202,8 +203,12 @@ const NewsAndUpdatesPage = () => {
             <p className="text-xs text-[#F76902] poppins font-semibold mb-1">
               {mostRecentUpdate.date}
             </p>
-            <h2 className="text-lg poppins font-bold">{mostRecentUpdate.title}</h2>
-            <p className="text-sm text-body mt-1">{mostRecentUpdate.subtitle}</p>
+            <h2 className="text-lg poppins font-bold">
+              {mostRecentUpdate.title}
+            </h2>
+            <p className="text-sm text-body mt-1">
+              {mostRecentUpdate.subtitle}
+            </p>
           </div>
         </motion.div>
       </div>
@@ -238,7 +243,11 @@ const NewsAndUpdatesPage = () => {
                 src={update.image}
                 alt={update.title}
                 className={`w-full transition-transform duration-300 hover:scale-120 object-fill 
-                  ${isFullWidth ? "aspect-[16/9]" : "aspect-[4/3] sm:aspect-[16/10] lg:aspect-[13/9]"}`}
+                  ${
+                    isFullWidth
+                      ? "aspect-[16/9]"
+                      : "aspect-[4/3] sm:aspect-[16/10] lg:aspect-[13/9]"
+                  }`}
               />
               {/* Text content of the update */}
               <div className="p-4 relative bg-white z-2">
