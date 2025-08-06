@@ -131,7 +131,7 @@ const PlayerStatsPage = ({
   return (
     <InfoPage
       playerData={playerData}
-      recentRaces={mockRecentRaces}
+      recentRaces={recentRaces}
       setActiveTab={setActiveTab}
       setAccount={setAccount}
       account={account}
