@@ -88,7 +88,7 @@ const PlayerStatsPage = ({
     raceTime4: 0,
   });
   // Store a list of the player's most recent races
-  const [recentRaces, setRecentRaces] = useState(null);
+  const [recentRaces, setRecentRaces] = useState(mockRecentRaces);
 
   useEffect(() => {
     if (account) {

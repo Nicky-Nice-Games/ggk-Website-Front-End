@@ -50,7 +50,7 @@ const LeaderboardPage = () => {
         <ArrowButton
           caption="Back"
           clickAction={() => setMapId(0)}
-          className="absolute left-[10%] top-15 md:top-26 font-semibold px-7"
+          className="absolute left-2 md:left-[10%] top-15 sm:top-26 font-semibold px-7"
           direction="left"
         />
         <h2 className="mb-2 text-header2 m-auto">{mapName}</h2>
