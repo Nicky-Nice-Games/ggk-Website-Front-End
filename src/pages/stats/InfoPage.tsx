@@ -26,9 +26,15 @@ const InfoPage = ({
     value: string | number;
   }
 
+  let favtrack = playerData.favoriteTrack - 1;
+  if(favtrack < 0)
+  {
+    favtrack = 0;
+  }
+
   const statsList1: Stat[] = [
     { name: "Most Used Character", value: characters[playerData.favoriteChara].name,},
-    { name: "Most Played Track",value: tracks[playerData.favoriteTrack].name,},
+    { name: "Most Played Track",value: tracks[favtrack].name,},
     { name: "Wins", value: playerData.firstPlace },
     { name: "Podium Finishes", value: playerData.podium },
     { name: "Races", value: playerData.totalRaces },
@@ -49,8 +55,8 @@ const InfoPage = ({
 
   const statsList3: Stat[] = [
     { name: "Campus Circuit", value: formatTime(playerData.raceTime1) },
-    { name: "Techhouse Turnpike", value: formatTime(playerData.raceTime2) },
-    { name: "Dorm Room Derby", value: formatTime(playerData.raceTime3) },
+    { name: "Dorm Room Derby", value: formatTime(playerData.raceTime2) },
+    { name: "Techhouse Turnpike", value: formatTime(playerData.raceTime3) },
     { name: "All Nighter Expressway", value: formatTime(playerData.raceTime4) },
   ];
 
@@ -174,7 +180,7 @@ const InfoPage = ({
                         className="bg-[#dc4d31] hover:bg-[#f25c3f] mb-4 rounded-md p-3 flex justify-between text-[#FFFBEE] border-2 border-orange-500 transition-colors"
                       >
                         <span className="text-[#FFFBEE] font-bold">
-                          {tracks[race.mapRaced].name}
+                          {tracks[race.mapRaced - 1].name}
                         </span>
                         <span className="text-[#FFFBEE] font-medium">
                           {formatTime(race.raceTime)}
