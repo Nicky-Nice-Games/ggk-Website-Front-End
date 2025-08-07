@@ -102,7 +102,7 @@ const NewsAndUpdatesPage = () => {
             <motion.div
               layoutId={`item-${active.title}-${id}`}
               ref={ref}
-              className={`w-18/20 h-[90%] md:h-150 md:max-h-[70%] bg-white dark:bg-neutral-900 rounded-3xl overflow-hidden ${isMobile
+              className={`z-400 w-18/20 h-[80%] md:h-150 md:max-h-[70%] bg-white rounded-3xl overflow-hidden ${isMobile
                   ? "flex flex-col overflow-y-auto"
                   : "flex flex-col md:flex-row"
                 }`}
@@ -111,14 +111,14 @@ const NewsAndUpdatesPage = () => {
                 // Mobile layout
                 <>
 
-                  <div className="relative w-full flex flex-col p-6 h-full overflow-hidden">
+                  <div className="relative w-full flex flex-col p-6 h-full overflow-hidden mb-[2rem]">
                     {/* x button */}
                     <motion.button
                       layout
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       exit={{ opacity: 0 }}
-                      className="self-end rounded-full h-6 mt-1 mr-1"
+                      className="self-end rounded-full h-fit mt-1 mr-1"
                       onClick={() => setActive(false)}
                     >
                       <CloseIcon />
@@ -142,14 +142,15 @@ const NewsAndUpdatesPage = () => {
                 <>
                   <motion.div
                     layoutId={`image-${active.title}-${id}`}
-                    className="min-w-2/5 md:h-auto"
+                    className="min-w-2/5 h-full relative"
                   >
-                    <img // Desktop image
+                    <img
                       src={active.image}
                       alt={active.title}
-                      className="w-full h-full object-top"
+                      className="w-full h-full object-cover object-top"
                     />
                   </motion.div>
+
 
                   <div className="relative w-full flex flex-col p-6 min-w-3/5 xl:min-w-2/5 h-full overflow-hidden">
                     {/* x button */}
@@ -266,11 +267,11 @@ const NewsAndUpdatesPage = () => {
       </div>
       {/* Only shows these buttons if its the desktop version*/}
       {!isMobile && (
-        <div className="flex justify-center gap-4 mt-6">
+        <div className="flex justify-center gap-4 mt-6 pb-[2rem]">
           <button
             onClick={prevPage}
             disabled={currentPage === 1}
-            className="cursor-pointer disabled:cursor-auto px-4 py-2 bg-gray-700 text-white rounded disabled:opacity-50 hover:bg-gray-600"
+            className="cursor-pointer disabled:cursor-auto px-4 py-2 bg-[#ea580c] text-button font-bold text-white rounded disabled:bg-[#a3a3a3] disabled:hover:bg-[#a3a3a3] hover:bg-[#f59e0b]"
           >
             Previous
           </button>
@@ -278,7 +279,7 @@ const NewsAndUpdatesPage = () => {
           <button
             onClick={nextPage}
             disabled={currentPage === totalPages}
-            className="cursor-pointer disabled:cursor-auto px-4 py-2 bg-gray-700 text-white rounded disabled:opacity-50 hover:bg-gray-600"
+            className="cursor-pointer disabled:cursor-auto px-4 py-2 bg-[#ea580c] text-button font-bold text-white rounded disabled:bg-[#a3a3a3] disabled:hover:bg-[#a3a3a3] hover:bg-[#f59e0b]"
           >
             Next
           </button>
@@ -289,9 +290,9 @@ const NewsAndUpdatesPage = () => {
         <div className="flex justify-center mt-4">
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="px-4 py-2 bg-gray-700 text-white rounded disabled:opacity-50 hover:bg-gray-600"
+            className="px-4 py-2 bg-[#ea580c] text-button font-bold text-white rounded disabled:opacity-50 hover:bg-[#fb923c]"
           >
-            ↑ Back to top
+            ^ Back to top
           </button>
         </div>
       )}
