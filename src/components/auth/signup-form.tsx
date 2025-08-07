@@ -1,9 +1,8 @@
 import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-
+import ArrowButton from "@/components/ui/arrow-button";
 interface SignupFormProps extends React.ComponentProps<"div"> {
   onLoginClick?: () => void;
 }
@@ -16,7 +15,7 @@ export function SignupForm({
     <div className={cn("flex flex-col gap-6", className)} {...props}>
       <Card className="bg-[#1a1a1a]">
         <CardHeader className="text-center">
-          <CardTitle className="text-xl text-white">
+          <CardTitle className="text-xl text-white poppins">
             Join The Competition
           </CardTitle>
         </CardHeader>
@@ -24,8 +23,11 @@ export function SignupForm({
           <form>
             <div className="grid gap-6">
               <div className="grid gap-6">
-                <p id="error-message" className="text-red-600 text-center"></p>
-                <div className="grid gap-3 text-[#D0D3D4]">
+                <p
+                  id="error-message"
+                  className="text-red-600 text-center poppins"
+                ></p>
+                <div className="grid gap-3 text-[#D0D3D4] poppins">
                   <Label htmlFor="email">Email</Label>
                   <Input
                     id="email"
@@ -34,8 +36,10 @@ export function SignupForm({
                     required
                   />
                 </div>
-                <div className="grid gap-3 text-[#D0D3D4]">
-                  <Label htmlFor="username">Username</Label>
+                <div className="grid gap-3 text-[#D0D3D4] poppins">
+                  <Label htmlFor="username" className="poppins">
+                    Username
+                  </Label>
                   <Input
                     id="username"
                     type="username"
@@ -44,43 +48,44 @@ export function SignupForm({
                   />
                 </div>
                 <div className="grid gap-3">
-                  <div className="flex items-center text-[#D0D3D4]">
-                    <Label htmlFor="password">Enter Password</Label>
+                  <div className="flex items-center text-[#D0D3D4] poppins">
+                    <Label htmlFor="password" className="poppins">
+                      Enter Password
+                    </Label>
                     <a
                       href="#"
-                      className="ml-auto text-sm underline-offset-4 hover:underline text-[#F76902]"
+                      className="ml-auto text-sm underline-offset-4 hover:underline text-[#F76902] poppins"
                     ></a>
                   </div>
                   <Input
                     id="password"
                     type="password"
-                    className="text-white"
+                    className="text-white poppins"
                     required
                   />
                 </div>
                 <div className="grid gap-3">
-                  <div className="flex items-center text-[#D0D3D4]">
+                  <div className="flex items-center text-[#D0D3D4] poppins">
                     <Label htmlFor="retype-password">Retype Password</Label>
                     <a
                       href="#"
-                      className="ml-auto text-sm underline-offset-4 hover:underline text-[#F76902]"
+                      className="ml-auto text-sm underline-offset-4 hover:underline text-[#F76902] poppins"
                     ></a>
                   </div>
                   <Input
                     id="retype-password"
                     type="password"
-                    className="text-white"
+                    className="text-white poppins"
                     required
                   />
                 </div>
-                <Button
+                <ArrowButton
                   type="submit"
-                  className="w-full border border-1 text-white bg-[#F76902]"
-                >
-                  Start Racing
-                </Button>
+                  className=" w-[85%] mx-auto"
+                  caption="Start Racing"
+                />
               </div>
-              <div className="text-center text-sm text-[#D0D3D4]">
+              <div className="text-center text-sm text-[#D0D3D4] poppins">
                 Already have an account?{" "}
                 <button
                   onClick={onLoginClick}
