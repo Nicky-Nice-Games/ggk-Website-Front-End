@@ -32,6 +32,9 @@ function App() {
   const [currentPage, setCurrentPage] = useState("home");
 
   useEffect(() => {
+    const storedPage: string | null = localStorage.getItem("currentPage");
+    if (storedPage) setCurrentPage(storedPage);
+
     const storedPID: string | null = localStorage.getItem("pid");
     const storedUsername: string | null = localStorage.getItem("username");
     const storedPfpString: string | null = localStorage.getItem("pfp");
@@ -41,11 +44,11 @@ function App() {
 
       // Set account to dummy data for testing purposes.
       // COMMENT THIS OUT BEFORE YOU BUILD.
-      // setAccount({
-      //   pid: "string",
-      //   username: "string",
-      //   pfp: 0,
-      // });
+      setAccount({
+        pid: "string",
+        username: "string",
+        pfp: 0,
+      });
       return;
     }
     const storedAccount: AccountSchema = {
@@ -61,7 +64,10 @@ function App() {
       <Navbar
         account={account}
         setAccount={setAccount}
-        setCurrentPage={setCurrentPage}
+        setCurrentPage={(newPage: string) => {
+          setCurrentPage(newPage);
+          localStorage.setItem("currentPage", newPage);
+        }}
         currentPage={currentPage}
       />
 
@@ -78,7 +84,14 @@ function App() {
           <Route path="/mascot" element={<MascotPage />} />
           <Route
             path="/home"
-            element={<HomePage setCurrentPage={setCurrentPage} />}
+            element={
+              <HomePage
+                setCurrentPage={(newPage: string) => {
+                  setCurrentPage(newPage);
+                  localStorage.setItem("currentPage", newPage);
+                }}
+              />
+            }
           />
           <Route path="/leaderboard" element={<LeaderboardPage />} />
           <Route path="/news" element={<NewsAndUpdatesPage />} />
