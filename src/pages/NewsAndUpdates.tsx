@@ -111,7 +111,7 @@ const NewsAndUpdatesPage = () => {
                 // Mobile layout
                 <>
 
-                  <div className="relative w-full flex flex-col p-6 h-full overflow-hidden mb-[2rem]">
+                  <div className="relative w-full flex flex-col p-6 h-full overflow-hidden mb-[1rem]">
                     {/* x button */}
                     <motion.button
                       layout
@@ -129,12 +129,14 @@ const NewsAndUpdatesPage = () => {
                     >
                       {active.title}
                     </motion.h3>
-                    <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.worker.min.js">
-                      <Viewer
-                        fileUrl={active.contentLink}
-                        defaultScale={.6}
-                      />
-                    </Worker>
+                    <div className="max-h-[100vh] overflow-hidden">
+                      <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.worker.min.js">
+                        <Viewer
+                          fileUrl={active.contentLink}
+                          defaultScale={.6}
+                        />
+                      </Worker>
+                    </div>
                   </div>
                 </>
               ) : (
@@ -172,12 +174,15 @@ const NewsAndUpdatesPage = () => {
                       {active.title}
                     </motion.h3>
 
-                    <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.worker.min.js">
-                      <Viewer
-                        fileUrl={active.contentLink}
-                        defaultScale={SpecialZoomLevel.PageWidth}
-                      />
-                    </Worker>
+                    <div className="max-h-[50vh] overflow-hidden">
+                      <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.worker.min.js">
+                        <Viewer
+                          fileUrl={active.contentLink}
+                          defaultScale={SpecialZoomLevel.PageWidth}
+                        />
+                      </Worker>
+                    </div>
+              
                   </div>
                 </>
               )}
