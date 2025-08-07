@@ -144,7 +144,7 @@ export const ItemCard = memo(function ItemCard({
                   <div className="w-full ">
                     <motion.h3
                       layoutId={`title-${category}-${id}`}
-                      className="bg-[url(images/arrow.png)] bg-size-[70%_100%] bg-center bg-no-repeat py-2 text-white poppins text-[24px] font-bold mb-4 text-center"
+                      className="bg-[url(images/arrow.png)] bg-size-[100%_100%] sm:bg-size-[70%_100%] bg-center bg-no-repeat py-2 text-white poppins text-[24px] font-bold mb-4 text-center"
                     >
                       {activeItem.name}
                     </motion.h3>

@@ -169,7 +169,7 @@ const ProcessPage = () => {
                           <DialogTitle>
                             <h3 className="text-header3 mb-[1rem]">
                               {c.name}
-                              {c.occupation ? ` - ${c.occupation}` : ""}
+                              {` - The ${c.occupation}`}
                             </h3>
                           </DialogTitle>
                         </DialogHeader>
