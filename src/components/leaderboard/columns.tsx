@@ -30,7 +30,7 @@ export const columns: ColumnDef<Racer>[] = [
       const index: number = row.getValue("index");
       const pfp: number = row.getValue("pfp");
       return (
-        <div className="flex flex-row items-center justify-center w-full">
+        <div className="flex flex-row items-center justify-center md:justify-end md:w-1/5 m-auto">
           <h1 className="font-bold text-base md:text-xl mr-3">
             {formatPlacing(index)}
           </h1>

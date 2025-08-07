@@ -10,7 +10,7 @@ const ItemsPage = () => {
     <>
       <ContentNavigator currentPage={"items"} />
       <main
-        className="min-h-[73vh] bg-size-[110%] bg-blend-multiply w-[100%] bg-size-[90%] md:bg-size-[80%] pt-5"
+        className="min-h-[74vh] bg-size-[110%] bg-blend-multiply w-[100%] bg-size-[90%] md:bg-size-[80%] pt-5"
         style={{
           backgroundImage:
             "linear-gradient(rgba(104, 104, 104, 1),rgba(104, 104, 104, 1), rgba(160, 160, 160, 1)), url('images/items-background-darkoutline.png')",

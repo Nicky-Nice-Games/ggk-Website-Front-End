@@ -4,7 +4,7 @@ import { DataTable } from "@/components/leaderboard/data-table";
 import { type Track } from "@/data/tracks";
 import ArrowButton from "@/components/ui/arrow-button";
 import { fetchData } from "@/utils";
-import MapSelect from "@/components/map-select";
+import MapSelect from "@/components/content/map-select";
 import TitleBanner from "@/components/ui/title-banner";
 
 const LeaderboardPage = () => {
