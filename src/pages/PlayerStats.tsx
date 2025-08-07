@@ -56,7 +56,7 @@ const PlayerStatsPage = ({
     favoriteChara: 0,
     favoriteTrack: 0,
     offenseUsage: {
-      puck1: 0,
+      puck1: 20,
       puck2: 0,
       puck3: 0,
       puck4: 0,
@@ -88,7 +88,7 @@ const PlayerStatsPage = ({
     raceTime4: 0,
   });
   // Store a list of the player's most recent races
-  const [recentRaces, setRecentRaces] = useState(mockRecentRaces);
+  const [recentRaces, setRecentRaces] = useState();
 
   useEffect(() => {
     if (account) {
@@ -104,7 +104,10 @@ const PlayerStatsPage = ({
         "GET",
         `https://maventest-a9cc74b8d5cf.herokuapp.com/webservice/playerinfo/getrecentstats/${account.pid}`,
         "json",
-        setRecentRaces
+        (races: any) => {
+          if (races) races.reverse();
+          setRecentRaces(races);
+        }
       );
     }
   }, [account]);

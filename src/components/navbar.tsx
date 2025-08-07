@@ -99,7 +99,7 @@ const Navbar = ({
               setCurrentPage("stats");
             }}
           >
-            My Stats
+            My Info
           </button>
         </NavigationMenuLink>
         <NavigationMenuLink>
