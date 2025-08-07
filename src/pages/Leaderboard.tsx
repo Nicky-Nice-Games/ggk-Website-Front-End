@@ -4,7 +4,7 @@ import { DataTable } from "@/components/leaderboard/data-table";
 import { type Track } from "@/data/tracks";
 import ArrowButton from "@/components/ui/arrow-button";
 import { fetchData } from "@/utils";
-import MapSelect from "@/components/map-select";
+import MapSelect from "@/components/content/map-select";
 import TitleBanner from "@/components/ui/title-banner";
 
 const LeaderboardPage = () => {
@@ -50,7 +50,7 @@ const LeaderboardPage = () => {
         <ArrowButton
           caption="Back"
           clickAction={() => setMapId(0)}
-          className="absolute left-[10%] top-15 md:top-26 font-semibold px-7"
+          className="absolute left-2 md:left-[10%] top-15 sm:top-26 font-semibold px-7"
           direction="left"
         />
         <h2 className="mb-2 text-header2 m-auto">{mapName}</h2>

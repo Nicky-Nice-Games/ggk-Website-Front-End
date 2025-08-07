@@ -1,6 +1,6 @@
 import { CloseIcon } from "@/components/content/close-icon";
 import { ContentNavigator } from "@/components/content/content-navigator";
-import MapSelect from "@/components/map-select";
+import MapSelect from "@/components/content/map-select";
 import {
   DialogContent,
   DialogDescription,

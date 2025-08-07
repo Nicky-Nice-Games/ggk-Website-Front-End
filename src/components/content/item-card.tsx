@@ -82,7 +82,7 @@ export const ItemCard = memo(function ItemCard({
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/60 h-full w-full z-40"
+            className="fixed inset-0 bg-black/60 h-full w-full z-900"
           />
         )}
       </AnimatePresence>
@@ -90,7 +90,7 @@ export const ItemCard = memo(function ItemCard({
       {/* Popup Content */}
       <AnimatePresence>
         {isActive && activeItem && (
-          <div className="fixed inset-0 grid place-items-center mx-[1rem] z-50">
+          <div className="fixed inset-0 grid place-items-center mx-[1rem] z-901">
             <motion.div
               layoutId={`item-${category}-${id}`}
               ref={ref}

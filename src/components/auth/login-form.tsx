@@ -4,12 +4,14 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import ArrowButton from "@/components/ui/arrow-button";
 interface LoginFormProps extends React.ComponentProps<"div"> {
-  onSignupClick?: () => void;
+  onSignupClick: () => void;
+  onResetPasswordClick: () => void;
 }
 
 export function LoginForm({
   className,
   onSignupClick,
+  onResetPasswordClick,
   ...props
 }: LoginFormProps) {
   return (
@@ -38,10 +40,14 @@ export function LoginForm({
                   />
                 </div>
                 <div className="grid gap-3">
-                  <div className="flex items-center text-[#D0D3D4]">
-                    <Label htmlFor="password" className="poppins">
-                      Password
-                    </Label>
+                  <div className="flex items-center justify-between text-[#D0D3D4]">
+                    <Label htmlFor="password">Password</Label>
+                    <button
+                      onClick={onResetPasswordClick}
+                      className="text-xs text-[#F76902] hover:underline cursor-pointer"
+                    >
+                      Forgot your password?
+                    </button>
                   </div>
                   <Input
                     id="password"
@@ -60,7 +66,7 @@ export function LoginForm({
                 Don&apos;t have an account?{" "}
                 <button
                   onClick={onSignupClick}
-                  className="underline underline-offset-4 cursor-pointer text-[#F76902] poppins"
+                  className="hover:underline underline-offset-4 cursor-pointer text-[#F76902]"
                 >
                   Sign up
                 </button>
