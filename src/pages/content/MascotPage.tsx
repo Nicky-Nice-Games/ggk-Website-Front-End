@@ -20,7 +20,7 @@ const MascotPage = () => {
         <div className="flex flex-col-reverse md:flex-row md:justify-between">
           <p
             className="m-3 mx-[2rem] mb-[3rem] p-4 md:p-8 rounded-xl md:max-w-[50%] 
-          bg-[#3380c0] text-white text-body border-3 border-black"
+    bg-[rgb(86,106,191)] text-white text-body border-3 border-black"
           >
             Gizmo is a curious spirit that lingers in the IGM Open Lab at RIT.
             They carved a life-sized wooden doll to possess, allowing them to

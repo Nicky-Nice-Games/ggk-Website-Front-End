@@ -1,18 +1,21 @@
 interface ArrowButtonProps {
-  caption: string;
-  clickAction: Function;
+  caption?: string;
+  clickAction?: () => void;
   className?: string;
-  direction?: string;
+  direction?: "left" | "right";
+  type?: "button" | "submit" | "reset";
 }
 
 const ArrowButton = ({
   caption,
-  clickAction,
-  className,
+  clickAction = () => {},
+  className = "",
   direction = "right",
+  type = "button",
 }: ArrowButtonProps) => {
   return (
     <button
+      type={type}
       onClick={() => {
         clickAction();
       }}
