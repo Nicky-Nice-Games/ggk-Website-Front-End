@@ -12,7 +12,13 @@ import { motion } from "framer-motion"; // Import motion for simple animations
 const NoPage: React.FC = () => {
   return (
     // Full-screen container with a gradient background
-    <div className="relative min-h-screen bg-gradient-to-br from-black via-[#F76902] to-[#1a1a1a] flex flex-col overflow-hidden particles-container">
+    <div
+      className="relative min-h-screen flex flex-col bg-size-[90%] bg-blend-multiply min-h-[80vh] flex flex-col items-center justify-center gap-6 p-6"
+      style={{
+        backgroundImage:
+          "linear-gradient(#FFA962, #F76902), url('images/items-background-darkoutline.png')",
+      }}
+    >
       {/* Centering wrapper for the card */}
       <div className="flex-grow flex items-center justify-center px-4">
         {/* Fade-in animation for the whole card */}
