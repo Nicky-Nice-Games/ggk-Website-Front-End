@@ -31,9 +31,14 @@ const InfoPage = ({
   {
     favtrack = 0;
   }
+  let favchara = playerData.favoriteChara - 1;
+  if(favchara < 0)
+  {
+    favchara = 0;
+  }
 
   const statsList1: Stat[] = [
-    { name: "Most Used Character", value: characters[playerData.favoriteChara].name,},
+    { name: "Most Used Character", value: characters[favchara].name,},
     { name: "Most Played Track",value: tracks[favtrack].name,},
     { name: "Wins", value: playerData.firstPlace },
     { name: "Podium Finishes", value: playerData.podium },
@@ -76,7 +81,7 @@ const InfoPage = ({
                 {/* Left side/Buttons */}
                 <div className="flex flex-col sm:flex-row sm:space-x-3 space-y-2 sm:space-y-0 border-2 border-orange-500 bg-[#dc4d31]/90 p-2 rounded-md justify-center items-center">
                   <button
-                    className="w-full sm:w-auto font-bold text-[#e7ee33] hover:text-[#FFFBEE] border-0 rounded-md py-1.5 px-3.5 text-sm md:text-xl transition-colors "
+                    className="w-full sm:w-auto font-bold text-[#e7ee33] border-0 rounded-md py-1.5 px-3.5 text-sm md:text-xl transition-colors "
                     onClick={() => setActiveTab("info")}
                   >
                     Stats

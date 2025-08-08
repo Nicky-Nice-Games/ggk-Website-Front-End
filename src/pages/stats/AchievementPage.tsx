@@ -39,9 +39,6 @@ export const AchievementsPage = ({
   playerData,
   setActiveTab,
 }: AchievementsPageProps) => {
-  // Medals shape (rotated 30 degrees)
-  const hexagonClip =
-    "polygon(50% 0%, 93.3% 25%, 93.3% 75%, 50% 100%, 6.7% 75%, 6.7% 25%)";
 
   const firstPlaceFinishes = playerData.firstPlace;
   const top3Finishes = playerData.podium;
@@ -62,7 +59,7 @@ export const AchievementsPage = ({
   );
   const itemsUsedAchievements = checkAchievementProgress(
     itemsUsed,
-    [25, 75, 150, 200, 350]
+    [25, 75, 150, 250, 450]
   );
 
   const achievementSections = [
@@ -92,7 +89,7 @@ export const AchievementsPage = ({
                 </button>
 
                 <button
-                  className="w-full sm:w-auto font-bold text-[#e7ee33] hover:text-[#FFFBEE] border-0 rounded-md py-1.5 px-3.5 text-sm md:text-xl transition-colors"
+                  className="w-full sm:w-auto font-bold text-[#e7ee33] border-0 rounded-md py-1.5 px-3.5 text-sm md:text-xl transition-colors"
                   onClick={() => setActiveTab("achievements")}
                 >
                   Achievements
@@ -154,13 +151,10 @@ export const AchievementsPage = ({
                           </div>
                         ) : (
                           <div className="relative">
-                            <div
-                              className="w-22 h-22 md:w-24 md:h-24 border-2 border-gray-600 bg-[#dc4d31] flex items-center justify-center"
-                              style={{ clipPath: hexagonClip }}
-                            >
-                              <span className="text-2xl md:text-3xl text-gray-600">
-                                🔒
-                              </span>
+                                   <div
+                              className="w-22 h-22 md:w-24 md:h-24 border-0 flex items-center justify-center"
+                            > 
+                              <img src={medals[idx].lockimg} alt="achievement icon"/>
                             </div>
                             <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-2 py-1 bg-[#dc4d31] text-[#FFFBEE] font-semibold text-xs md:text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap border border-orange-500">
                               {medals[idx].name}

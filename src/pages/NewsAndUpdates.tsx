@@ -49,6 +49,9 @@ const NewsAndUpdatesPage = () => {
         (currentPage - 1) * itemsPerPage,
         currentPage * itemsPerPage
       );
+        (currentPage - 1) * itemsPerPage,
+        currentPage * itemsPerPage
+      );
   // Handlers
   const nextPage = () =>
     setCurrentPage((prev) => Math.min(prev + 1, totalPages));
@@ -102,7 +105,8 @@ const NewsAndUpdatesPage = () => {
             <motion.div
               layoutId={`item-${active.title}-${id}`}
               ref={ref}
-              className={`z-400 w-18/20 h-[80%] md:h-150 md:max-h-[70%] bg-white rounded-3xl overflow-hidden ${
+              className={`w-18/20 h-[90%] md:h-150 md:max-h-[70%] bg-white rounded-3xl overflow-hidden ${
+                
                 isMobile
                   ? "flex flex-col overflow-y-auto"
                   : "flex flex-col md:flex-row"
