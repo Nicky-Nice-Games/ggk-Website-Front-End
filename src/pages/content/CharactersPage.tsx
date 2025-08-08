@@ -25,7 +25,7 @@ const CharactersPage = () => {
           Click a character to learn more about them!
         </p>
 
-        <div className="relative">
+        <div className="relative mx-[2vw]">
           {/* Character carousel */}
           <CharacterCarousel
             contentClass="lg:max-w-240 bg-[#0000] border-none shadow-none"

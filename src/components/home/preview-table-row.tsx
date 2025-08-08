@@ -23,7 +23,7 @@ const PreviewTableRow = ({
     >
       <td className="w-[25%] min-w-0 mx-auto text-center ">
         <h3
-          className={`bravo text-[20px] xs:text-[24px] sm:text-[28px] md:text-[36px] lg:text-[48px] ${color} min-w-[30px] xs:min-w-[40px] sm:min-w-[50px] md:min-w-[60px]  leader-text `}
+          className={`bravo text-[20px] xs:text-[24px] sm:text-[28px] md:text-[36px] lg:text-[48px] ${color} min-w-[30px] xs:min-w-[40px] sm:min-w-[50px] md:min-w-[60px] leader-text`}
         >
           {place}
         </h3>

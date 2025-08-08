@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
- :inline {
+:inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -242,8 +242,11 @@
   text-shadow: 4px 4px 0 #0009;
 }
 
-
 @media screen and (max-width: 768px) {
+  .leader-text {
+    -webkit-text-stroke: 1px black;
+    text-shadow: 4px 4px 0 #0009;
+  }
   .banner-text {
     -webkit-text-stroke: 1px black;
   }
