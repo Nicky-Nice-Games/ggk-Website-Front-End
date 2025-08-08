@@ -46,9 +46,9 @@ const NewsAndUpdatesPage = () => {
   const paginatedUpdates = isMobile
     ? restUpdates
     : restUpdates.slice(
-      (currentPage - 1) * itemsPerPage,
-      currentPage * itemsPerPage
-    );
+        (currentPage - 1) * itemsPerPage,
+        currentPage * itemsPerPage
+      );
   // Handlers
   const nextPage = () =>
     setCurrentPage((prev) => Math.min(prev + 1, totalPages));
@@ -102,15 +102,15 @@ const NewsAndUpdatesPage = () => {
             <motion.div
               layoutId={`item-${active.title}-${id}`}
               ref={ref}
-              className={`z-400 w-18/20 h-[80%] md:h-150 md:max-h-[70%] bg-white rounded-3xl overflow-hidden ${isMobile
+              className={`z-400 w-18/20 h-[80%] md:h-150 md:max-h-[70%] bg-white rounded-3xl overflow-hidden ${
+                isMobile
                   ? "flex flex-col overflow-y-auto"
                   : "flex flex-col md:flex-row"
-                }`}
+              }`}
             >
               {isMobile ? (
                 // Mobile layout
                 <>
-
                   <div className="relative w-full flex flex-col p-6 h-full overflow-hidden mb-[1rem]">
                     {/* x button */}
                     <motion.button
@@ -133,7 +133,7 @@ const NewsAndUpdatesPage = () => {
                       <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.worker.min.js">
                         <Viewer
                           fileUrl={active.contentLink}
-                          defaultScale={.6}
+                          defaultScale={0.6}
                         />
                       </Worker>
                     </div>
@@ -152,7 +152,6 @@ const NewsAndUpdatesPage = () => {
                       className="w-full h-full object-cover object-top"
                     />
                   </motion.div>
-
 
                   <div className="relative w-full flex flex-col p-6 min-w-3/5 xl:min-w-2/5 h-full overflow-hidden">
                     {/* x button */}
@@ -182,7 +181,6 @@ const NewsAndUpdatesPage = () => {
                         />
                       </Worker>
                     </div>
-              
                   </div>
                 </>
               )}
@@ -238,8 +236,9 @@ const NewsAndUpdatesPage = () => {
               key={update.id} // Unique key for each item
               onClick={() => setActive(update)}
               // Full width for all images, but height depends on if it's full-width or not
-              className={`${isFullWidth ? "col-span-1 sm:col-span-2 lg:col-span-3" : ""
-                } bg-white text-black rounded-xl shadow overflow-hidden 
+              className={`${
+                isFullWidth ? "col-span-1 sm:col-span-2 lg:col-span-3" : ""
+              } bg-white text-black rounded-xl shadow overflow-hidden 
               cursor-pointer m-4 `}
             >
               {/* Image */}
