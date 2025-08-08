@@ -43,6 +43,7 @@ export function LoginForm({
                   <div className="flex items-center justify-between text-[#D0D3D4]">
                     <Label htmlFor="password">Password</Label>
                     <button
+                      type="button"
                       onClick={onResetPasswordClick}
                       className="text-xs text-[#F76902] hover:underline cursor-pointer"
                     >
