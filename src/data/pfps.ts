@@ -1,74 +1,73 @@
 interface ProfilePicture {
-  emote: string;
+  character: string;
   src: string;
 }
 
 const pfpList: ProfilePicture[] = [
   {
-    emote: "Gizmo",
+    character: "Gizmo",
     src: "images/pfps/gizmo.png",
   },
-   {
-    emote: "Gizmo",
+  {
+    character: "Gizmo",
     src: "images/pfps/gizmo-2.png",
   },
-    {
-    emote: "Morgan",
+  {
+    character: "Morgan",
     src: "images/pfps/morgan.png",
   },
-   {
-    emote: "Morgan",
+  {
+    character: "Morgan",
     src: "images/pfps/morgan-2.png",
   },
-     {
-    emote: "Reese",
+  {
+    character: "Reese",
     src: "images/pfps/reese.png",
   },
-   {
-    emote: "Reese",
+  {
+    character: "Reese",
     src: "images/pfps/reese-2.png",
   },
-    {
-    emote: "Reese",
+  {
+    character: "Reese",
     src: "images/pfps/reese-3.png",
   },
-       {
-    emote: "Emma",
+  {
+    character: "Emma",
     src: "images/pfps/emma.png",
   },
-   {
-    emote: "Emma",
+  {
+    character: "Emma",
     src: "images/pfps/emma-2.png",
   },
-    {
-    emote: "Emma",
+  {
+    character: "Emma",
     src: "images/pfps/emma-3.png",
   },
-       {
-    emote: "Kai",
+  {
+    character: "Kai",
     src: "images/pfps/kai.png",
   },
-   {
-    emote: "Kai",
+  {
+    character: "Kai",
     src: "images/pfps/kai-2.png",
   },
-    {
-    emote: "Kai",
+  {
+    character: "Kai",
     src: "images/pfps/kai-3.png",
   },
-       {
-    emote: "Jamster",
+  {
+    character: "Jamster",
     src: "images/pfps/jamster.png",
   },
-   {
-    emote: "Jamster",
+  {
+    character: "Jamster",
     src: "images/pfps/jamster-2.png",
   },
-    {
-    emote: "Jamster",
+  {
+    character: "Jamster",
     src: "images/pfps/jamster-3.png",
   },
-
 ];
 
 export { pfpList };

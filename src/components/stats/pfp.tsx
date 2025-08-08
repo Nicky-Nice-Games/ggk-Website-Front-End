@@ -35,8 +35,10 @@ export default function Pfp({
   showEdit = true,
   className = "",
 }: PfpProps) {
-  // Split "emotes" in pfp list to a new list. "Set" prevents repeats.
-  const emotes: string[] = [...new Set(pfpList.map((pfp) => pfp.emote))];
+  // Split characters in pfp list to a new list. "Set" prevents repeats.
+  const characters: string[] = [
+    ...new Set(pfpList.map((pfp) => pfp.character)),
+  ];
 
   return (
     <div className={`flex flex-col items-center ${className}`}>
@@ -55,29 +57,32 @@ export default function Pfp({
           {/* Avatar picker overlay - made larger */}
           <DialogContent
             showCloseButton={false}
-            className="w-full border-orange-700 bg-[#131313]"
+            className="w-full md:min-w-160 border-orange-700 bg-[#131313]"
           >
             <DialogTitle className="text-xl font-medium mb-6 text-white">
               Choose an avatar
             </DialogTitle>
             <Tabs>
-              <TabsList>
-                {emotes.map((e, index) => {
+              <TabsList className="flex flex-wrap h-full">
+                {characters.map((c, index) => {
                   return (
-                    <TabsTrigger value={index.toString()} className="ml-0 mr-1 md:text-[16px]">
-                      {e}
+                    <TabsTrigger
+                      value={index.toString()}
+                      className="ml-0 mr-1 md:text-[16px] h-8"
+                    >
+                      {c}
                     </TabsTrigger>
                   );
                 })}
               </TabsList>
-              {emotes.map((e, index) => {
+              {characters.map((c, index) => {
                 return (
                   <TabsContent
                     value={index.toString()}
                     className="grid grid-cols-3 gap-6 py-3 place-items-center shadow-lg bg-linear-to-b from-[#CE6131] to-[#BA382A] rounded-b-xl rounded-tr-xl"
                   >
                     {pfpList
-                      .filter((pfp) => pfp.emote === e)
+                      .filter((pfp) => pfp.character === c)
                       .map((pfp, index) => (
                         <img
                           key={pfp.src}
