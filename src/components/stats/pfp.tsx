@@ -55,7 +55,7 @@ export default function Pfp({
           {/* Avatar picker overlay - made larger */}
           <DialogContent
             showCloseButton={false}
-            className="max-w-md border-orange-700 bg-[#131313]"
+            className="w-full border-orange-700 bg-[#131313]"
           >
             <DialogTitle className="text-xl font-medium mb-6 text-white">
               Choose an avatar
@@ -64,7 +64,7 @@ export default function Pfp({
               <TabsList>
                 {emotes.map((e, index) => {
                   return (
-                    <TabsTrigger value={index.toString()} className="ml-0 mr-1">
+                    <TabsTrigger value={index.toString()} className="ml-0 mr-1 md:text-[16px]">
                       {e}
                     </TabsTrigger>
                   );
