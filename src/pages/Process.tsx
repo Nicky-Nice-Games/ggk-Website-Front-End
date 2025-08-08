@@ -16,7 +16,7 @@ const ProcessPage = () => {
 
   return (
     <>
-      <main className="mt-0 px-6 md:px-12 relative bg-[url(images/items-background.png)] bg-[#BBB] bg-fixed bg-repeat bg-blend-difference bg-size-[90%] md:bg-size-[80%] *:text-white min-h-[80vh]">
+      <main className="mt-0 px-4 md:px-12 relative bg-[url(images/items-background.png)] bg-[#BBB] bg-fixed bg-repeat bg-blend-difference bg-size-[90%] md:bg-size-[80%] *:text-white min-h-[80vh]">
         {/* About Project Section */}
         <div className="pt-5">
           <TitleBanner color="orange" text="The Process" className="mb-5" />
@@ -31,7 +31,7 @@ const ProcessPage = () => {
                   over the summer of 2025 sponsored by RIT Professor Nicholas
                   Buonarota. All students are split into 8 sub-teams by their
                   specialty:
-                  <ul className="list-disc *:my-2 ml-5">
+                  <ul className="list-disc *:my-2 ml-5 my-4">
                     <li>
                       <b className="font-bold text-[#fb923c]">Production:</b>{" "}
                       Oversees the entire team's work, assigning tasks and
@@ -91,7 +91,7 @@ const ProcessPage = () => {
                   developed over the course of 2.5 months, stretching from late
                   May to mid-August of 2025.
                 </p>
-                <div className="md:min-w-[400px] md:w-300">
+                <div className="md:min-w-[400px] md:w-300 mb-7 md:mb-0">
                   <img
                     src="images/process/team-photo.jpg"
                     alt="Photo of the team"

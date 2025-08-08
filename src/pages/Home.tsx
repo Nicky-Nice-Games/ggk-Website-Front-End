@@ -17,8 +17,8 @@ const HomePage = ({ setCurrentPage }: HomePageParams) => {
   React.useEffect(() => {
     fetchData(
       "GET",
-      //"data/leaderboard-data.json",
-      "https://maventest-a9cc74b8d5cf.herokuapp.com/webservice/leaderboard/%7Bmapid%7D?mapid=4",
+      "data/leaderboard-data.json",
+      //"https://maventest-a9cc74b8d5cf.herokuapp.com/webservice/leaderboard/%7Bmapid%7D?mapid=4",
       "json",
       (data: any) => {
         data = data.sort((a: any, b: any) => a.raceTime - b.raceTime);
@@ -75,7 +75,7 @@ const HomePage = ({ setCurrentPage }: HomePageParams) => {
 
         <div
           id="introduction"
-          className="pt-[20%] md:pt-[15%] md:pb-[15%] pb:[10%] px-[4vw] md:px-[8vw] w-full 
+          className="pt-[20%] md:pt-[15%] pb-[10%] px-[4vw] md:px-[8vw] w-full 
                     bg-repeat bg-fixed bg-[url('images/black-checker.png')]
                     text-white flex flex-col items-center"
         >
@@ -91,19 +91,19 @@ const HomePage = ({ setCurrentPage }: HomePageParams) => {
             style.
           </p>
         </div>
-        <div className="bg-fixed bg-repeat bg-[url('images/black-checker.png')]">
+        <div className="bg-fixed bg-repeat bg-[url('images/black-checker.png')] max-h-40 sm:max-h-full mb-10 sm:mb-0">
           <div className="overflow-hidden rotate-6 w-[120%] h-75 origin-top-left flex bottom-0">
             <InfiniteMovingCards
               items={bannerImages}
               direction="right"
               speed="verySlow"
-              className="relative top-15 sm:top-0 bottom-0 bg-[url('images/items-background.png')] bg-fixed bg-cover bg-repeat bg-size-[90%] md:bg-size-[80%]"
+              className="relative bottom-0 bg-fixed bg-cover bg-repeat bg-size-[90%] md:bg-size-[80%]"
             ></InfiniteMovingCards>
           </div>
         </div>
         <div
           id="lore"
-          className="px-8 md:px-[8vw] text-center pt-[18%] bg-fixed bg-repeat pb-[20%]
+          className="px-8 md:px-[8vw] text-center pt-[20%] bg-fixed bg-repeat pb-[20%]
           bg-[url('images/items-background.png')] bg-fixed bg-cover bg-repeat bg-size-[90%] md:bg-size-[80%]"
         >
           <h2 className="text-header2 m-4">The Lore</h2>

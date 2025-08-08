@@ -5,27 +5,27 @@ interface ProfilePicture {
 
 const pfpList: ProfilePicture[] = [
   {
-    emote: "neutral",
+    emote: "Neutral",
     src: "images/pfps/gizmo.png",
   },
   {
-    emote: "neutral",
+    emote: "Neutral",
     src: "images/pfps/jamster.png",
   },
   {
-    emote: "neutral",
+    emote: "Neutral",
     src: "images/pfps/morgan.png",
   },
   {
-    emote: "neutral",
+    emote: "Neutral",
     src: "images/pfps/reese.png",
   },
   {
-    emote: "neutral",
+    emote: "Neutral",
     src: "images/pfps/emma.png",
   },
   {
-    emote: "neutral",
+    emote: "Neutral",
     src: "images/pfps/kai.png",
   },
 ];
