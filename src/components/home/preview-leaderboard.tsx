@@ -21,9 +21,10 @@ const getPlacementColor = (index: number): string => {
 const PreviewLeaderboard = ({ data }: { data: any }) => {
   return (
     <>
-    <div className="top-0 z-0 w-full h-[90vh] lg:w-3/5 md:h-225 bg-[url('images/arcade-machine-2.png')] 
-    xl:bg-[url('images/arcade-machine-wide.png')] bg-no-repeat bg-size-[100%_100%]">
-    </div>
+      <div
+        className="top-0 z-0 w-full h-[90vh] lg:w-3/5 md:h-225 bg-[url('images/arcade-machine-2.png')] 
+    md:bg-[url('images/arcade-machine-wide.png')] bg-no-repeat bg-size-[100%_100%]"
+      ></div>
       <table
         id="scoreboard"
         className="absolute top-[27%] 
@@ -34,9 +35,7 @@ const PreviewLeaderboard = ({ data }: { data: any }) => {
           <th className="racingHeader text-[4vw] md:text-[3vw] lg:text-[2vw] w-[20%] text-center">
             Placing
           </th>
-          <th className="racingHeader text-[4vw] md:text-[3vw] lg:text-[2vw] w-[20%] text-center">
-
-          </th>
+          <th className="racingHeader text-[4vw] md:text-[3vw] lg:text-[2vw] w-[20%] text-center"></th>
           <th className="racingHeader text-[4vw] md:text-[3vw] lg:text-[2vw] w-[20%] text-center">
             Player
           </th>
