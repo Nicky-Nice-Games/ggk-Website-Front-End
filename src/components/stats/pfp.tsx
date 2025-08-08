@@ -88,7 +88,7 @@ export default function Pfp({
                           key={pfp.src}
                           src={pfp.src}
                           alt="Option"
-                          className={`cursor-pointer rounded-full h-20 w-20 object-cover border-4 hover:border-blue-500 transition-all ${
+                          className={`cursor-pointer rounded-full h-24 w-24 object-cover border-4 hover:border-blue-500 transition-all ${
                             index === account.pfp
                               ? "border-green-500"
                               : "border-transparent"
