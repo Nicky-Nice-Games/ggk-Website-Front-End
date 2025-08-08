@@ -125,7 +125,7 @@ export const columns: ColumnDef<Racer>[] = [
     cell: ({ row }) => {
       if (!row.getValue("index")) return;
       return (
-        <h2 className={`text-right text-xs md:text-lg`}>
+        <h2 className={`text-right text-xs md:text-lg mr-1`}>
           {row.getValue("score")}
         </h2>
       );
