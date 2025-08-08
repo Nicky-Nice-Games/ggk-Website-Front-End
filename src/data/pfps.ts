@@ -12,6 +12,18 @@ const pfpList: ProfilePicture[] = [
     character: "Gizmo",
     src: "images/pfps/gizmo-2.png",
   },
+   {
+    character: "Gizmo",
+    src: "images/pfps/gizmo-3.png",
+  },
+  {
+    character: "Gizmo",
+    src: "images/pfps/gizmo-4.png",
+  },
+    {
+    character: "Gizmo",
+    src: "images/pfps/gizmo-5.png",
+  },
   {
     character: "Morgan",
     src: "images/pfps/morgan.png",
@@ -31,6 +43,14 @@ const pfpList: ProfilePicture[] = [
   {
     character: "Reese",
     src: "images/pfps/reese-3.png",
+  },
+    {
+    character: "Reese",
+    src: "images/pfps/reese-4.png",
+  },
+  {
+    character: "Reese",
+    src: "images/pfps/reese-5.png",
   },
   {
     character: "Emma",
