@@ -1,32 +1,72 @@
 interface ProfilePicture {
-  emote: string;
+  character: string;
   src: string;
 }
 
 const pfpList: ProfilePicture[] = [
   {
-    emote: "Neutral",
+    character: "Gizmo",
     src: "images/pfps/gizmo.png",
   },
   {
-    emote: "Neutral",
-    src: "images/pfps/jamster.png",
+    character: "Gizmo",
+    src: "images/pfps/gizmo-2.png",
   },
   {
-    emote: "Neutral",
+    character: "Morgan",
     src: "images/pfps/morgan.png",
   },
   {
-    emote: "Neutral",
+    character: "Morgan",
+    src: "images/pfps/morgan-2.png",
+  },
+  {
+    character: "Reese",
     src: "images/pfps/reese.png",
   },
   {
-    emote: "Neutral",
+    character: "Reese",
+    src: "images/pfps/reese-2.png",
+  },
+  {
+    character: "Reese",
+    src: "images/pfps/reese-3.png",
+  },
+  {
+    character: "Emma",
     src: "images/pfps/emma.png",
   },
   {
-    emote: "Neutral",
+    character: "Emma",
+    src: "images/pfps/emma-2.png",
+  },
+  {
+    character: "Emma",
+    src: "images/pfps/emma-3.png",
+  },
+  {
+    character: "Kai",
     src: "images/pfps/kai.png",
+  },
+  {
+    character: "Kai",
+    src: "images/pfps/kai-2.png",
+  },
+  {
+    character: "Kai",
+    src: "images/pfps/kai-3.png",
+  },
+  {
+    character: "Jamster",
+    src: "images/pfps/jamster.png",
+  },
+  {
+    character: "Jamster",
+    src: "images/pfps/jamster-2.png",
+  },
+  {
+    character: "Jamster",
+    src: "images/pfps/jamster-3.png",
   },
 ];
 
