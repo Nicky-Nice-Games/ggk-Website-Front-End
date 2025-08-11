@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 interface TitleBannerProps {
   color:
     | "purple"
-    | "red"
+    | "pink"
     | "orange"
     | "green"
     | "blue"
@@ -20,8 +20,8 @@ const TitleBanner = ({ color, text, className }: TitleBannerProps) => {
     case "purple":
       bannerBackground = "bg-[url(images/banners/purple.png)]";
       break;
-    case "red":
-      bannerBackground = "bg-[url(images/banners/red-md.png)]";
+    case "pink":
+      bannerBackground = "bg-[url(images/banners/pink-md.png)]";
       break;
     case "orange":
       bannerBackground = "bg-[url(images/banners/orange.png)]";
