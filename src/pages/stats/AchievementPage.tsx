@@ -39,7 +39,6 @@ export const AchievementsPage = ({
   playerData,
   setActiveTab,
 }: AchievementsPageProps) => {
-
   const firstPlaceFinishes = playerData.firstPlace;
   const top3Finishes = playerData.podium;
   const totalRaces = playerData.totalRaces;
@@ -63,10 +62,10 @@ export const AchievementsPage = ({
   );
 
   const achievementSections = [
-    { name: "1st Place Finishes", progress: firstPlaceAchievements},
-    { name: "Podium Finishes", progress: top3Achievements},
-    { name: "Races", progress: totalRaceAchievements},
-    { name: "Items Collected", progress: itemsUsedAchievements},
+    { name: "1st Place Finishes", progress: firstPlaceAchievements },
+    { name: "Podium Finishes", progress: top3Achievements },
+    { name: "Races", progress: totalRaceAchievements },
+    { name: "Items Collected", progress: itemsUsedAchievements },
   ];
 
   return (
@@ -82,7 +81,7 @@ export const AchievementsPage = ({
               {/* Left side/Buttons */}
               <div className="flex flex-col sm:flex-row sm:space-x-3 space-y-2 sm:space-y-0 border-2 border-orange-500 bg-[#dc4d31]/90 p-2 rounded-md justify-center items-center">
                 <button
-                  className="w-full sm:w-auto font-bold text-[#FFFBEE] hover:text-[#e7ee33] border-0 rounded-md py-1.5 px-3.5 text-sm md:text-xl transition-colors"
+                  className="w-full sm:w-auto font-bold text-[#FFFBEE] hover:text-[#e7ee33] border-0 rounded-md py-1.5 px-3.5 text-sm md:text-xl transition-colors hover:cursor-pointer"
                   onClick={() => setActiveTab("info")}
                 >
                   Stats
@@ -137,12 +136,11 @@ export const AchievementsPage = ({
                           <div className="relative transform transition-transform hover:scale-110">
                             {/* Ribbon */}
                             {/* Hexagon medal */}
-                            <div
-                              className="w-22 h-22 md:w-24 md:h-24 border-0 flex items-center justify-center"
-  
-                            > 
-                              <img src={medals[idx].img} alt="achievement icon"/>
-
+                            <div className="w-22 h-22 md:w-24 md:h-24 border-0 flex items-center justify-center">
+                              <img
+                                src={medals[idx].img}
+                                alt="achievement icon"
+                              />
                             </div>
                             {/* Tooltip */}
                             <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-2 py-1 bg-black text-orange-300 text-xs md:text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap border border-orange-500">
@@ -151,10 +149,11 @@ export const AchievementsPage = ({
                           </div>
                         ) : (
                           <div className="relative">
-                                   <div
-                              className="w-22 h-22 md:w-24 md:h-24 border-0 flex items-center justify-center"
-                            > 
-                              <img src={medals[idx].lockimg} alt="achievement icon"/>
+                            <div className="w-22 h-22 md:w-24 md:h-24 border-0 flex items-center justify-center">
+                              <img
+                                src={medals[idx].lockimg}
+                                alt="achievement icon"
+                              />
                             </div>
                             <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-2 py-1 bg-[#dc4d31] text-[#FFFBEE] font-semibold text-xs md:text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap border border-orange-500">
                               {medals[idx].name}
