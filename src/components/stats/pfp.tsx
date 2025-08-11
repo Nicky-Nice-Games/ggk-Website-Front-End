@@ -83,16 +83,13 @@ export default function Pfp({
                   >
                     {pfpList
                       .filter((pfp) => pfp.character === c)
-                      .map((pfp, index) => (
+                      .map((pfp) => (
                         <img
                           key={pfp.src}
                           src={pfp.src}
                           alt="Option"
-                          className={`cursor-pointer rounded-full h-24 w-24 object-cover border-4 hover:border-blue-500 transition-all ${
-                            index === account.pfp
-                              ? "border-green-500"
-                              : "border-transparent"
-                          }`}
+                          className={`cursor-pointer rounded-full h-24 w-24 object-cover border-4 border-transparent hover:border-blue-500 transition-all 
+                              `}
                           onClick={() => {
                             if (account) {
                               const storedAccount: AccountSchema = {

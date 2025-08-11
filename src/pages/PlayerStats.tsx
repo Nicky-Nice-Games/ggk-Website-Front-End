@@ -56,7 +56,7 @@ const PlayerStatsPage = ({
     favoriteChara: 0,
     favoriteTrack: 0,
     offenseUsage: {
-      puck1: 20,
+      puck1: 0,
       puck2: 0,
       puck3: 0,
       puck4: 0,
