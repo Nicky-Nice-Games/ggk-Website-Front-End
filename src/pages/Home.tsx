@@ -61,7 +61,8 @@ const HomePage = ({ setCurrentPage }: HomePageParams) => {
                   "_blank"
                 )
               }
-              className="w-50 h-12 font-bold mt-5"
+              className="w-70 h-16 font-bold mt-5"
+              textSize="large"
             />
           </div>
           <div className="overflow-hidden rotate-6 w-[120%] h-75 origin-top-left flex relative top-24 sm:top-0">
