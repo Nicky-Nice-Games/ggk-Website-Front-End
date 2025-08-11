@@ -71,7 +71,7 @@ const TitleBanner = ({ color, text, className }: TitleBannerProps) => {
         className
       )}
     >
-      <h1 className="relative z-10 mx-10 bravo text-center text-[30px] sm:text-[40px] md:text-[54px] lg:text-[70px] banner-text">
+      <h1 className="relative z-10 mx-10 bravo text-center text-[40px] sm:text-[40px] md:text-[54px] lg:text-[70px] banner-text">
         {text}
       </h1>
     </div>

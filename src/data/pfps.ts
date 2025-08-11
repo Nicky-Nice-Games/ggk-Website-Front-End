@@ -12,6 +12,18 @@ const pfpList: ProfilePicture[] = [
     character: "Gizmo",
     src: "images/pfps/gizmo-2.png",
   },
+   {
+    character: "Gizmo",
+    src: "images/pfps/gizmo-3.png",
+  },
+  {
+    character: "Gizmo",
+    src: "images/pfps/gizmo-4.png",
+  },
+    {
+    character: "Gizmo",
+    src: "images/pfps/gizmo-5.png",
+  },
   {
     character: "Morgan",
     src: "images/pfps/morgan.png",
@@ -32,6 +44,14 @@ const pfpList: ProfilePicture[] = [
     character: "Reese",
     src: "images/pfps/reese-3.png",
   },
+    {
+    character: "Reese",
+    src: "images/pfps/reese-4.png",
+  },
+  {
+    character: "Reese",
+    src: "images/pfps/reese-5.png",
+  },
   {
     character: "Emma",
     src: "images/pfps/emma.png",
@@ -43,6 +63,14 @@ const pfpList: ProfilePicture[] = [
   {
     character: "Emma",
     src: "images/pfps/emma-3.png",
+  },
+    {
+    character: "Emma",
+    src: "images/pfps/emma-4.png",
+  },
+  {
+    character: "Emma",
+    src: "images/pfps/emma-5.png",
   },
   {
     character: "Kai",
@@ -67,6 +95,22 @@ const pfpList: ProfilePicture[] = [
   {
     character: "Jamster",
     src: "images/pfps/jamster-3.png",
+  },
+    {
+    character: "Extras",
+    src: "images/pfps/squirrel.png",
+  },
+  {
+    character: "Extras",
+    src: "images/pfps/squirrel-2.png",
+  },
+   {
+    character: "Extras",
+    src: "images/pfps/extra.png",
+  },
+     {
+    character: "Extras",
+    src: "images/pfps/extra-2.png",
   },
 ];
 

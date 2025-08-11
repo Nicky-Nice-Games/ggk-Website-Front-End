@@ -15,7 +15,7 @@ const AuthPage = ({ setAccount }: { setAccount: Function }) => {
       }}
     >
       <div className="text-white flex size-16 items-center justify-center rounded-full">
-        <img src="images/logo/gizmo-icon-hover.svg" alt="Gizmo Icon" />
+        <img src="images/logo/gizmo-icon.svg" alt="Gizmo Icon" />
       </div>
       <div className="flex w-full max-w-sm flex-col gap-6">
         <h1
