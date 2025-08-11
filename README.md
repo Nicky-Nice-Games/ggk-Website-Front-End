@@ -1,54 +1,37 @@
-# React + TypeScript + Vite
+# Gizmo Go-Kartz
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the repository of the public-facing website for Gizmo Go-Kartz, hosted at <a href="nickynicegames.com/ggk" target="_blank">nickynicegames.com/ggk</a>.
 
-Currently, two official plugins are available:
+# Frameworks & Libraries
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Vite** - The building tool by which the project was initially created.
+- **React + TypeScript** - The main language all the source code is written in. React provides the essential functionality while TypeScript is primarily used for better code legibility.
+- **TailwindCSS** - A styling framework that provides easier and more convenient styling than using many separated CSS files.
+- **Shadcn** - A component library that uses React and TailwindCSS, and is the basis for most of the components used in this website.
 
-## Expanding the ESLint configuration
+# File Structure
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- `.github/ISSUE_TEMPLATE` - For github-related metadata, such as codeowners and issue templates.
+- `public/ggk` - Contains all public assets, including images, fonts, and other data.
+  - `data` - Files with written information. (CSV, JSON, and PDFs)
+  - `images` - All images, including backgrounds, icons and other displays.
+  - `font` - All custom fonts used in the website.
+- `src` - The main folder where React code is stored.
+  - `components` - Includes shadcn-native and custom-built React components.
+  - `data` - Files with globally used lists and TypeScript object templates.
+  - `pages` - All components for entire pages or sub-pages.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+# Installation & Usage
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+To use this website, start by cloning the repository or downloading the code as a .ZIP file and extracting it. When extracted, open a terminal in the project's root folder. Then, type this command to install all the modules:
+`npm install`
+After the modules are installed, type this command to run the website locally:
+`npm run dev`
+This will run the website on a local host that the user can access through any browser as long as the host is active. To deactivate it, open the terminal where the host is running and press `Ctrl+C`.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+# Building
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+After downloading the repository and installing the modules, the project is then built into a single HTML/CSS/JS with the same functionality. To build the website, type this into the command line:
+`npm run build`
+This generates a new folder called `dist/` in which the build is generated. This build can be opened like a normal .HTML file, whether locally or on a server.
+**IMPORTANT**: remove the first '/' from both the `<script>` and second `<link>` tags (which link to the JS and CSS, respectively.) The files will not be properly referenced and the website will fail to work.

@@ -2,6 +2,7 @@ interface ArrowButtonProps {
   caption?: string;
   clickAction?: () => void;
   className?: string;
+  textSize?: "normal" | "large";
   direction?: "left" | "right";
   type?: "button" | "submit" | "reset";
 }
@@ -10,6 +11,7 @@ const ArrowButton = ({
   caption,
   clickAction = () => {},
   className = "",
+  textSize = "normal",
   direction = "right",
   type = "button",
 }: ArrowButtonProps) => {
@@ -26,7 +28,11 @@ const ArrowButton = ({
         : "hover:translate-x-3"
     } ${className}`}
     >
-      <h3 className={`text-white ${direction === "left" ? "rotate-180" : ""}`}>
+      <h3
+        className={`text-white ${direction === "left" ? "rotate-180" : ""} ${
+          textSize === "large" ? "text-2xl" : ""
+        }`}
+      >
         {caption}
       </h3>
     </button>
