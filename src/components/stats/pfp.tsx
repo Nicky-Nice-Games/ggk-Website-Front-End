@@ -83,13 +83,26 @@ export default function Pfp({
                   >
                     {pfpList
                       .filter((pfp) => pfp.character === c)
-                      .map((pfp) => (
+                      .map((pfp, index) => (
                         <img
                           key={pfp.src}
                           src={pfp.src}
                           alt="Option"
-                          className={`cursor-pointer rounded-full h-24 w-24 object-cover border-4 border-transparent hover:border-blue-500 transition-all 
-                              `}
+                          className={`cursor-pointer rounded-full h-24 w-24 object-cover border-4 hover:border-blue-500 transition-all 
+                              
+                            ${
+                             
+                            index === account.pfp
+                              ? "border-green-500"
+                              : (index === (account.pfp - 5)  ? "border-green-500" 
+                              : (index === (account.pfp - 10) ? "border-green-500" 
+                              : (index === (account.pfp - 15) ? "border-green-500" 
+                              : (index === (account.pfp - 20) ? "border-green-500" 
+                              : (index === (account.pfp - 25) ? "border-green-500"  
+                              : (index === (account.pfp - 30) ? "border-green-500"
+                              : "border-transparent" ))))))                           
+                          }
+                            `}
                           onClick={() => {
                             if (account) {
                               const storedAccount: AccountSchema = {
