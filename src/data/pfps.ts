@@ -125,6 +125,10 @@ const pfpList: ProfilePicture[] = [
     character: "Jamster",
     src: "images/pfps/jamster-5.png",
   },
+  {
+    character: "Jamster",
+    src: "images/pfps/jamster-6.png",
+  },
     {
     character: "Extras",
     src: "images/pfps/squirrel.png",
