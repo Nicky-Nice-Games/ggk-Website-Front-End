@@ -117,7 +117,6 @@ export function DataTable<TData, TValue>({
       <div className="flex items-center justify-between space-x-2 py-4 px-3">
         <Button
           variant="outline"
-          size="sm"
           onClick={() => {
             const pageNumberInput: HTMLInputElement | null =
               document.querySelector("#page-number-input");
@@ -127,6 +126,7 @@ export function DataTable<TData, TValue>({
             table.previousPage();
           }}
           disabled={!table.getCanPreviousPage()}
+          className="bg-white/60 hover:bg-white/20 text-lg font-normal"
         >
           Previous
         </Button>
@@ -155,7 +155,6 @@ export function DataTable<TData, TValue>({
         </div>
         <Button
           variant="outline"
-          size="sm"
           onClick={() => {
             const pageNumberInput: HTMLInputElement | null =
               document.querySelector("#page-number-input");
@@ -165,6 +164,7 @@ export function DataTable<TData, TValue>({
             table.nextPage();
           }}
           disabled={!table.getCanNextPage()}
+          className="bg-white/60 hover:bg-white/20 text-lg font-normal"
         >
           Next
         </Button>
