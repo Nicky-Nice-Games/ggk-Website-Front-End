@@ -16,7 +16,7 @@ const ItemsPage = () => {
             "linear-gradient(rgba(104, 104, 104, 1),rgba(104, 104, 104, 1), rgba(160, 160, 160, 1)), url('images/items-background-darkoutline.png')",
         }}
       >
-        <TitleBanner color="red" text="Items" className="mb-5" />
+        <TitleBanner color="pink" text="Items" className="mb-5" />
         <p className="text-center text-[#fffbee] text-body mb-5">
           Click an item to view its effects and levels!
         </p>
