@@ -88,8 +88,8 @@ const ProcessPage = () => {
                   game's marketing. A majority of the team works remotely, but
                   team meetings occur on-campus with all local members present,
                   and all remote members in a Zoom call. This project was
-                  developed over the course of 2.5 months, stretching from late
-                  May to mid-August of 2025.
+                  developed over the course of 2.5 months, stretching from 
+                  mid-May to mid-August of 2025.
                 </p>
                 <div className="md:min-w-[400px] md:w-300 mb-7 md:mb-0">
                   <img

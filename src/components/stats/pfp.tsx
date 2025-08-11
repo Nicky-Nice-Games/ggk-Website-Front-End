@@ -47,7 +47,7 @@ export default function Pfp({
         <img
           src={pfpList[account.pfp].src}
           alt="Profile"
-          className="rounded-full h-18 w-18 md:h-24 md:w-24 object-cover"
+          className="rounded-full h-26 w-26 md:h-[10rem] md:w-[10rem] object-cover"
         />
       </div>
 

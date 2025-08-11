@@ -36,7 +36,7 @@ export const characters: Character[] = [
       </div>
     ),
     devDescription:
-      "As the mascot of the game, Gizmo's design is based on the first IGM logo from roughly 2011 to 2018, using the \"M\" as his head. Gizmo's toy and ghost designs were created as separate concepts, but both would be utilized in the final design of the character. The wooden toy form is inspired by other blocky wooden string dolls, which had similar shape language to the original ghost form.",
+      "Gizmo's design is based on the now-unused IGM logo from 2011-2018, specifically referencing the 'M' as Gizmo's head. The ghost form and toy form were orignally 2 different potential designs that eventually got merged into the same character. The toy form was inspired by wooden string dolls that have similar blocky features to the ghost form.",
   },
   {
     imgUrl: "images/characters/morgan.png",
@@ -50,7 +50,7 @@ export const characters: Character[] = [
         <b>Year:</b> 1st
         <br />
         <b>Major:</b> Photography <br />
-        <b>Likes:</b> Skating, Thrifting Clothes, Going Fast
+        <b>Likes:</b> Skating, Thrifting clothes, Going fast
         <br />
         <b>Dislikes:</b> 8AM classes, Wiping out
         <br />
@@ -59,12 +59,12 @@ export const characters: Character[] = [
           className="text-[#d97706]"
           href="https://www.youtube.com/watch?v=TIy3n2b7V9k"
         >
-          Skater Boi - Avril Lavigne
+          Sk8er Boi - Avril Lavigne
         </a>
       </div>
     ),
     devDescription:
-      "Morgan is designed after the Lead Content Developer as she appeared in her first year, with a casual personality and interests in ice skating and baggy clothes. She's designed around fast-travel, representing the RIT students that travels around campus using alternative transportation, and incorporating influence from the RIT Skate Club. This fast-travel motif is also reflected by the beanie she wears.",
+      "Morgan is based on the character's designer Yazmin (Content Team Lead) during her first year at RIT: skating, baggy clothing, cool vibes. She represents a portion of the RIT population that uses alternative transportation to get around campus, as well as drawing influences from RIT Skate Club. Morgan was designed with fast travel in mind, wearing a tight beanie around her head.",
   },
   {
     imgUrl: "images/characters/reese.png",
@@ -78,7 +78,7 @@ export const characters: Character[] = [
         <b>Year:</b> 2nd
         <br />
         <b>Major:</b> Packaging Science <br />
-        <b>Likes:</b> Free Stuff, Making Mixtapes, Anime, Energy Drinks <br />
+        <b>Likes:</b> Free stuff, Making mixtapes, Anime, Energy drinks <br />
         <b>Dislikes:</b> Angry customers, Waking up
         <br />
         <b>Favorite Song: </b>
@@ -91,7 +91,7 @@ export const characters: Character[] = [
       </div>
     ),
     devDescription:
-      "Reese is the only character in the roster without visible eyes, inspiring his mellow personality and cheesy grin. His occupation as a dining worker was added later in development, which also inspired his name, a food pun that references Reese's™.",
+      "Reese is the only character in the roster who doesn't have visible eyes, which inspired his chill vibes and cheesy grin; the idea to make him a dining worker came later. His name also references Reese's™ peanut butter cups as a food pun.",
   },
   {
     imgUrl: "images/characters/emma.png",
@@ -107,8 +107,8 @@ export const characters: Character[] = [
         <br />
         <b>Job:</b> Orientation Leader <br />
         <b>Major:</b> Game Design and Development <br />
-        <b>Likes:</b> Pins, Early Morning Walks, Bucket Hats <br />
-        <b>Dislikes:</b> Loud Music, Sleeping In <br />
+        <b>Likes:</b> Pins, Early morning walks, Bucket hats <br />
+        <b>Dislikes:</b> Loud music, Sleeping in <br />
         <b>Favorite Song: </b>
         <a
           className="text-[#d97706]"
@@ -119,7 +119,7 @@ export const characters: Character[] = [
       </div>
     ),
     devDescription:
-      "Emma is inspired by an image of a real RIT Orientation Leader found in research. Her design uses circular shape language to invoke a feeling of cheer, friendliness, and a warm welcome. Her outfit primarily uses RIT's colors to emphasize her pride in the institution.",
+      "Emma was inspired by an image of a real RIT orientation leader (pictured on the left) during the initial research. The character design is meant to feel welcoming, friendly, and cheerful by emphasizing rounded and curved shapes instead of sharp points. Her outfit also heavily uses RIT's main colors to show her enthusiasm towards school spirit.",
   },
   {
     imgUrl: "images/characters/kai.png",
@@ -149,7 +149,7 @@ export const characters: Character[] = [
       </div>
     ),
     devDescription:
-      "Kai is designed and named after a high-school friend of the Assistant Content Team Lead. They were originally designed with a wide triangle-like design, but it was shrunk to fit the other characters later on. Kai's outfit matches their occupation as a hockey player, being based on RIT hockey jerseys with a legally distinct tiger logo on the front.",
+      "Kai's name and personality is based a high school friend from the characters designer Joshua (Assistant Content Team Lead). Their original design was more triangle-shaped with wide pants and slimmer shoulders, but the proportions were modified later to match the other characters. Kai's outfit is based on the RIT hockey team jerseys with a legally-distinct tiger logo on the front.",
   },
   {
     imgUrl: "images/characters/jamster.png",
@@ -164,7 +164,7 @@ export const characters: Character[] = [
         <br />
         <b>Major:</b> N/A
         <br />
-        <b>Likes:</b> Games, Jams, GameJams <br />
+        <b>Likes:</b> Games, Jams, Game jams <br />
         <b>Dislikes:</b> Sitting still, Being hungry
         <br />
         <b>Favorite Song: </b>
@@ -177,6 +177,6 @@ export const characters: Character[] = [
       </div>
     ),
     devDescription:
-      "Jamster is the mascot of the RIT Game Developers Club (RGDC), designed by an alum who is a former E-board member of the club. Due to their representation as a mascot for RIT's Game Development majors, they were approved and added to the roster as a guest character with slight design modifications.",
+      "Jamster was designed by an RIT alum and former RIT Game Dev Club E-board member as a mascot for the club. Although the design was slightly modified, it still abides closely to RGDC's original guidelines. Jamster's magenta, cyan, and beige colors also had to be added to the color palette specifically for themselves.",
   },
 ];
