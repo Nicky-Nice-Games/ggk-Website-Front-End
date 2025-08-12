@@ -28,7 +28,7 @@ const ProcessPage = () => {
               }
               content={
                 <div className="flex md:flex-row flex-col items-stretch">
-                  <p className="text-body mb-4">
+                  <p className="text-body mb-4 mr-[2rem]">
                     Gizmo Go-Kartz was constructed by a team of almost 50 RIT
                     students of varying grade levels, as an Entrepreneurial
                     Co-op over the summer of 2025 sponsored by RIT Professor
@@ -95,7 +95,18 @@ const ProcessPage = () => {
                     present, and all remote members in a Zoom call. This project
                     was developed over the course of 2.5 months, stretching from
                     late May to mid-August of 2025.
+                    <p className="mt-[1rem]">
+                      Visit our{" "}
+                      <a
+                        className="text-orange-300"
+                        href="https://github.com/Nicky-Nice-Games/ggk-UnityProject/wiki"
+                      >
+                        GitHub
+                      </a>{" "}
+                      to see our documentation!
+                    </p>
                   </p>
+
                   <div className="md:min-w-[400px] md:w-300 mb-7 md:mb-0 flex flex-col items-center">
                     <img
                       src="images/process/team-photo.jpg"

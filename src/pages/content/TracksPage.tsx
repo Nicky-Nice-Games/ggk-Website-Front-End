@@ -39,7 +39,7 @@ const TracksPage = () => {
               >
                 <img
                   src={track.imgUrl}
-                  className="w-[100%] lg:w-2/5 rounded-t-lg lg:rounded-r-none lg:rounded-bl-lg"
+                  className="w-[100%] lg:w-2/5 rounded-t-lg lg:rounded-r-none object-cover lg:rounded-bl-lg"
                 />
                 <div
                   className="relative bg-gray-200 
