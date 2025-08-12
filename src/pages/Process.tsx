@@ -28,7 +28,7 @@ const ProcessPage = () => {
               }
               content={
                 <div className="flex md:flex-row flex-col items-stretch">
-                  <p className="text-body mb-4">
+                  <p className="text-body mb-4 mr-[2rem]">
                     Gizmo Go-Kartz was constructed by a team of almost 50 RIT
                     students of varying grade levels, as an Entrepreneurial
                     Co-op over the summer of 2025 sponsored by RIT Professor
