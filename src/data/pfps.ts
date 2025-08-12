@@ -24,6 +24,10 @@ const pfpList: ProfilePicture[] = [
     character: "Gizmo",
     src: "images/pfps/gizmo-5.png",
   },
+    {
+    character: "Gizmo",
+    src: "images/pfps/gizmo-6.png",
+  },
   {
     character: "Morgan",
     src: "images/pfps/morgan.png",
@@ -44,7 +48,10 @@ const pfpList: ProfilePicture[] = [
     character: "Morgan",
     src: "images/pfps/morgan-5.png",
   },
-  
+    {
+    character: "Morgan",
+    src: "images/pfps/morgan-6.png",
+  },
   {
     character: "Reese",
     src: "images/pfps/reese.png",
@@ -64,6 +71,10 @@ const pfpList: ProfilePicture[] = [
   {
     character: "Reese",
     src: "images/pfps/reese-5.png",
+  },
+    {
+    character: "Reese",
+    src: "images/pfps/reese-6.png",
   },
   {
     character: "Emma",
@@ -86,6 +97,10 @@ const pfpList: ProfilePicture[] = [
     src: "images/pfps/emma-5.png",
   },
   {
+    character: "Emma",
+    src: "images/pfps/emma-6.png",
+  },
+  {
     character: "Kai",
     src: "images/pfps/kai.png",
   },
@@ -104,6 +119,10 @@ const pfpList: ProfilePicture[] = [
   {
     character: "Kai",
     src: "images/pfps/kai-5.png",
+  },
+    {
+    character: "Kai",
+    src: "images/pfps/kai-6.png",
   },
   {
     character: "Jamster",
