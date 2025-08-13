@@ -143,7 +143,7 @@ const HomePage = ({ setCurrentPage }: HomePageParams) => {
             <PreviewLeaderboard data={previewLeaderboardData} />
             <div
               id="link-container"
-              className="bg-black/80 absolute z-3 bottom-0 w-full p-4 text-white text-center"
+              className="bg-black/80 absolute z-999 bottom-0 w-full p-4 text-white text-center"
             >
               <ArrowButton
                 caption="See all scores!"

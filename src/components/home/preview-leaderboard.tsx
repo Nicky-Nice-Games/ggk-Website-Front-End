@@ -6,13 +6,13 @@ import { pfpList } from "@/data/pfps";
 const getPlacementColor = (index: number): string => {
   switch (index) {
     case 0:
-      return "text-[#facc15]";
+      return "text-[#F77128]";
     case 1:
-      return "text-[#cbd5e1]";
+      return "text-[#1FDB6A]";
     case 2:
-      return "text-[#fdba74]";
+      return "text-[#3375CA]";
     case 3:
-      return "text-[#f59e0b]";
+      return "text-[#CCCCCC]";
     default:
       return "text-white";
   }
