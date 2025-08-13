@@ -17,8 +17,8 @@ const HomePage = ({ setCurrentPage }: HomePageParams) => {
   React.useEffect(() => {
     fetchData(
       "GET",
-      "data/leaderboard-data.json",
-      //"https://maventest-a9cc74b8d5cf.herokuapp.com/webservice/leaderboard/%7Bmapid%7D?mapid=4",
+      //"data/leaderboard-data.json",
+      "https://maventest-a9cc74b8d5cf.herokuapp.com/webservice/leaderboard/%7Bmapid%7D?mapid=4",
       "json",
       (data: any) => {
         data = data.sort((a: any, b: any) => a.raceTime - b.raceTime);

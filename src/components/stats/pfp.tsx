@@ -47,7 +47,7 @@ export default function Pfp({
         <img
           src={pfpList[account.pfp].src}
           alt="Profile"
-          className="rounded-full h-18 w-18 md:h-24 md:w-24 object-cover"
+          className="rounded-full h-26 w-26 md:h-[10rem] md:w-[10rem] object-cover"
         />
       </div>
 
@@ -83,13 +83,26 @@ export default function Pfp({
                   >
                     {pfpList
                       .filter((pfp) => pfp.character === c)
-                      .map((pfp) => (
+                      .map((pfp, index) => (
                         <img
                           key={pfp.src}
                           src={pfp.src}
                           alt="Option"
-                          className={`cursor-pointer rounded-full h-24 w-24 object-cover border-4 border-transparent hover:border-blue-500 transition-all 
-                              `}
+                          className={`cursor-pointer rounded-full h-24 w-24 object-cover border-4 hover:border-blue-500 transition-all 
+                              
+                            ${
+                            index === account.pfp
+                              ? "border-green-500"
+                              : (index + 1 === (account.pfp - 5)  ? "border-green-500" 
+                              : (index + 2 === (account.pfp - 10) ? "border-green-500" 
+                              : (index + 3 === (account.pfp - 15) ? "border-green-500" 
+                              : (index + 4 === (account.pfp - 20) ? "border-green-500" 
+                              : (index + 5 === (account.pfp - 25) ? "border-green-500"  
+                              : (index + 6 === (account.pfp - 30) ? "border-green-500"
+                              : (index + 7 === (account.pfp - 35) ? "border-green-500"
+                              : "border-transparent" )))))))                       
+                          }
+                            `}
                           onClick={() => {
                             if (account) {
                               const storedAccount: AccountSchema = {

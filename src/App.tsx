@@ -21,6 +21,7 @@ import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 import { useEffect, useState } from "react";
 import AuthenticationPage from "./pages/Authentication";
+import { ListPage } from "./pages/List";
 export interface AccountSchema {
   pid: string;
   username: string;
@@ -105,6 +106,8 @@ function App() {
           <Route path="/tracks" element={<TracksPage />} />
           <Route path="/items" element={<ItemsPage />} />
           <Route path="*" element={<NoPage />}></Route>
+                    <Route path="/list" element={<ListPage />}></Route>
+
         </Routes>
       </div>
       <Footer />
