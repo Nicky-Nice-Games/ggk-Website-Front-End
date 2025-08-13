@@ -52,7 +52,7 @@ const PreviewLeaderboard = ({ data }: { data: any }) => {
               place={formatPlacing(index + 1)}
               imgPath={pfpList[player.pfp].src}
               name={player.username}
-              time={formatTime(player.raceTime)}
+              time={formatTime(player.raceTime, false)}
               score={player.score}
               color={getPlacementColor(index)}
               className=""
