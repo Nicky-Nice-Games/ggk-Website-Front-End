@@ -1,7 +1,10 @@
 import { millisecondsToSeconds } from "framer-motion";
 
 // Formats a millisecond value into MM:SS:msmsms
-const formatTime = (milliseconds: number): string => {
+const formatTime = (
+  milliseconds: number,
+  includeMilliseconds: boolean = true
+): string => {
   let seconds = millisecondsToSeconds(milliseconds);
   let minutes = Math.floor(seconds / 60);
   milliseconds %= 1000;
@@ -11,7 +14,9 @@ const formatTime = (milliseconds: number): string => {
   const formattedSeconds = String(Math.floor(seconds)).padStart(2, "0");
   const formattedMinutes = String(minutes).padStart(2, "0");
 
-  return `${formattedMinutes}:${formattedSeconds}:${formattedMilliseconds}`;
+  if (includeMilliseconds)
+    return `${formattedMinutes}:${formattedSeconds}:${formattedMilliseconds}`;
+  else return `${formattedMinutes}:${formattedSeconds}`;
 };
 
 // Adds a suffix to the index to indicate the placing

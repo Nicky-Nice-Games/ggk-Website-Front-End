@@ -38,12 +38,13 @@ export function SignupForm({
                 </div>
                 <div className="grid gap-3 text-[#D0D3D4] poppins">
                   <Label htmlFor="username" className="poppins">
-                    Username
+                    Username (Up to 10 Characters)
                   </Label>
                   <Input
                     id="username"
                     type="username"
                     placeholder="username..."
+                    maxLength={10}
                     required
                   />
                 </div>

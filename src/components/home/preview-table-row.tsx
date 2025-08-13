@@ -39,7 +39,7 @@ const PreviewTableRow = ({
         </div>
       </td>
 
-      <td className="w-[25%] min-w-0 mx-auto text-center">
+      <td className="w-[30%] min-w-0 mx-auto text-center">
         <p
           className="font-racingMobileText sm:font-racingText 
              text-[11px] xs:text-[13px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[20px]"
